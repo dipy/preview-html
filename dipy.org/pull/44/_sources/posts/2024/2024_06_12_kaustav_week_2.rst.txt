@@ -25,7 +25,7 @@ These tests have been instrumental in identifying and resolving bugs, allowing m
 Difficulties & Challenges
 -------------------------
 
-I didn't face any particular difficulty with my task this week, as it was pretty straighforward. I just had concerns about how the versioning would work out but I made proper test case scenarios for that as well.
+I didn't face any particular difficulty with my task this week, as it was pretty straightforward. I just had concerns about how the versioning would work out but I made proper test case scenarios for that as well.
 
 Documentation Updates
 ---------------------

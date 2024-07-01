@@ -972,10 +972,10 @@ This milestone represents a major step forward in enhancing the codebase’s eff
 <section id="difficulties-challenges">
 <h2>Difficulties &amp; Challenges<a class="headerlink" href="#difficulties-challenges" title="Link to this heading">#</a></h2>
 <p>When I was trying to implement the decorator to multiple modules, I tried to do it through a script so that I could apply the decorator to all necessary functions at one shot.
-The script functionality would first parse the selected file, then apply the decorator to the necessary functions and lastly unparse and reconstuct the file. I was using libraries which comply with PEP-8 and ruff formatting.
+The script functionality would first parse the selected file, then apply the decorator to the necessary functions and lastly unparse and reconstruct the file. I was using libraries which comply with PEP-8 and ruff formatting.
 I faced two problems here:
-1. After reconstuction, the comments that were put in the file will be removed. (This happened due to how the libraries worked)
-2. The libraries were not able to unparse the Docstring correctly and would gived errors.</p>
+1. After reconstruction, the comments that were put in the file will be removed. (This happened due to how the libraries worked)
+2. The libraries were not able to unparse the Docstring correctly and would give errors.</p>
 <p>After long time of trial and errors, I decided to work on applying decorators manually to all the modules.</p>
 </section>
 <section id="testing-and-continuous-integration">
