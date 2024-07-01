@@ -969,6 +969,15 @@ The third week of the Coding phase has been a whirlwind of progress. I have achi
 <p>With refinements made in the previous week, I am thrilled to announce that I have successfully implemented the decorator function across 15 modules in DIPY.
 This milestone represents a major step forward in enhancing the codebase’s efficiency and maintainability.</p>
 </section>
+<section id="difficulties-challenges">
+<h2>Difficulties &amp; Challenges<a class="headerlink" href="#difficulties-challenges" title="Link to this heading">#</a></h2>
+<p>When I was trying to implement the decorator to multiple modules, I tried to do it through a script so that I could apply the decorator to all necessary functions at one shot.
+The script functionality would first parse the selected file, then apply the decorator to the necessary functions and lastly unparse and reconstuct the file. I was using libraries which comply with PEP-8 and ruff formatting.
+I faced two problems here:
+1. After reconstuction, the comments that were put in the file will be removed. (This happened due to how the libraries worked)
+2. The libraries were not able to unparse the Docstring correctly and would gived errors.</p>
+<p>After long time of trial and errors, I decided to work on applying decorators manually to all the modules.</p>
+</section>
 <section id="testing-and-continuous-integration">
 <h2>Testing and Continuous Integration<a class="headerlink" href="#testing-and-continuous-integration" title="Link to this heading">#</a></h2>
 <p>While the decorator implementation has been completed, there is still some testing remaining to ensure the robustness and reliability of the integrated code.
@@ -1059,6 +1068,7 @@ I am grateful for the guidance and support provided by my mentor <a class="refer
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decorator-implementation-across-modules">Decorator Implementation across Modules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#difficulties-challenges">Difficulties &amp; Challenges</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-and-continuous-integration">Testing and Continuous Integration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lazy-loading-demonstration">Lazy Loading Demonstration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-week">Next Week</a></li>

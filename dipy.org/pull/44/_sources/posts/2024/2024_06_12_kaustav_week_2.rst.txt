@@ -21,6 +21,12 @@ Comprehensive Testing and Bug Fixing
 Alongside the refinement process, I have written comprehensive tests to ensure the decorator function's robustness and reliability.
 These tests have been instrumental in identifying and resolving bugs, allowing me to thoroughly validate the decorator's functionality across various scenarios and cases.
 
+
+Difficulties & Challenges
+-------------------------
+
+I didn't face any particular difficulty with my task this week, as it was pretty straighforward. I just had concerns about how the versioning would work out but I made proper test case scenarios for that as well.
+
 Documentation Updates
 ---------------------
 

@@ -15,6 +15,17 @@ Decorator Implementation across Modules
 With refinements made in the previous week, I am thrilled to announce that I have successfully implemented the decorator function across 15 modules in DIPY.
 This milestone represents a major step forward in enhancing the codebase's efficiency and maintainability.
 
+Difficulties & Challenges
+-------------------------
+
+When I was trying to implement the decorator to multiple modules, I tried to do it through a script so that I could apply the decorator to all necessary functions at one shot.
+The script functionality would first parse the selected file, then apply the decorator to the necessary functions and lastly unparse and reconstuct the file. I was using libraries which comply with PEP-8 and ruff formatting.
+I faced two problems here:
+1. After reconstuction, the comments that were put in the file will be removed. (This happened due to how the libraries worked)
+2. The libraries were not able to unparse the Docstring correctly and would gived errors.
+
+After long time of trial and errors, I decided to work on applying decorators manually to all the modules.
+
 Testing and Continuous Integration
 ----------------------------------
 
