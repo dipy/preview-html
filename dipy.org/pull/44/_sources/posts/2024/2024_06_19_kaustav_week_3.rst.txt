@@ -44,7 +44,8 @@ By delaying the initialization of objects until they are actually needed, lazy l
 Next Week
 ---------
 
-The plan next week is to work on the Lazy Loading, implement in DIPY and 
+The plan next week is to work on the Lazy Loading, implement in DIPY and share a test branch with my mentor.
+I will also look into fixing the existing PRs where I have implmented the decorator in sub-modules.
 
 Final Thoughts
 --------------
