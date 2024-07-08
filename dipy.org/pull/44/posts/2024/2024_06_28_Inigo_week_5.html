@@ -55,9 +55,9 @@
                 gtag('js', new Date());
                 gtag('config', 'G-D610GKJZRC');
             </script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2023/2023_07_27_Shilpi_week_8_9';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2024/2024_06_28_Inigo_week_5';</script>
     <script src="../../_static/js/dipy.js?v=4b4dfe59"></script>
-    <link rel="canonical" href="https://dipy.org/posts/2023/2023_07_27_Shilpi_week_8_9.html" />
+    <link rel="canonical" href="https://dipy.org/posts/2024/2024_06_28_Inigo_week_5.html" />
     <link rel="icon" href="../../_static/dipy-favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -757,7 +757,7 @@ document.write(`
   
   <i class="fa fa-calendar"></i>
   
-  27 July 2023
+  28 June 2024
   
 </h2>
 <ul>
@@ -772,7 +772,7 @@ document.write(`
     </span>
   
   
-  <a href="../../blog/author/shilpi-prasad.html">Shilpi Prasad</a>
+  <a href="../../blog/author/inigo-tellaetxe.html">Iñigo Tellaetxe</a>
   
   
   
@@ -825,32 +825,32 @@ document.write(`
   
   
   <li>
-    <a href="../2024/2024_07_07_kaustav_week_6.html">
+    <a href="2024_07_07_kaustav_week_6.html">
       07 July - My Journey Continues: Week 6 Progress with DIPY
     </a>
   </li>
   
   <li>
-    <a href="../2024/2024_07_01_kaustav_week_5.html">
+    <a href="2024_07_01_kaustav_week_5.html">
       01 July - My Journey Continues: Week 5 Progress with DIPY
     </a>
   </li>
   
   <li>
-    <a href="../2024/2024_06_28_Inigo_week_5.html">
-      28 June - Week 5 into GSoC 2024: Vacation, starting with the conditional AutoEncoder
-    </a>
-  </li>
-  
-  <li>
-    <a href="../2024/2024_06_30_kaustav_week_4.html">
+    <a href="2024_06_30_kaustav_week_4.html">
       23 June - My Journey Continues: Week 4 Progress with DIPY
     </a>
   </li>
   
   <li>
-    <a href="../2024/2024_06_21_Inigo_week_4.html">
+    <a href="2024_06_21_Inigo_week_4.html">
       21 June - Week 4 into GSoC 2024: Weight transfer experiments, hardships, and results!
+    </a>
+  </li>
+  
+  <li>
+    <a href="2024_06_19_kaustav_week_3.html">
+      17 June - My Journey Continues: Week 3 Progress with DIPY
     </a>
   </li>
   
@@ -960,26 +960,23 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-<section id="generating-fit-functions-week-8-9">
-<h1>Generating Fit Functions : Week 8 &amp; 9<a class="headerlink" href="#generating-fit-functions-week-8-9" title="Link to this heading">#</a></h1>
+<section id="week-5-into-gsoc-2024-vacation-starting-with-the-conditional-autoencoder">
+<h1>Week 5 into GSoC 2024: Vacation, starting with the conditional AutoEncoder<a class="headerlink" href="#week-5-into-gsoc-2024-vacation-starting-with-the-conditional-autoencoder" title="Link to this heading">#</a></h1>
 <section id="what-i-did-this-week">
 <h2>What I did this week<a class="headerlink" href="#what-i-did-this-week" title="Link to this heading">#</a></h2>
-<p>This week, I started by figuring out how to run Spyder on Ubuntu. After resolving technical problems, I needed to ensure I could edit code to meet pep8 standards but the automatic formatting of code wasn’t working. I made changes in the <code class="docutils literal notranslate"><span class="pre">utils.py</span></code> file to increase the design matrix readability and fixed a typo in the <code class="docutils literal notranslate"><span class="pre">B[:,3]</span></code> and <code class="docutils literal notranslate"><span class="pre">B[:,</span> <span class="pre">4]</span></code> diffusion tensor elements. This is because we realized that the sign needed to be negative to show that it’s representing a signal decay.
-I implemented mapping all of the covariance parameters from paper to its actual code, creating a need to talk to the original paper’s authors as the conversion shown in the paper didn’t quite match its implementation.
-I also worked on matching the ground truth signal values in case of anisotropic and combined DTDs. This is because the isotropic DTD signals that were being generated matched exactly the QTI signals, as in case of isotropic we’ve 6 non zero elements, and the rest are 0s. However in anisotropic case we had more non-zero covariance parameters (9 non-zero), similarly as in the case of combined DTD. So we figured out that the non-zero elements are being multiplied to some value which isn’t correct and that this needs modifying the <code class="docutils literal notranslate"><span class="pre">ccti</span></code> conversion.
-So, I worked on reading more about voigt notation, as the QTI parameters were implemented using that notation.
-Then we looked again into the QTI paper, and felt the need to contact their author and code implementer and realized that the coding was done while keeping in mind the voigt notation conversion as well as some other factors. At the end of this we figured out the correct conversion of the <code class="docutils literal notranslate"><span class="pre">ccti</span></code> parameters. We noticed that some factors needed the (root2) division, while some others needed (2). Therefore, we were able to successfully figure out the correct factors that needed to be multiplied/ divided to each of the covariance parameters.
-And hence, now the signal values of all the DTDs match as expected.
-Then the other major ongoing task this week has been the implementation of the Fit class in CTI. This required me to implement some functions which might’ve been implemented in DKI/ QTI. This is an ongoing task and would require more work.</p>
+<p>Hi everyone! This week I have been on vacation, so I have not been able to work on the project as much as the previous weeks. However, I have been thinking about the next steps to take and I have decided to start with the conditional AutoEncoder. I have been reading some papers and I have found some interesting ideas that would be nice to implement.</p>
+<p>While stuck at the Munich airport, I started to write some code for this (the weather was not very good and my flight was delayed, so I lost my connecting flight and I had to sleep at the airport). I found an implementation of a regression variational AutoEncoder <a class="reference external" href="https://doi.org/10.1007/978-3-030-32245-8_91">in this paper</a>, where the authors implement a way to manipulate the latent space so that the input data that get projected (streamlines for our case, 3D image patches in the paper) into it are organized along a desired scalar parameter.</p>
+<p>I thought this could be a good starting point for my conditional AutoEncoder because it basically provides a way to sample from the latent space in a controlled manner, where you can select the age of the streamlines you want to generate. Also, having the variational regularizes the latent space, so our model is more resilient against overfitting against the identity function, which might happen in “vanilla” AutoEncoders without any regularization.</p>
+<p>Also, they provided their code in TensorFlow, so I started adapting it to our use case, which uses 1D convolutions instead of 3D ones.</p>
 </section>
-<section id="things-coming-up-next-week">
-<h2>Things coming up next week<a class="headerlink" href="#things-coming-up-next-week" title="Link to this heading">#</a></h2>
-<p>After the matching of the correct signals which matched the ground truth values, we realized that a DTD with more non-zero covariance parameters might make the <code class="docutils literal notranslate"><span class="pre">ccti</span></code> conversion more robust while taking all cases into consideration. So, we created a DTD with mevals, its angles and the fractions. However the signals didn’t match exactly. But rather than being stuck on this case, we decided to move forward for the time being. So, I’ll work on making sure that all the ground truth signals match.
-But the more important work I will be doing this coming week would be to implement all the required functions in the <code class="docutils literal notranslate"><span class="pre">ccti</span></code> module such as the different sources of kurtosis which hasn’t been implemented before as this is one of the differentiating factors of CTI. And then hopefully move on to generating the tests for these functions.</p>
+<section id="what-is-coming-up-next-week">
+<h2>What is coming up next week<a class="headerlink" href="#what-is-coming-up-next-week" title="Link to this heading">#</a></h2>
+<p>I will continue working on the conditional AutoEncoder next week, but you can see the progress <a class="reference external" href="https://github.com/itellaetxe/tractoencoder_gsoc/blob/main/src/tractoencoder_gsoc/models/cvae_model.py">here</a>.</p>
 </section>
-<section id="did-i-get-stuck-this-week">
-<h2>Did i get stuck this week<a class="headerlink" href="#did-i-get-stuck-this-week" title="Link to this heading">#</a></h2>
-<p>Not at all. Some things were kind of vexing, but I didn’t get stuck as there was always something else that could be done.</p>
+<section id="did-i-get-stuck-anywhere">
+<h2>Did I get stuck anywhere<a class="headerlink" href="#did-i-get-stuck-anywhere" title="Link to this heading">#</a></h2>
+<p>The only place I got stuck in was the airport, but thankfully I managed to arrive to my destination, even if my baggage was lost (they delivered it 2 days later, thankfully nothing was missing!)</p>
+<p>Until next week!</p>
 </section>
 </section>
 
@@ -992,11 +989,11 @@ But the more important work I will be doing this coming week would be to impleme
   <span class="ablog__prev">
     
     
-    <a href="2023_07_24_vara_week_8_9.html">
+    <a href="2024_06_30_kaustav_week_4.html">
       
       <i class="fa fa-arrow-circle-left"></i>
       
-      <span>VQVAE MONAI models & checkerboard artifacts: Week 8 & Week 9</span>
+      <span>My Journey Continues: Week 4 Progress with DIPY</span>
     </a>
     
   </span>
@@ -1004,8 +1001,8 @@ But the more important work I will be doing this coming week would be to impleme
   <span class="ablog__next">
     
     
-    <a href="2023_07_31_Shilpi_week10.html">
-      <span>Adding Tests : Week 10</span>
+    <a href="2024_07_01_kaustav_week_5.html">
+      <span>My Journey Continues: Week 5 Progress with DIPY</span>
       
       <i class="fa fa-arrow-circle-right" ></i>
       
@@ -1047,8 +1044,8 @@ But the more important work I will be doing this coming week would be to impleme
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-i-did-this-week">What I did this week</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#things-coming-up-next-week">Things coming up next week</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#did-i-get-stuck-this-week">Did i get stuck this week</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-coming-up-next-week">What is coming up next week</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#did-i-get-stuck-anywhere">Did I get stuck anywhere</a></li>
 </ul>
   </nav></div>
 

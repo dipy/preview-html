@@ -757,7 +757,7 @@ document.write(`
   
   <i class="fa fa-calendar"></i>
   
-  30 June 2024
+  23 June 2024
   
 </h2>
 <ul>
@@ -825,6 +825,24 @@ document.write(`
   
   
   <li>
+    <a href="2024_07_07_kaustav_week_6.html">
+      07 July - My Journey Continues: Week 6 Progress with DIPY
+    </a>
+  </li>
+  
+  <li>
+    <a href="2024_07_01_kaustav_week_5.html">
+      01 July - My Journey Continues: Week 5 Progress with DIPY
+    </a>
+  </li>
+  
+  <li>
+    <a href="2024_06_28_Inigo_week_5.html">
+      28 June - Week 5 into GSoC 2024: Vacation, starting with the conditional AutoEncoder
+    </a>
+  </li>
+  
+  <li>
     <a href="2024_06_21_Inigo_week_4.html">
       21 June - Week 4 into GSoC 2024: Weight transfer experiments, hardships, and results!
     </a>
@@ -832,25 +850,7 @@ document.write(`
   
   <li>
     <a href="2024_06_19_kaustav_week_3.html">
-      19 June - My Journey Continues: Week 3 Progress with DIPY
-    </a>
-  </li>
-  
-  <li>
-    <a href="2024_06_14_Inigo_week_3.html">
-      14 June - Third Week into GSoC 2024: Replicating training parameters, approaching replication
-    </a>
-  </li>
-  
-  <li>
-    <a href="2024_06_12_kaustav_week_2.html">
-      12 June - My Journey Continues: Week 2 Progress with DIPY
-    </a>
-  </li>
-  
-  <li>
-    <a href="2024_06_07_Inigo_week_2.html">
-      07 June - Second Week into GSoC 2024: Refactoring the AutoEncoder, preliminary results
+      17 June - My Journey Continues: Week 3 Progress with DIPY
     </a>
   </li>
   
@@ -880,7 +880,7 @@ document.write(`
   
   
   <li>
-    <a href="../../blog/category/gsoc.html">gsoc (33)</a>
+    <a href="../../blog/category/gsoc.html">gsoc (36)</a>
   </li>
   
   
@@ -896,7 +896,7 @@ document.write(`
   
   
   <li>
-    <a href="../../blog/2024.html">2024 (10)</a>
+    <a href="../../blog/2024.html">2024 (13)</a>
   </li>
   
   
@@ -963,32 +963,33 @@ document.write(`
 <section id="my-journey-continues-week-4-progress-with-dipy">
 <h1>My Journey Continues: Week 4 Progress with DIPY<a class="headerlink" href="#my-journey-continues-week-4-progress-with-dipy" title="Link to this heading">#</a></h1>
 <p>Hello everyone,
-I hope this update finds you well. The fourth week of my Google Summer of Code (GSoC) journey with DIPY has been a bit different from the previous ones,
-and I wanted to share an honest update about my progress and plans.</p>
-<section id="a-week-of-unexpected-challenges">
-<h2>A Week of Unexpected Challenges<a class="headerlink" href="#a-week-of-unexpected-challenges" title="Link to this heading">#</a></h2>
-<p>This past week, I faced an unexpected setback as I fell ill. As a result, I wasn’t able to make as much progress on the project as I had initially planned.
-I’m grateful for the understanding and support from my mentor, <a class="reference external" href="https://github.com/skoudoro">Serge Koudoro</a>, and my fellow GSOC team on the project.</p>
+I hope this update finds you well. The fourth week of GSOC has made a little slow progress.</p>
+<section id="decorator-implementation-pr-fix">
+<h2>Decorator Implementation PR Fix<a class="headerlink" href="#decorator-implementation-pr-fix" title="Link to this heading">#</a></h2>
+<p>A significant portion of this week was dedicated to addressing and resolving issues with the tests for our decorator implementations. My primary goal was to eliminate any warnings in the Continuous Integration (CI) pipeline, as these warnings are treated as errors and prevent the acceptance of our changes.
+This process involved carefully reviewing each test, identifying the source of warnings, and making necessary adjustments to ensure our code passes all checks without raising any flags.</p>
 </section>
-<section id="preparing-for-lazy-loading-implementation">
-<h2>Preparing for Lazy Loading Implementation<a class="headerlink" href="#preparing-for-lazy-loading-implementation" title="Link to this heading">#</a></h2>
-<p>Whatever time I could get, I used it to prepare for the upcoming task of implementing lazy loading in DIPY.
-I’ve been reviewing the research I conducted earlier and planning my approach for integrating lazy loading into various modules.</p>
+<section id="difficulties-challenges">
+<h2>Difficulties &amp; Challenges<a class="headerlink" href="#difficulties-challenges" title="Link to this heading">#</a></h2>
+<p>No specific challenges faced this week.</p>
 </section>
-<section id="next-steps">
-<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading">#</a></h2>
-<p>As I recover and regain my full productivity, I’m excited to dive into the lazy loading implementation. My goals include:</p>
-<ul class="simple">
-<li><p>Identifying key modules and functions that would benefit most from lazy loading.</p></li>
-<li><p>Developing a strategy for implementing lazy loading without disrupting existing functionality.</p></li>
-<li><p>Beginning the actual implementation process, by implementing for Sub-Modules of DIPY and sharing a build with my mentor for POC.</p></li>
-<li><p>Preparing comprehensive tests to ensure the lazy loading implementation works as expected and doesn’t introduce any bugs.</p></li>
-</ul>
+<section id="peer-review-contributions">
+<h2>Peer Review Contributions<a class="headerlink" href="#peer-review-contributions" title="Link to this heading">#</a></h2>
+<p>In addition to working on our own implementations, I’ve had the opportunity to review Pull Requests (PRs) from my peer.
+This has been an enriching experience, allowing me to gain insights into different coding approaches and problem-solving techniques.</p>
+<p>PR: <a class="github reference external" href="https://github.com/fury-gl/fury/pull/888">fury-gl/fury#888</a></p>
 </section>
-<section id="final-thoughts">
-<h2>Final Thoughts<a class="headerlink" href="#final-thoughts" title="Link to this heading">#</a></h2>
-<p>While this week didn’t see as much tangible progress as I would have liked, it has been an opportunity for reflection and preparation. I’m grateful for the support of my mentor and excited to return to full speed at the earliest.
-Thank you for your understanding and continued support. Stay tuned for what I hope will be a more code-filled update next week!</p>
+<section id="blog-review">
+<h2>Blog Review<a class="headerlink" href="#blog-review" title="Link to this heading">#</a></h2>
+<p>I also reviewed blogs of Peers.
+1. <a class="github reference external" href="https://github.com/fury-gl/fury/pull/896">fury-gl/fury#896</a> - <a class="reference external" href="https://github.com/robinroy03">Robin Roy</a>
+2. <a class="github reference external" href="https://github.com/fury-gl/fury/pull/897">fury-gl/fury#897</a> - <a class="reference external" href="https://github.com/WassCodeur">Wachiou BOURAÏMA</a></p>
+</section>
+<section id="next-week">
+<h2>Next Week<a class="headerlink" href="#next-week" title="Link to this heading">#</a></h2>
+<p>Next week I am planning to submit my Lazy Loading PR.</p>
+<p>Stay tuned for more updates as I continue to work on enhancing DIPY!</p>
+<p>Thank you for reading!</p>
 </section>
 </section>
 
@@ -1011,6 +1012,14 @@ Thank you for your understanding and continued support. Stay tuned for what I ho
   </span>
   <span class="ablog__spacer">&nbsp;</span>
   <span class="ablog__next">
+    
+    
+    <a href="2024_06_28_Inigo_week_5.html">
+      <span>Week 5 into GSoC 2024: Vacation, starting with the conditional AutoEncoder</span>
+      
+      <i class="fa fa-arrow-circle-right" ></i>
+      
+    </a>
     
   </span>
 </div>
@@ -1047,10 +1056,11 @@ Thank you for your understanding and continued support. Stay tuned for what I ho
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-week-of-unexpected-challenges">A Week of Unexpected Challenges</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-for-lazy-loading-implementation">Preparing for Lazy Loading Implementation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-steps">Next Steps</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-thoughts">Final Thoughts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decorator-implementation-pr-fix">Decorator Implementation PR Fix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#difficulties-challenges">Difficulties &amp; Challenges</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#peer-review-contributions">Peer Review Contributions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#blog-review">Blog Review</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-week">Next Week</a></li>
 </ul>
   </nav></div>
 

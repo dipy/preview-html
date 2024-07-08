@@ -1,7 +1,7 @@
 My Journey Continues: Week 2 Progress with DIPY
 ===============================================
 
-.. post:: June 12 2024
+.. post:: June 10 2024
      :author: Kaustav
      :tags: google
      :category: gsoc
