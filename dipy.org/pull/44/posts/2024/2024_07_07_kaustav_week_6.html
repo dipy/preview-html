@@ -966,26 +966,26 @@ document.write(`
 The sixth week of GSOC has been a hectic one. A ton of time in correcting errors and fixing PRs.</p>
 <section id="decorator-pr-fixes">
 <h2>Decorator PR Fixes<a class="headerlink" href="#decorator-pr-fixes" title="Link to this heading">#</a></h2>
-<p>With Decorator Implementation PRs in place, and the integration of my original PR for keyword (<a class="github reference external" href="https://github.com/dipy/dipy/pull/3239">dipy/dipy#3239</a>), it was now time for the PRs which had decorator implementation for specific module to be integrated.</p>
+<p>With decorator implementation PRs in place, and the integration of my original PR for keyword-only arguments (<a class="github reference external" href="https://github.com/dipy/dipy/pull/3239">dipy/dipy#3239</a>), it was now time for the PRs which had the decorator implementation for specific modules to be integrated.</p>
 </section>
 <section id="lazy-loading-pr">
 <h2>Lazy Loading PR<a class="headerlink" href="#lazy-loading-pr" title="Link to this heading">#</a></h2>
-<p>I have submitted a PR for the Lazy Loading feature using the lazy_loader package. (<a class="github reference external" href="https://github.com/dipy/dipy/pull/3288">dipy/dipy#3288</a>)</p>
+<p>I have submitted a PR for the lazy loading feature using the <a class="reference external" href="https://pypi.org/project/lazy-loader/">lazy_loader</a> package. (<a class="github reference external" href="https://github.com/dipy/dipy/pull/3288">dipy/dipy#3288</a>)</p>
 </section>
 <section id="difficulties-challenges">
 <h2>Difficulties &amp; Challenges<a class="headerlink" href="#difficulties-challenges" title="Link to this heading">#</a></h2>
-<p>I had and have a ton of Challenges ahead as I am having trouble with some PR, I am specifically having a challenge in completing:
-1. <a class="github reference external" href="https://github.com/dipy/dipy/pull/3257">dipy/dipy#3257</a>
-- This PR, has issues related to <cite>wls_fit_tensor</cite> function, after the application of the decorator, I am receiving an error where it is telling me hat 3 positional arguments are allowed but 4 are being passed, but when I check the main function parameters, there are only 3 positional params, I am not able to figure why 1 extra arg is being passed.
-2. <a class="github reference external" href="https://github.com/dipy/dipy/pull/3254">dipy/dipy#3254</a>
-- This PR, I have a question about the application of arguments separator, I am just awaiting response on applying the separator.
-3. <a class="github reference external" href="https://github.com/dipy/dipy/pull/3288">dipy/dipy#3288</a>
-- This PR is my lazy loading PR, I am having trouble with the application of <cite>type_stub</cite> as the package is not able to recognise it and thus I am receiving error in importing the modules correctly. I was trying to make it as close as possible to scikit-image implementation, it hasn’t happened yet. But I’m hopeful.</p>
+<p>I had and have a ton of challenges ahead as I am having trouble with some PR, I am specifically having a challenge in completing:</p>
+<p>1. <a class="github reference external" href="https://github.com/dipy/dipy/pull/3257">dipy/dipy#3257</a>
+- This PR has issues related to the <strong>wls_fit_tensor</strong> function, after the application of the decorator I am receiving an error where it is telling me that 3 positional arguments are allowed but 4 are being passed, but when I check the main function parameters there are only 3 positional params. I am not able to figure out why 1 extra <strong>argument</strong> is being passed.</p>
+<p>2. <a class="github reference external" href="https://github.com/dipy/dipy/pull/3254">dipy/dipy#3254</a>
+- This PR have a issue about the application of arguments separator, I am just awaiting response on applying the separator.</p>
+<p>3. <a class="github reference external" href="https://github.com/dipy/dipy/pull/3288">dipy/dipy#3288</a>
+- This PR is my lazy loading PR. I am having trouble with the application of <strong>type_stub</strong> as the package is not able to recognize it and thus I am receiving error when trying to import the modules. I was trying to make it as close as possible to <a class="reference external" href="https://github.com/scikit-image/scikit-image/tree/main">scikit-image</a> implementation, it hasn’t happened yet. But I’m hopeful.</p>
 </section>
 <section id="next-week">
 <h2>Next Week<a class="headerlink" href="#next-week" title="Link to this heading">#</a></h2>
-<p>Next week I am planning to push through the remaining PRs of decorator implementation. Also for lazy_loader, I am planning to fix the error.
-I will have to go through the <cite>PEP-561</cite> documentation which talks about the <cite>type_stub</cite> implementation.</p>
+<p>Next week I am planning to push through the remaining PRs of decorator implementation. Also for <strong>lazy_loader</strong>, I am planning to fix the error.
+I will have to go through the <a class="reference external" href="https://peps.python.org/pep-0561/">PEP-561</a> documentation which talks about the <strong>type_stub</strong> implementation.</p>
 </section>
 <section id="final-thoughts">
 <h2>Final Thoughts<a class="headerlink" href="#final-thoughts" title="Link to this heading">#</a></h2>

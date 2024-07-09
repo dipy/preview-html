@@ -12,29 +12,32 @@ The sixth week of GSOC has been a hectic one. A ton of time in correcting errors
 Decorator PR Fixes
 ------------------
 
-With Decorator Implementation PRs in place, and the integration of my original PR for keyword (https://github.com/dipy/dipy/pull/3239), it was now time for the PRs which had decorator implementation for specific module to be integrated.
+With decorator implementation PRs in place, and the integration of my original PR for keyword-only arguments (https://github.com/dipy/dipy/pull/3239), it was now time for the PRs which had the decorator implementation for specific modules to be integrated.
 
 Lazy Loading PR
 ---------------
 
-I have submitted a PR for the Lazy Loading feature using the lazy_loader package. (https://github.com/dipy/dipy/pull/3288)
+I have submitted a PR for the lazy loading feature using the `lazy_loader <https://pypi.org/project/lazy-loader/>`__ package. (https://github.com/dipy/dipy/pull/3288)
 
 Difficulties & Challenges
 -------------------------
 
-I had and have a ton of Challenges ahead as I am having trouble with some PR, I am specifically having a challenge in completing:
+I had and have a ton of challenges ahead as I am having trouble with some PR, I am specifically having a challenge in completing:
+
 1. https://github.com/dipy/dipy/pull/3257
-- This PR, has issues related to `wls_fit_tensor` function, after the application of the decorator, I am receiving an error where it is telling me hat 3 positional arguments are allowed but 4 are being passed, but when I check the main function parameters, there are only 3 positional params, I am not able to figure why 1 extra arg is being passed.
+- This PR has issues related to the **wls_fit_tensor** function, after the application of the decorator I am receiving an error where it is telling me that 3 positional arguments are allowed but 4 are being passed, but when I check the main function parameters there are only 3 positional params. I am not able to figure out why 1 extra **argument** is being passed.
+
 2. https://github.com/dipy/dipy/pull/3254
-- This PR, I have a question about the application of arguments separator, I am just awaiting response on applying the separator.
+- This PR have a issue about the application of arguments separator, I am just awaiting response on applying the separator.
+
 3. https://github.com/dipy/dipy/pull/3288
-- This PR is my lazy loading PR, I am having trouble with the application of `type_stub` as the package is not able to recognise it and thus I am receiving error in importing the modules correctly. I was trying to make it as close as possible to scikit-image implementation, it hasn't happened yet. But I'm hopeful.
+- This PR is my lazy loading PR. I am having trouble with the application of **type_stub** as the package is not able to recognize it and thus I am receiving error when trying to import the modules. I was trying to make it as close as possible to `scikit-image <https://github.com/scikit-image/scikit-image/tree/main>`__ implementation, it hasn't happened yet. But I'm hopeful.
 
 Next Week
 ---------
 
-Next week I am planning to push through the remaining PRs of decorator implementation. Also for lazy_loader, I am planning to fix the error.
-I will have to go through the `PEP-561` documentation which talks about the `type_stub` implementation.
+Next week I am planning to push through the remaining PRs of decorator implementation. Also for **lazy_loader**, I am planning to fix the error.
+I will have to go through the `PEP-561 <https://peps.python.org/pep-0561/>`__ documentation which talks about the **type_stub** implementation.
 
 Final Thoughts
 --------------
