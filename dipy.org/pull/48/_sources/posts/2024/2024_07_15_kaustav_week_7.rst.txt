@@ -7,12 +7,12 @@ My Journey Continues: Week 7 Progress with DIPY
      :category: gsoc
 
 Greetings, everyone!
-The seventh week of GSOC has been a fruitful and a learning one.
+The seventh week of GSOC has been a fruitful and learning one.
 
 Decorator PR Fixes
 ------------------
 
-This week I tried to fix one of the decorator PR(:ref:`PR #3257 <#3257>`). I had implementated a lot of solutions to make the tests pass, but realized I had added unnecessary code, all I had to do was fix the tests.
+This week I tried to fix one of the decorator PR(:ref:`PR #3257 <#3257>`). I had implemented a lot of solutions to make the tests pass, but realized I had added unnecessary code, all I had to do was fix the tests.
 Basically I had to add the necessary calls for keyword arguments.
 
 Lazy Loading PR
@@ -99,13 +99,13 @@ While fixing the PRs, these were some of my thoughts
 Next Week
 ---------
 
-Next week I am planning to take care of some documentation issues that are raised in the repository. Also I have some tasks assigned by my mentor towards improvments of DIPY.
+Next week I am planning to take care of some documentation issues that are raised in the repository. Also I have some tasks assigned by my mentor towards improvements of DIPY.
 I have started working on them already, planning to put down the PRs soon.
 
 Final Thoughts
 --------------
 
-The seventh week of the Coding phase has been a progressive one. I learned tons of new stuff and implementated it. Hopefully I can finish the PRs soon and move onto next tasks.
+The seventh week of the Coding phase has been a progressive one. I learned tons of new stuff and implemented it. Hopefully I can finish the PRs soon and move onto next tasks.
 I am grateful for the guidance and support provided by my mentor `Serge Koudoro <https://github.com/skoudoro>`__, and the DIPY community, which have been instrumental in driving this project forward.
 
 Stay tuned for more updates as I continue to work on enhancing DIPY!
