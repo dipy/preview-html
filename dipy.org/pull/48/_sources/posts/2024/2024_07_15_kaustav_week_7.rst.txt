@@ -29,7 +29,7 @@ While fixing the PRs, these were some of my thoughts
 .. _#3257:
 
 1. `PR #3257 <https://github.com/dipy/dipy/pull/3257>`_
-- Most of the issues were fixed thanks to the review by my mentor. One clarification still remains about the **fit_method**. I was receiving error as mentioned below, to fix it it I applied an `else` clause for `fit_method` in `FreeWaterTensorModel`.
+- Most of the issues were fixed thanks to the review by my mentor. One clarification still remains about the **fit_method**. I was receiving an error as mentioned below, to fix it I applied an `else` clause for the `fit_method` in `FreeWaterTensorModel`.
 
 .. code-block:: python
 
@@ -88,18 +88,18 @@ While fixing the PRs, these were some of my thoughts
 
 .. _#3254:
 
-2. `PR #3254 <https://github.com/dipy/dipy/pull/3254>`_
-- I am still having issue with this PR, where applying decorator to two specific functions gives me errors. I am assuming the problem arrives because my decorator is not receiving correct signature from the cython function. I was able to resolve it locally through `cython.binding` method but it didn't work out for the CI.
+1. `PR #3254 <https://github.com/dipy/dipy/pull/3254>`_
+- I am still having issues with this PR, where applying the decorator to two specific functions gives me errors. I am assuming the problem is occuring because my decorator is not receiving the signature correctly from the cython function. I was able to resolve it locally through the `cython.binding` method but it didn't work out for the CI.
 
 .. _#3288:
 
 3. `PR #3288 <https://github.com/dipy/dipy/pull/3288>`_
-- Very good progress, I have a few little doubts to complete this PR. I will try to ask them in the next meeting session with my mentor. Also for some reason the external libraries are not getting loaded even with correct implementation of `lazy_loader <https://pypi.org/project/lazy-loader/>`__ package. Hopefully I can resolve this soon.
+- Very good progress, I have a few little doubts to complete this PR. I will try to ask them in the next meeting session with my mentor. Also for some reason the external libraries are not getting loaded even with the correct implementation of the `lazy_loader <https://pypi.org/project/lazy-loader/>`__ package. Hopefully I can resolve this soon.
 
 Next Week
 ---------
 
-Next week I am planning to take care of some documentation issues that are raised in the repository. Also I have some tasks assigned by my mentor towards improvements of DIPY.
+Next week I am planning to take care of some documentation issues that are raised in the repository like `Issue #2665 <https://github.com/dipy/dipy/issues/2665>`__. Also I have some tasks assigned by my mentor towards improvements of DIPY.
 I have started working on them already, planning to put down the PRs soon.
 
 Final Thoughts

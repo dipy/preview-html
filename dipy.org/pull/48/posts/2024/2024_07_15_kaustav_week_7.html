@@ -978,7 +978,7 @@ I had initiated the review of the PR this week. I hope to get it merged ASAP, ma
 <h2>Difficulties &amp; Challenges<a class="headerlink" href="#difficulties-challenges" title="Link to this heading">#</a></h2>
 <p>While fixing the PRs, these were some of my thoughts</p>
 <p id="id1">1. <a class="reference external" href="https://github.com/dipy/dipy/pull/3257">PR #3257</a>
-- Most of the issues were fixed thanks to the review by my mentor. One clarification still remains about the <strong>fit_method</strong>. I was receiving error as mentioned below, to fix it it I applied an <cite>else</cite> clause for <cite>fit_method</cite> in <cite>FreeWaterTensorModel</cite>.</p>
+- Most of the issues were fixed thanks to the review by my mentor. One clarification still remains about the <strong>fit_method</strong>. I was receiving an error as mentioned below, to fix it I applied an <cite>else</cite> clause for the <cite>fit_method</cite> in <cite>FreeWaterTensorModel</cite>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_fwdti_singlevoxel</span><span class="p">():</span>
     <span class="c1"># Simulation when water contamination is added</span>
     <span class="n">gtf</span> <span class="o">=</span> <span class="mf">0.44444</span>  <span class="c1"># ground truth volume fraction</span>
@@ -1033,14 +1033,14 @@ I had initiated the review of the PR this week. I hope to get it merged ASAP, ma
 <span class="n">dipy</span><span class="o">/</span><span class="n">reconst</span><span class="o">/</span><span class="n">fwdti</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">161</span><span class="p">:</span> <span class="ne">TypeError</span>
 </pre></div>
 </div>
-<p id="id2">2. <a class="reference external" href="https://github.com/dipy/dipy/pull/3254">PR #3254</a>
-- I am still having issue with this PR, where applying decorator to two specific functions gives me errors. I am assuming the problem arrives because my decorator is not receiving correct signature from the cython function. I was able to resolve it locally through <cite>cython.binding</cite> method but it didn’t work out for the CI.</p>
+<p id="id2">1. <a class="reference external" href="https://github.com/dipy/dipy/pull/3254">PR #3254</a>
+- I am still having issues with this PR, where applying the decorator to two specific functions gives me errors. I am assuming the problem is occuring because my decorator is not receiving the signature correctly from the cython function. I was able to resolve it locally through the <cite>cython.binding</cite> method but it didn’t work out for the CI.</p>
 <p id="id3">3. <a class="reference external" href="https://github.com/dipy/dipy/pull/3288">PR #3288</a>
-- Very good progress, I have a few little doubts to complete this PR. I will try to ask them in the next meeting session with my mentor. Also for some reason the external libraries are not getting loaded even with correct implementation of <a class="reference external" href="https://pypi.org/project/lazy-loader/">lazy_loader</a> package. Hopefully I can resolve this soon.</p>
+- Very good progress, I have a few little doubts to complete this PR. I will try to ask them in the next meeting session with my mentor. Also for some reason the external libraries are not getting loaded even with the correct implementation of the <a class="reference external" href="https://pypi.org/project/lazy-loader/">lazy_loader</a> package. Hopefully I can resolve this soon.</p>
 </section>
 <section id="next-week">
 <h2>Next Week<a class="headerlink" href="#next-week" title="Link to this heading">#</a></h2>
-<p>Next week I am planning to take care of some documentation issues that are raised in the repository. Also I have some tasks assigned by my mentor towards improvements of DIPY.
+<p>Next week I am planning to take care of some documentation issues that are raised in the repository like <a class="reference external" href="https://github.com/dipy/dipy/issues/2665">Issue #2665</a>. Also I have some tasks assigned by my mentor towards improvements of DIPY.
 I have started working on them already, planning to put down the PRs soon.</p>
 </section>
 <section id="final-thoughts">
