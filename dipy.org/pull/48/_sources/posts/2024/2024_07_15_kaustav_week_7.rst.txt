@@ -89,7 +89,7 @@ While fixing the PRs, these were some of my thoughts
 .. _#3254:
 
 1. `PR #3254 <https://github.com/dipy/dipy/pull/3254>`_
-- I am still having issues with this PR, where applying the decorator to two specific functions gives me errors. I am assuming the problem is occuring because my decorator is not receiving the signature correctly from the cython function. I was able to resolve it locally through the `cython.binding` method but it didn't work out for the CI.
+- I am still having issues with this PR, where applying the decorator to two specific functions gives me errors. I am assuming the problem is occurring because my decorator is not receiving the signature correctly from the cython function. I was able to resolve it locally through the `cython.binding` method but it didn't work out for the CI.
 
 .. _#3288:
 
