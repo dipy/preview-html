@@ -55,9 +55,9 @@
                 gtag('js', new Date());
                 gtag('config', 'G-D610GKJZRC');
             </script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2015/2015_07_08_Rafael';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2020/2020_02_05_serge_gsoc_announcement';</script>
     <script src="../../_static/js/dipy.js?v=4b4dfe59"></script>
-    <link rel="canonical" href="https://dipy.org/posts/2015/2015_07_08_Rafael.html" />
+    <link rel="canonical" href="https://dipy.org/posts/2020/2020_02_05_serge_gsoc_announcement.html" />
     <link rel="icon" href="../../_static/dipy-favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -438,6 +438,10 @@ document.write(`
   
 
   
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
 </div>
 
 </nav>
@@ -753,7 +757,7 @@ document.write(`
   
   <i class="fa fa-calendar"></i>
   
-  08 July 2015
+  05 February 2020
   
 </h2>
 <ul>
@@ -768,7 +772,7 @@ document.write(`
     </span>
   
   
-  <a href="../../blog/author/rafael-henriques.html">Rafael Henriques</a>
+  <a href="../../blog/author/serge-koudoro.html">Serge Koudoro</a>
   
   
   
@@ -785,7 +789,7 @@ document.write(`
     </span>
   
   
-  <a href="../../blog/category/gsoc.html">gsoc</a>
+  <a href="../../blog/category/gsoc-announcement.html">gsoc announcement</a>
   
   
   
@@ -1010,17 +1014,64 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-<section id="artifacts-in-dipy-s-sample-data-sherbrooke-s-3-shells">
-<h1>Artifacts in Dipy’s sample data Sherbrooke’s 3 shells<a class="headerlink" href="#artifacts-in-dipy-s-sample-data-sherbrooke-s-3-shells" title="Link to this heading">#</a></h1>
-<p>Hi all,</p>
-<p>Just to report an issue that I am currently trying to figure out!</p>
-<p>As I showed on my <a class="reference external" href="https://dipy.org/posts/2015/2015_07_02_Rafael.html">previous post</a> my first diffusion kurtosis reconstructions are looking very good. However when I try to process the Dipy’s multi-shell dataset sample Sherbrooke 3 shells, kurtosis measures seem to be widely corrupted by implausible high negative values see figure below:</p>
-<figure class="align-center" id="id1">
-<img alt="Real brain standard diffusion tensor measures" src="../../_images/Kurtosis_tensor_standard_measures.png" />
-<figcaption>
-<p><span class="caption-text">Fig.1 - Diffusion kurtosis standard measures obtain from the Sherbrooke 3 shells Dipy’s sample dataset.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
+<section id="google-summer-of-code-2020">
+<h1>Google Summer of Code 2020<a class="headerlink" href="#google-summer-of-code-2020" title="Link to this heading">#</a></h1>
+</section>
+<section id="introduction-to-dipy">
+<h1>Introduction to DIPY<a class="headerlink" href="#introduction-to-dipy" title="Link to this heading">#</a></h1>
+<p>DIPY is a free and open-source software library for the analysis of 3D/4D+ imaging in Python. It contains generic methods for spatial normalization, signal processing, machine learning, statistical analysis and visualization of medical images. Additionally, it contains specialized methods for computational anatomy including diffusion, perfusion, and structural imaging. DIPY has many users from computational neuroanatomy and medical data science field. DIPY is an international project which brings together scientists across labs and countries to share their state-of-the-art code and expertise in the same codebase, accelerating scientific research in medical imaging. DIPY is participating in GSoC this year for the 4th time.</p>
+</section>
+<section id="how-to-become-a-part-of-dipy-s-google-summer-of-code-2020">
+<h1>How to become a part of DIPY’s Google Summer of Code 2020<a class="headerlink" href="#how-to-become-a-part-of-dipy-s-google-summer-of-code-2020" title="Link to this heading">#</a></h1>
+<p>GSoC is a program that allows students to learn by contributing to an open-source project while receiving a fellowship from Google, and mentorship from open-source software developers. For details about this year’s GSoC, please refer to <a class="reference external" href="https://summerofcode.withgoogle.com/">this page</a>. This year, DIPY is participating in GSoC under the umbrella of International Neuroinformatics Coordinating Facility (<a class="reference external" href="https://www.incf.org/">INCF</a>). More information can be found at INCF’s <a class="reference external" href="https://www.incf.org/training/gsoc">GSoC 2020 page</a>.</p>
+<p>Before considering becoming part of the DIPY GSoC, please read about our expectations.</p>
+<p>All participants should have basic knowledge of scientific computing and development in Python. For a comprehensive introduction to these topics, please refer to the book <a class="reference external" href="http://shop.oreilly.com/product/0636920033424.do">Effective Computation in Physics</a> by Katy Huff and Anthony Scopatz. However, you should be already familiar with data analysis using Python and Numpy before applying.</p>
+<p>Be happy to ask questions directly in our Gitter channel <a class="reference external" href="https://gitter.im/nipy/dipy">https://gitter.im/nipy/dipy</a></p>
+<section id="advice">
+<h2>Advice<a class="headerlink" href="#advice" title="Link to this heading">#</a></h2>
+<p>Potential candidates should take a look at the guidelines on how to <a class="reference external" href="https://github.com/dipy/dipy/blob/master/CONTRIBUTING.md">contribute to DIPY</a>. Making a small enhancement/bugfix/documentation fix/etc to DIPY already before applying for the GSoC can help you get some idea how things would work during the GSoC. The fix does not need to be related to your proposal. We have and will continue adding some beginner-friendly issues in Github. You can see some of them <a class="reference external" href="https://github.com/dipy/dipy/issues">here</a>.</p>
+</section>
+</section>
+<section id="projects">
+<h1>Projects<a class="headerlink" href="#projects" title="Link to this heading">#</a></h1>
+<section id="dipy-support-for-dicom-files">
+<h2>DIPY support for DICOM files<a class="headerlink" href="#dipy-support-for-dicom-files" title="Link to this heading">#</a></h2>
+<p><strong>Description:</strong> Magnetic resonance imaging (MRI) is often stored in Digital Imaging and Communications in Medicine (DICOM) format. We want to provide DIPY users support for reading and writing to DICOM files. And also have an additional option to convert from DICOM to NIFTI file format.</p>
+<ul class="simple">
+<li><p>Understand how DICOM file format works.</p></li>
+<li><p>Add support in DIPY to read and write DICOM files.</p></li>
+<li><p>Understand and create a new DIPY command-line interface (Workflow).</p></li>
+<li><p>Implement a robust DICOM to NIFTI conversion method.</p></li>
+<li><p>(Optional) Create a workflow to connect and get data from a PACS server.</p></li>
+</ul>
+<p><strong>Difficulty:</strong> Intermediate</p>
+<p><strong>Skills required:</strong> Python/Cython, Medical Imaging.</p>
+<p><strong>Mentors:</strong> <a class="reference external" href="mailto:bqchandi&#37;&#52;&#48;iu&#46;edu">Bramsh Chandio</a> and <a class="reference external" href="mailto:elef&#37;&#52;&#48;indiana&#46;edu">Eleftherios Garyfallidis</a></p>
+</section>
+<section id="machine-learning-based-mri-registration">
+<h2>Machine learning-based MRI registration<a class="headerlink" href="#machine-learning-based-mri-registration" title="Link to this heading">#</a></h2>
+<p><strong>Description:</strong> Develop a machine learning-based registration framework that makes use of the Diffeomorphic Registration implemented in DIPY. The goal is to train a CNN model that can compute the deformation field in an unsupervised setting. This project will also involve leveraging the reconstruction module in DIPY to perform image fusion via inter-modality registration.</p>
+<ul class="simple">
+<li><p>Understand Diffeomorphic Registration. Look at <code class="docutils literal notranslate"><span class="pre">dipy.align</span></code> module and DIPY tutorial.</p></li>
+<li><p>Understand advanced Image Reconstruction Models such as Free-Water-DTI, DKI, etc. in DIPY</p></li>
+<li><p>Implement a Deep Neural Net (e.g. a 2D/ 3D CNN) or a Multivariate Model for Co-learning</p></li>
+</ul>
+<p><strong>Difficulty:</strong> High</p>
+<p><strong>Skills required:</strong> Python, Deep Learning, Tensorflow, Registration, Strong Math Skills.</p>
+<p><strong>Mentors:</strong> <a class="reference external" href="mailto:shreyasfadnavis&#37;&#52;&#48;gmail&#46;com">Shreyas Fadnavis</a> and <a class="reference external" href="mailto:bqchandi&#37;&#52;&#48;iu&#46;edu">Bramsh Chandio</a></p>
+</section>
+<section id="extend-dipy-horizon-workflow">
+<h2>Extend DIPY Horizon workflow<a class="headerlink" href="#extend-dipy-horizon-workflow" title="Link to this heading">#</a></h2>
+<p><strong>Description:</strong> Extend <code class="docutils literal notranslate"><span class="pre">dipy_horizon</span></code> workflow by adding more options for the visualization of the diffusion data. DIPY Horizon is a workflow that enables to visualize diffusion data such as dMRI, tractograms, white matter bundles and more from command line. This project requires student to add support for different types of visualizations in the horizon workflow.</p>
+<ul class="simple">
+<li><p>Add support to visualize orientation distribution functions (odfs) generated from diffusion data</p></li>
+<li><p>Create an option in the horizon workflow to project anatomical measures such as functional anisotropy (FA), mean diffusivity (MD), etc on the white matter tracts and visualize them</p></li>
+<li><p>Add Qt functionality in dipy_horizon workflow</p></li>
+</ul>
+<p><strong>Difficulty:</strong> Easy / Intermediate</p>
+<p><strong>Skills required:</strong> Python, VTK, Qt.</p>
+<p><strong>Mentors:</strong> <a class="reference external" href="mailto:bqchandi&#37;&#52;&#48;iu&#46;edu">Bramsh Chandio</a> and <a class="reference external" href="mailto:elef&#37;&#52;&#48;indiana&#46;edu">Eleftherios Garyfallidis</a></p>
+</section>
 </section>
 
 <div class="section ablog__blog_comments">
@@ -1032,11 +1083,11 @@ document.write(`
   <span class="ablog__prev">
     
     
-    <a href="2015_07_02_Rafael.html">
+    <a href="../2018/2018_01_24_eleftherios_gsoc_announcement.html">
       
       <i class="fa fa-arrow-circle-left"></i>
       
-      <span>Mid-Term Summary</span>
+      <span>Google Summer of Code 2018</span>
     </a>
     
   </span>
@@ -1044,8 +1095,8 @@ document.write(`
   <span class="ablog__next">
     
     
-    <a href="2015_07_09_Rafael.html">
-      <span>Perpendicular directions samples relative to a given vector</span>
+    <a href="2020_05_04_serge_gsod_announcement.html">
+      <span>Google Season of Docs 2020</span>
       
       <i class="fa fa-arrow-circle-right" ></i>
       
@@ -1077,6 +1128,32 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Google Summer of Code 2020</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-dipy">Introduction to DIPY</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-become-a-part-of-dipy-s-google-summer-of-code-2020">How to become a part of DIPY’s Google Summer of Code 2020</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advice">Advice</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#projects">Projects</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dipy-support-for-dicom-files">DIPY support for DICOM files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-based-mri-registration">Machine learning-based MRI registration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extend-dipy-horizon-workflow">Extend DIPY Horizon workflow</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>

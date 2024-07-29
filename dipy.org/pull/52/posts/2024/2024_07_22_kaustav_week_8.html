@@ -55,9 +55,9 @@
                 gtag('js', new Date());
                 gtag('config', 'G-D610GKJZRC');
             </script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2024/2024_01_10_serge_gsoc';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2024/2024_07_22_kaustav_week_8';</script>
     <script src="../../_static/js/dipy.js?v=4b4dfe59"></script>
-    <link rel="canonical" href="https://dipy.org/posts/2024/2024_01_10_serge_gsoc.html" />
+    <link rel="canonical" href="https://dipy.org/posts/2024/2024_07_22_kaustav_week_8.html" />
     <link rel="icon" href="../../_static/dipy-favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -757,7 +757,7 @@ document.write(`
   
   <i class="fa fa-calendar"></i>
   
-  10 January 2024
+  22 July 2024
   
 </h2>
 <ul>
@@ -772,7 +772,7 @@ document.write(`
     </span>
   
   
-  <a href="../../blog/author/serge-koudoro.html">Serge Koudoro</a>
+  <a href="../../blog/author/kaustav.html">Kaustav</a>
   
   
   
@@ -789,7 +789,7 @@ document.write(`
     </span>
   
   
-  <a href="../../blog/category/gsoc-announcement.html">gsoc announcement</a>
+  <a href="../../blog/category/gsoc.html">gsoc</a>
   
   
   
@@ -880,7 +880,7 @@ document.write(`
   
   
   <li>
-    <a href="../../blog/category/gsoc.html">gsoc (58)</a>
+    <a href="../../blog/category/gsoc.html">gsoc (59)</a>
   </li>
   
   
@@ -914,7 +914,7 @@ document.write(`
   
   
   <li>
-    <a href="../../blog/2024.html">2024 (17)</a>
+    <a href="../../blog/2024.html">2024 (18)</a>
   </li>
   
   
@@ -1014,111 +1014,63 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-<section id="google-summer-of-code-2024">
-<h1>Google Summer of Code 2024<a class="headerlink" href="#google-summer-of-code-2024" title="Link to this heading">#</a></h1>
+<section id="my-journey-continues-week-8-progress-with-dipy">
+<h1>My Journey Continues: Week 8 Progress with DIPY<a class="headerlink" href="#my-journey-continues-week-8-progress-with-dipy" title="Link to this heading">#</a></h1>
+<p>Hello everyone! Time for another week of progress. This week has been particularly productive as I tackled several important issues in the dipy.org project and implemented an enhancement suggested by my mentor. Let me walk you through the details of my work.</p>
+<section id="issues-in-dipy-org">
+<h2>Issues in dipy.org<a class="headerlink" href="#issues-in-dipy-org" title="Link to this heading">#</a></h2>
+<section id="blog-post-migration-https-github-com-dipy-dipy-org-issues-11">
+<h3>1. Blog Post migration (<a class="github reference external" href="https://github.com/dipy/dipy.org/issues/11">dipy/dipy.org#11</a>)<a class="headerlink" href="#blog-post-migration-https-github-com-dipy-dipy-org-issues-11" title="Link to this heading">#</a></h3>
+<p>One of the major tasks I undertook this week was migrating blog posts from various old sources to our current website. This task was crucial for consolidating our content and ensuring all valuable information is accessible on our main platform. I worked with three different sources: a Blogspot site dedicated to GSoC 2015, a personal blog, and a Google Docs document.</p>
+<p>The migration process was quite involved. I had to carefully convert each post from its original format to RST (reStructuredText), ensuring that all formatting, links, and images were correctly transferred. In total, I migrated 20 blog posts, each requiring individual attention to preserve its unique content and structure.</p>
+<p>A significant part of this task involved adding and organizing images associated with these posts. I created a new directory structure in our <cite>/_static/images/gsoc/</cite> folder to house these images, making sure they were correctly linked in the new RST files.</p>
+<p>To ensure the quality of the migration, I conducted thorough testing. This involved verifying that all 20 migrated posts rendered correctly on our development server, checking both internal and external links for functionality, and confirming that all images displayed properly in their new locations.</p>
+<p>One challenge I encountered was dealing with complex formatting, particularly in code blocks. These required manual adjustments to ensure they displayed correctly in the RST format. Additionally, I made sure to preserve all author information in the RST metadata, maintaining proper attribution for each post.</p>
+<p>Lastly, I updated the old blog URLs to redirect to their new locations on our site.</p>
 </section>
-<section id="introduction-to-dipy">
-<h1>Introduction to DIPY<a class="headerlink" href="#introduction-to-dipy" title="Link to this heading">#</a></h1>
-<p>DIPY is a free and open-source software library for the analysis of 3D/4D+ imaging in Python. It contains generic methods for spatial normalization, signal processing, machine learning, statistical analysis, and visualization of medical images. Additionally, it contains specialized methods for computational anatomy including diffusion, perfusion, and structural imaging. DIPY has many users from computational neuroanatomy and the medical data science field. DIPY is an international project which brings together scientists across labs and countries to share their state-of-the-art code and expertise in the same codebase, accelerating scientific research in medical imaging. DIPY is participating in GSoC this year for the 7th time.</p>
+<section id="image-organization-https-github-com-dipy-dipy-org-issues-50">
+<h3>2. Image Organization (<a class="github reference external" href="https://github.com/dipy/dipy.org/issues/50">dipy/dipy.org#50</a>)<a class="headerlink" href="#image-organization-https-github-com-dipy-dipy-org-issues-50" title="Link to this heading">#</a></h3>
+<p>Upon reviewing our image organization, I noticed that it was rather chaotic and in need of improvement. To address this, I proposed and implemented a new organizational structure for our images. The new system organizes images by year and contributor, following this pattern:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>_static/images/gsoc/[year]/[name_of_contributor]
+</pre></div>
+</div>
+<p>It involved moving numerous images from their original locations in the main folder to their new, more specific locations based on the year and contributor. This wasn’t just a matter of moving files; each move necessitated updating the corresponding image links in our blog posts and other content.</p>
+<p>The benefits of this new structure are significant. It allows for easier management of our growing image collection, makes it simpler to find specific images when needed, and provides a clear history of contributions over the years. Moreover, it sets a clear standard for future image uploads, ensuring our organization remains consistent moving forward.</p>
 </section>
-<section id="how-to-become-a-part-of-dipy-s-google-summer-of-code-2024">
-<h1>How to become a part of DIPY’s Google Summer of Code 2024<a class="headerlink" href="#how-to-become-a-part-of-dipy-s-google-summer-of-code-2024" title="Link to this heading">#</a></h1>
-<p>GSoC is a program that allows students to learn by contributing to an open-source project while receiving a fellowship from Google, and mentorship from open-source software developers. For details about this year’s GSoC, please refer to <a class="reference external" href="https://summerofcode.withgoogle.com/">this page</a>.</p>
-<p>Before considering becoming part of the DIPY GSoC, please read about our expectations.</p>
-<p>All participants should have basic knowledge of scientific computing and development in Python. For a comprehensive introduction to these topics, please refer to the book <a class="reference external" href="http://shop.oreilly.com/product/0636920033424.do">Effective Computation in Physics</a> by Katy Huff and Anthony Scopatz. However, you should be already familiar with data analysis using Python and Numpy before applying.</p>
-<p>Be happy to ask questions directly in our:</p>
-<ul class="simple">
-<li><p>Gitter channel <a class="reference external" href="https://gitter.im/dipy/dipy">https://gitter.im/dipy/dipy</a></p></li>
-<li><p>Forum <a class="github reference external" href="https://github.com/dipy/dipy/discussions">dipy/dipy#discussions</a></p></li>
-</ul>
-<section id="advice">
-<h2>Advice<a class="headerlink" href="#advice" title="Link to this heading">#</a></h2>
-<p>Potential candidates should take a look at the guidelines on how to <a class="reference external" href="https://github.com/dipy/dipy/blob/master/CONTRIBUTING.md">contribute to DIPY</a>. Making a small enhancement/bugfix/documentation fix/etc to DIPY already before applying for the GSoC can help you get some idea how things would work during the GSoC. The fix does not need to be related to your proposal. We have and will continue adding some beginner-friendly issues in Github. You can see some of them <a class="reference external" href="https://github.com/dipy/dipy/issues?q=is%3Aissue+is%3Aopen+label%3ABeginner-friendly">here (beginner-friendly issues)</a>  or all the issues <a class="reference external" href="https://github.com/dipy/dipy/issues">here (all issues)</a>.</p>
+<section id="gsoc-wiki-posts-migration-https-github-com-dipy-dipy-org-issues-21">
+<h3>3. GSoC wiki posts migration (<a class="github reference external" href="https://github.com/dipy/dipy.org/issues/21">dipy/dipy.org#21</a>)<a class="headerlink" href="#gsoc-wiki-posts-migration-https-github-com-dipy-dipy-org-issues-21" title="Link to this heading">#</a></h3>
+<p>Another important task I tackled this week was migrating our GSoC (Google Summer of Code) and GSOD (Google Season of Docs) announcements from the DIPY wiki to our main blog. This migration is part of our ongoing efforts to centralize our content and make important announcements more accessible to our community.</p>
+<p>The process involved carefully converting the wiki content into blog post format, ensuring that all the information was accurately transferred. I paid special attention to maintaining the original context and importance of these announcements while adapting them to our blog’s style and format.</p>
+<p>After creating these new blog posts, I conducted thorough testing to verify that they render correctly on our development server. This included checking the formatting, ensuring all links are functional, and confirming that any associated images or embedded content displays properly.</p>
+<p>This migration will make our GSoC and GSOD announcements more visible and easily accessible to potential participants and the wider DIPY community, potentially increasing engagement with these programs.</p>
 </section>
 </section>
-<section id="project-ideas">
-<h1>Project Ideas<a class="headerlink" href="#project-ideas" title="Link to this heading">#</a></h1>
-<p><strong>Notice 1:</strong> More project ideas might appear <strong>Stay tuned and check regularly this page!</strong></p>
-<p><strong>Notice 2:</strong> We want to provide the best mentoring to our students, <strong>only 2 or 3 of these projects will be selected.</strong> Not more!</p>
-<p>If you have any questions or if you want to contact a mentor:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://github.com/dipy/dipy/discussions/new">open a new discussion</a> with GSOC as a category.</p></li>
-</ul>
-<section id="project-1-add-mutual-information-for-non-rigid-registration">
-<h2>Project 1. Add mutual information for non-rigid registration<a class="headerlink" href="#project-1-add-mutual-information-for-non-rigid-registration" title="Link to this heading">#</a></h2>
-<p><strong>Difficulty:</strong> Beginner</p>
-<p><strong>Mentors:</strong> Sreekar Chigurupati, Serge Koudoro, Jong Sung Park (contact via github discussion)</p>
-<p><strong>Description:</strong></p>
-<p>Mutual information (MI) similarity metric is a metric for registering images that have different modalities or styles. Currently, the metric is available only for affine registration and not nonrigid registration. The student will need to implement, compare and test MI for nonrigid registration. An existing implementation in DIPY of different metrics will provide a guideline. An initial implementation separate from DIPY will be provided as well. This metric is expected to boost registration accuracy. This project will focus on multimodal images. If time is permitted the student can also investigate a tensor based metric for registration.</p>
-<p><strong>Time:</strong> small (~90 hour projects) or medium (~175 hr projects)</p>
-<p><strong>Skills required:</strong> Familiarity with registration algorithms, Python and some knowledge in Cython or C/C++.</p>
+<section id="enhancement">
+<h2>Enhancement<a class="headerlink" href="#enhancement" title="Link to this heading">#</a></h2>
+<section id="adding-sidebar-to-blog-page-https-github-com-dipy-dipy-org-pull-53">
+<h3>1. Adding sidebar to blog page (<a class="github reference external" href="https://github.com/dipy/dipy.org/pull/53">dipy/dipy.org#53</a>)<a class="headerlink" href="#adding-sidebar-to-blog-page-https-github-com-dipy-dipy-org-pull-53" title="Link to this heading">#</a></h3>
+<p>In addition to addressing existing issues, I also worked on an enhancement suggested by my mentor: adding a sidebar to our <cite>blog.html</cite> page. Previously, our blog page lacked a sidebar, which made navigation less intuitive and user-friendly.</p>
+<p>The new sidebar is a significant improvement to our blog’s usability. It provides quick access to important navigational elements such as categories, archives, and tags. This addition allows users to easily browse through our blog content, find related posts, or explore posts from specific time periods.</p>
+<p>This enhancement greatly improves the overall user experience of our blog, making it easier for readers to discover and engage with our content. It’s a small change that has a big impact on the usability of our site.</p>
 </section>
-<section id="project-2-cuda-non-rigid-registration">
-<h2>Project 2. CUDA non-rigid registration<a class="headerlink" href="#project-2-cuda-non-rigid-registration" title="Link to this heading">#</a></h2>
-<p><strong>Difficulty:</strong> Intermediate</p>
-<p><strong>Mentors:</strong> Sreekar Chigurupati, Serge Koudoro, Jong Sung Park (contact via github discussion)</p>
-<p><strong>Description:</strong></p>
-<p>Non-rigid registration has a larger degree of freedom than affine registration, hence a more accurate registration output. However, this also means an increase in time complexity. In neuroimaging, it is always beneficial to have a faster preprocessing pipeline. The student will work implementing the current non-rigid registration algorithm in DIPY using CUDA, as part of the gpu acceleration projects of various DIPY algorithms. If time permits, the student can also investigate accelerating different algorithms such as tracking or segmentation.</p>
-<p><strong>Time:</strong> medium (~175 hr projects) or large (~350 hour)</p>
-<p><strong>Skills required:</strong> Familiarity with registration algorithms, Python and CUDA</p>
 </section>
-<section id="project-3-dipy-algorithms-optimizations">
-<h2>Project 3. DIPY algorithms Optimizations<a class="headerlink" href="#project-3-dipy-algorithms-optimizations" title="Link to this heading">#</a></h2>
-<p><strong>Difficulty:</strong> Intermediate</p>
-<p><strong>Mentors:</strong> Serge Koudoro, Jongsung Park (contact via github discussion)</p>
-<p><strong>Description:</strong></p>
-<p>Our algorithms performance can be easily be improved via some algorithms trick and auto-vectorization. To realize this, the project will make sure that our current code is “auto-vectorization” friendly for any C compiler.  An extra step would be to parallelize via thread and CPU. In addition, an extra GPU component can be added for a full-time project if the student feel comfortable and confident with this technology. For example, we currently have cudipy and GPU streamlines. A unified framework is required. In addition, we will need to parallelize some algorithms such as those used for probabilistic tractography and nonrigid registration.</p>
-<p><strong>Project Steps:</strong></p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Step 1: Look at pitfalls of our Registration framework and Denoising framework.</p></li>
-<li><p>Step 2: Unroll many loop and simplify several Cython function.</p></li>
-<li><p>Step 3: Benchmark performance improvement.</p></li>
-<li><p>Step 4: Implementation of multithreading/multiprocessing via openmp or MPI</p></li>
-<li><p>Step 5 (optional): GPU study and improvement. Research for new algorithm tricks and implement them</p></li>
-</ul>
-</div></blockquote>
-<p><strong>Time:</strong> Full-time (350 hours) or Part-time (175 hours)</p>
-<p><strong>Skills Required:</strong> Python, cython, math, algorithms, optimization, CUDA, openmp, MPI, SIMD, SIMT</p>
+<section id="difficulties-challenges">
+<h2>Difficulties &amp; Challenges<a class="headerlink" href="#difficulties-challenges" title="Link to this heading">#</a></h2>
+<p>I didn’t particularly find anything difficult, the tasks were time consuming but not trouble causing.</p>
 </section>
-<section id="project-4-solving-issues-in-dipy-horizon">
-<h2>Project 4. Solving Issues in DIPY_HORIZON<a class="headerlink" href="#project-4-solving-issues-in-dipy-horizon" title="Link to this heading">#</a></h2>
-<p><strong>Difficulty:</strong> Beginner</p>
-<p><strong>Mentors:</strong> Maharshi Gor, Serge Koudoro, Jong Sung Park (contact via github discussion)</p>
-<p><strong>Description:</strong></p>
-<p>Horizon is a highly efficient scientific visualization tool. While DIPY contributors have been upgrading the function to accommodate user feedback and fix bugs, there are still several issues that need to be solved. This project requires the student to modify the python code and work on the issue. It will be a great opportunity for them to get involved in an open-source project and possibly continue to work on such projects.</p>
-<p><strong>Time:</strong> small (~90 hour projects)</p>
-<p><strong>Skills required:</strong> Python</p>
+<section id="next-week">
+<h2>Next Week<a class="headerlink" href="#next-week" title="Link to this heading">#</a></h2>
+<p>Looking ahead to next week, I have several objectives in mind:</p>
+<ol class="arabic simple">
+<li><p>I plan to continue addressing open issues on the <cite>dipy.org</cite> &amp; <cite>dipy</cite> repository. There are still several tasks that need attention, and I’m eager to keep up the momentum we’ve built. I have yet to look into which issues I will be tackling next week.</p></li>
+<li><p>For the preparation of next task, I have to look into Docker. I am planning to learn it through next week to be well prepared for the next task which is about github actions.</p></li>
+</ol>
 </section>
-<section id="project-5-project-ideas-using-ai-ml-in-diffusion-mri-processing">
-<h2>Project 5. Project ideas using AI/ML in Diffusion MRI processing<a class="headerlink" href="#project-5-project-ideas-using-ai-ml-in-diffusion-mri-processing" title="Link to this heading">#</a></h2>
-<p><strong>Difficulty:</strong> Intermediate</p>
-<p><strong>Mentors:</strong> Jong Sung Park,  Sreekar Chigurupati, Serge Koudoro (contact via github discussion)</p>
-<p><strong>Description:</strong></p>
-<p>While there are many techniques that provide good results in Diffusion MRI processing, in many cases the algorithm can be a time bottleneck in the pipeline due to the complex equations and following time complexity. This project is to support the research of students who are interested in a AI/ML project that uses diffusion MRI data. Once the project is concluded and if the model is ready, further support will be done for publishing and providing open source code.</p>
-<p><strong>Time:</strong> medium (~175 hr projects) or large (~350 hour)</p>
-<p><strong>Skills Required:</strong> Python, Some knowledge with diffusion MRI, experience with AI/ML and corresponding tools (e.g. Tensorflow, Pytorch, etc)</p>
-</section>
-<section id="project-6-modernize-dipy-codebase">
-<h2>Project 6. Modernize DIPY Codebase<a class="headerlink" href="#project-6-modernize-dipy-codebase" title="Link to this heading">#</a></h2>
-<p><strong>Difficulty:</strong> Beginner</p>
-<p><strong>Mentors:</strong> Serge Koudoro, Maharshi Gor, Jong Sung Park</p>
-<p><strong>Description:</strong></p>
-<p>The primary objective is to implement key improvements, including transitioning to keyword-only arguments for a more robust and readable codebase. Additionally, the initiative aims to integrate lazy loading, enhancing the tool’s efficiency by loading resources only when needed. This modernization effort reflects a commitment to maintainability, code clarity, and optimizing performance in DIPY, ensuring it remains at the forefront of scientific visualization tools in the Python ecosystem. Other potential tasks may include code refactoring, adopting best practices, and incorporating new features to further elevate DIPY’s capabilities and user experience.</p>
-<p><strong>Project Steps:</strong></p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Step 1: keyword-only arguments integration.</p></li>
-<li><p>Step 2: lazy loading implementation.</p></li>
-<li><p>Step 3: Improve and simplify the management of the current website.</p></li>
-<li><p>Step 4: Improve Issues and Pull Requests Triage + Triage automation.</p></li>
-<li><p>Step 5: Integrates multiple Github Actions to simplify the workflows.</p></li>
-<li><p>Step 6: Refactor some DIPY packages + Improves Docstring</p></li>
-<li><p>Step 7: Add Tutorials</p></li>
-</ul>
-</div></blockquote>
-<p><strong>Time:</strong> Part-time (175 hours) or full-time (350 hours) project</p>
-<p><strong>Skills Required:</strong> Python, Sphinx.</p>
+<section id="final-thoughts">
+<h2>Final Thoughts<a class="headerlink" href="#final-thoughts" title="Link to this heading">#</a></h2>
+<p>The eighth week of the Coding phase has been highly productive, allowing me to address several existing issues and implement a valuable enhancement. It’s satisfying to see these improvements take shape and know that they’re contributing to a better experience for our users and contributors.</p>
+<p>I continue to be grateful for the guidance and support provided by my mentor, <a class="reference external" href="https://github.com/skoudoro">Serge Koudoro</a>, and the entire DIPY community. Their insights and feedback have been instrumental in shaping my work and driving this project forward.</p>
+<p>Stay tuned for more updates as I continue to work on enhancing DIPY! Thank you for reading, and I look forward to sharing more progress next week.</p>
 </section>
 </section>
 
@@ -1131,24 +1083,16 @@ document.write(`
   <span class="ablog__prev">
     
     
-    <a href="../2023/2023_08_28_Shilpi_Week14.html">
+    <a href="2024_07_15_kaustav_week_7.html">
       
       <i class="fa fa-arrow-circle-left"></i>
       
-      <span>Doing Final Touch-Ups: Week 14</span>
+      <span>My Journey Continues: Week 7 Progress with DIPY</span>
     </a>
     
   </span>
   <span class="ablog__spacer">&nbsp;</span>
   <span class="ablog__next">
-    
-    
-    <a href="2024_05_27_Inigo_week_0.html">
-      <span>Community Bonding Period Summary and first impressions</span>
-      
-      <i class="fa fa-arrow-circle-right" ></i>
-      
-    </a>
     
   </span>
 </div>
@@ -1185,23 +1129,20 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Google Summer of Code 2024</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-dipy">Introduction to DIPY</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-become-a-part-of-dipy-s-google-summer-of-code-2024">How to become a part of DIPY’s Google Summer of Code 2024</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advice">Advice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#issues-in-dipy-org">Issues in dipy.org</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blog-post-migration-https-github-com-dipy-dipy-org-issues-11">1. Blog Post migration (https://github.com/dipy/dipy.org/issues/11)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#image-organization-https-github-com-dipy-dipy-org-issues-50">2. Image Organization (https://github.com/dipy/dipy.org/issues/50)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gsoc-wiki-posts-migration-https-github-com-dipy-dipy-org-issues-21">3. GSoC wiki posts migration (https://github.com/dipy/dipy.org/issues/21)</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#project-ideas">Project Ideas</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-1-add-mutual-information-for-non-rigid-registration">Project 1. Add mutual information for non-rigid registration</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-2-cuda-non-rigid-registration">Project 2. CUDA non-rigid registration</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-3-dipy-algorithms-optimizations">Project 3. DIPY algorithms Optimizations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-4-solving-issues-in-dipy-horizon">Project 4. Solving Issues in DIPY_HORIZON</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-5-project-ideas-using-ai-ml-in-diffusion-mri-processing">Project 5. Project ideas using AI/ML in Diffusion MRI processing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-6-modernize-dipy-codebase">Project 6. Modernize DIPY Codebase</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enhancement">Enhancement</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-sidebar-to-blog-page-https-github-com-dipy-dipy-org-pull-53">1. Adding sidebar to blog page (https://github.com/dipy/dipy.org/pull/53)</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#difficulties-challenges">Difficulties &amp; Challenges</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-week">Next Week</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-thoughts">Final Thoughts</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>

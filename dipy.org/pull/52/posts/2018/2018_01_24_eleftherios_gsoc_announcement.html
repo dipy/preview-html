@@ -55,9 +55,9 @@
                 gtag('js', new Date());
                 gtag('config', 'G-D610GKJZRC');
             </script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2022/2022_04_05_serge_gsoc';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2018/2018_01_24_eleftherios_gsoc_announcement';</script>
     <script src="../../_static/js/dipy.js?v=4b4dfe59"></script>
-    <link rel="canonical" href="https://dipy.org/posts/2022/2022_04_05_serge_gsoc.html" />
+    <link rel="canonical" href="https://dipy.org/posts/2018/2018_01_24_eleftherios_gsoc_announcement.html" />
     <link rel="icon" href="../../_static/dipy-favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -757,7 +757,7 @@ document.write(`
   
   <i class="fa fa-calendar"></i>
   
-  05 April 2022
+  24 January 2018
   
 </h2>
 <ul>
@@ -772,7 +772,7 @@ document.write(`
     </span>
   
   
-  <a href="../../blog/author/serge-koudoro.html">Serge Koudoro</a>
+  <a href="../../blog/author/eleftherios-garyfallidis.html">Eleftherios Garyfallidis</a>
   
   
   
@@ -825,6 +825,12 @@ document.write(`
   
   
   <li>
+    <a href="../2024/2024_07_22_kaustav_week_8.html">
+      22 July - My Journey Continues: Week 8 Progress with DIPY
+    </a>
+  </li>
+  
+  <li>
     <a href="../2024/2024_07_15_kaustav_week_7.html">
       15 July - My Journey Continues: Week 7 Progress with DIPY
     </a>
@@ -845,12 +851,6 @@ document.write(`
   <li>
     <a href="../2024/2024_07_06_Inigo_week_6.html">
       06 July - Week 6 into GSoC 2024: Stuck with the Variational AutoEncoder, problems with Keras
-    </a>
-  </li>
-  
-  <li>
-    <a href="../2024/2024_07_01_kaustav_week_5.html">
-      01 July - My Journey Continues: Week 5 Progress with DIPY
     </a>
   </li>
   
@@ -880,7 +880,7 @@ document.write(`
   
   
   <li>
-    <a href="../../blog/category/gsoc.html">gsoc (58)</a>
+    <a href="../../blog/category/gsoc.html">gsoc (59)</a>
   </li>
   
   
@@ -914,7 +914,7 @@ document.write(`
   
   
   <li>
-    <a href="../../blog/2024.html">2024 (17)</a>
+    <a href="../../blog/2024.html">2024 (18)</a>
   </li>
   
   
@@ -1014,58 +1014,114 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-<section id="google-summer-of-code-2022">
-<h1>Google Summer of Code 2022<a class="headerlink" href="#google-summer-of-code-2022" title="Link to this heading">#</a></h1>
+<section id="google-summer-of-code-2018">
+<h1>Google Summer of Code 2018<a class="headerlink" href="#google-summer-of-code-2018" title="Link to this heading">#</a></h1>
 </section>
 <section id="introduction-to-dipy">
 <h1>Introduction to DIPY<a class="headerlink" href="#introduction-to-dipy" title="Link to this heading">#</a></h1>
-<p>DIPY is a free and open-source software library for the analysis of 3D/4D+ imaging in Python. It contains generic methods for spatial normalization, signal processing, machine learning, statistical analysis, and visualization of medical images. Additionally, it contains specialized methods for computational anatomy including diffusion, perfusion, and structural imaging. DIPY has many users from computational neuroanatomy and the medical data science field. DIPY is an international project which brings together scientists across labs and countries to share their state-of-the-art code and expertise in the same codebase, accelerating scientific research in medical imaging. DIPY is participating in GSoC this year for the 7th time.</p>
+<p>DIPY is a free and open source software library for computational neuroanatomy and medical data science. DIPY contains algorithms for diffusion magnetic resonance imaging (dMRI) analysis and tractography but also contains implementations of other computational imaging methods such as denoising and registration that are applicable to the greater medical imaging and image processing communities. Additionally, DIPY is an international project which brings together scientists across labs and countries to share their state-of-the-art code and expertise in the same codebase, accelerating scientific research in medical imaging. DIPY is participating in GSoC this year for the 3rd time under the umbrella of the Python Software Foundation (PSF).</p>
 </section>
-<section id="how-to-become-a-part-of-dipy-s-google-summer-of-code-2022">
-<h1>How to become a part of DIPY’s Google Summer of Code 2022<a class="headerlink" href="#how-to-become-a-part-of-dipy-s-google-summer-of-code-2022" title="Link to this heading">#</a></h1>
-<p>GSoC is a program that allows students to learn by contributing to an open-source project while receiving a fellowship from Google, and mentorship from open-source software developers. For details about this year’s GSoC, please refer to <a class="reference external" href="https://summerofcode.withgoogle.com/">this page</a>. This year, DIPY is participating in GSoC under the umbrella of the International Neuroinformatics Coordinating Facility (<a class="reference external" href="https://www.incf.org/">INCF</a>). More information can be found at INCF’s <a class="reference external" href="https://www.incf.org/training/gsoc">GSoC 2022 page</a>.</p>
-<p>Before considering becoming part of the DIPY GSoC, please read about our expectations.</p>
-<p>All participants should have basic knowledge of scientific computing and development in Python. For a comprehensive introduction to these topics, please refer to the book <a class="reference external" href="http://shop.oreilly.com/product/0636920033424.do">Effective Computation in Physics</a> by Katy Huff and Anthony Scopatz. However, you should be already familiar with data analysis using Python and Numpy before applying.</p>
+<section id="how-to-become-a-part-of-dipy-s-google-summer-of-code-2018">
+<h1>How to become a part of DIPY’s Google Summer of Code 2018<a class="headerlink" href="#how-to-become-a-part-of-dipy-s-google-summer-of-code-2018" title="Link to this heading">#</a></h1>
+<p>GSoC is a program that allows students to learn by contributing to an open-source project, while receiving a fellowship from Google, and mentorship from open-source software developers. For details about this year’s GSoC, please refer to <a class="reference external" href="https://developers.google.com/open-source/gsoc/">this page</a>.</p>
+<p>Before considering becoming part of the DIPY GSoC, please read about our <a class="reference external" href="https://wiki.python.org/moin/SummerOfCode/Expectations">expectations</a>.</p>
+<p>All participants should have basic knowledge of scientific computing and development in Python. For a comprehensive introduction to these topics, please refer to the book <a class="reference external" href="http://shop.oreilly.com/product/0636920033424.do">Effective Computation in Physics</a> by Katy Huff and Anthony Scopatz.
+However, you should be already familiar with data analysis using Python and Numpy before applying.</p>
 <p>Be happy to ask questions directly in our Gitter channel <a class="reference external" href="https://gitter.im/nipy/dipy">https://gitter.im/nipy/dipy</a></p>
 <section id="advice">
 <h2>Advice<a class="headerlink" href="#advice" title="Link to this heading">#</a></h2>
-<p>Potential candidates should take a look at the guidelines on how to <a class="reference external" href="https://github.com/dipy/dipy/blob/master/CONTRIBUTING.md">contribute to DIPY</a>. Making a small enhancement/bugfix/documentation fix/etc to DIPY already before applying for the GSoC can help you get some idea how things would work during the GSoC. The fix does not need to be related to your proposal. We have and will continue adding some beginner-friendly issues in Github. You can see some of them <a class="reference external" href="https://github.com/dipy/dipy/issues">here</a>.</p>
+<p>Potential candidates should take a look at the guidelines on <a class="reference external" href="https://github.com/nipy/dipy/blob/master/CONTRIBUTING.md">how to contribute to DIPY</a>. Making a small enhancement/bugfix/documentation fix/etc to DIPY already before applying for the GSoC is a requirement from the PSF; it can help you get some idea how things would work during the GSoC. The fix does not need to be related to your proposal. We have and will continue adding some beginner friendly issues in github.</p>
 </section>
 </section>
 <section id="projects">
 <h1>Projects<a class="headerlink" href="#projects" title="Link to this heading">#</a></h1>
-<section id="gpu-parallelization-of-dipy-algorithms">
-<h2>GPU parallelization of DIPY algorithms<a class="headerlink" href="#gpu-parallelization-of-dipy-algorithms" title="Link to this heading">#</a></h2>
-<p><strong>Description:</strong> We have multiple versions of GPU parallelized algorithms. The project will be bringing those together in a common framework and adding new methods as well. For example, we currently have cudipy and GPU streamlines. A unified framework is required. In addition, we will need to parallelize some algorithms such as those used for probabilistic tractography and nonrigid registration.</p>
-<p><strong>Difficulty:</strong> Intermediate</p>
-<p><strong>Time:</strong> Full time</p>
-<p><strong>Skills required:</strong> CUDA, C/C++, Python</p>
-<p><strong>Mentors:</strong> Shreyas Fadnavis, Jongsung Park, Bramsh Qamar Chandio (contact via gitter or incf neurostar)</p>
-</section>
-<section id="a-pythonic-implementation-of-topup">
-<h2>A pythonic implementation of topup<a class="headerlink" href="#a-pythonic-implementation-of-topup" title="Link to this heading">#</a></h2>
-<p><strong>Description:</strong> A popular request is to bring topup [1] in a simple pythonic implementation that can be easily extended. The student will work on implementing topup (or similar function) from the ground up using Python, Cython and Numpy.</p>
-<p><strong>Difficulty:</strong> Hard</p>
-<p><strong>Time:</strong> Full time</p>
-<p><strong>Skills required:</strong> Strong familiarity with diffusion MRI, Python, Numpy, Cython or C/C++</p>
-<p><strong>Mentors:</strong> Jongsung Park, Shreyas Fadnavis, Bramsh Qamar Chandio (contact via gitter or incf neurostar)</p>
-</section>
-<section id="extend-dipy-horizon-workflow-for-visualization">
-<h2>Extend DIPY Horizon workflow for Visualization<a class="headerlink" href="#extend-dipy-horizon-workflow-for-visualization" title="Link to this heading">#</a></h2>
-<p><strong>Description:</strong> Extend dipy_horizon workflow by adding more options for the visualization and cleaning of tractograms generated from diffusion MRI data. DIPY Horizon is a workflow that enables to visualize diffusion data such as dMRI, tractograms, white matter bundles, and more from the command line. This project requires students to add support for different types of file formats and visualizations in the horizon workflow. Students will work on adding multiple features to help manual cleaning of streamlines such as select and remove streamlines from a bundle, cut some parts of the bundle and so on.</p>
-<p><strong>Difficulty:</strong> Intermediate</p>
-<p><strong>Time:</strong> Full time</p>
-<p><strong>Skills required:</strong> Python, OpenGL, VTK</p>
-<p><strong>Mentors:</strong> Bramsh Qamar Chandio, Shreyas Fadnavis, and Jong Sung Park (contact via gitter or incf neurostar)</p>
-</section>
-<section id="add-mutual-information-for-non-rigid-registration">
-<h2>Add mutual information for non-rigid registration<a class="headerlink" href="#add-mutual-information-for-non-rigid-registration" title="Link to this heading">#</a></h2>
-<p><strong>Description:</strong> Currently mutual information (MI) similarity metric is available only for affine registration and not nonrigid registration. The student will need to implement, compare and test MI for nonrigid registration. The existing implementation provides examples for SSD and Expectation Maximization metrics. The MI method is expected to work slightly better than our existing EM method for multimodal images. This project will focus on multimodal images. If time is permitted the student can also investigate a tensor based metric for registration.</p>
-<p><strong>Difficulty:</strong> Beginner</p>
-<p><strong>Time:</strong> Half time</p>
-<p><strong>Skills required:</strong> Familiarity with registration algorithms, Python, Cython or C/C++.</p>
-<p><strong>Mentors:</strong> Bramsh Qamar Chandio, Shreyas Fadnavis, Jong Sung Park (contact via gitter or incf neurostar)</p>
-</section>
+<ol class="arabic">
+<li><p><strong>DIPY workflows and Quality Assurance</strong></p>
+<p>Description: Create new dipy.workflows and make those executable in different platforms. DIPY has a unique
+system that allows to create command line interfaces in a systematic and precise way to run across platforms.
+DIPY uses existing technology such as the default argument parser of Python but enhances the parser using a
+software engineering process called introspection. Our IntrospectiveParser allows to generate workflows that
+can be executed both by the command line and using Python scripts. In this work, you will have to:</p>
+<ul class="simple">
+<li><p>Take existing tutorials and generate new workflows from them. Test the workflows with new data and generate
+automated reports.</p></li>
+<li><p>Help with simplifying installation in the different operating systems.</p></li>
+</ul>
+<p>Difficulty: easy to intermediate</p>
+<p>Skills required: Numpy, Python, pyinstaller (or similar), medical imaging.</p>
+<p>Mentors: <a class="reference external" href="mailto:skab12&#37;&#52;&#48;gmail&#46;com">Serge Koudoro</a> and <a class="reference external" href="mailto:garyfallidis&#37;&#52;&#48;gmail&#46;com">Eleftherios Garyfallidis</a></p>
+</li>
+<li><p><strong>Extend Visualization - Focus in UI</strong></p>
+<p>Description: In this project you will build scifi-like 3D and 2D user interfaces inspired from Guardians of
+the Galaxy <a class="reference external" href="https://www.youtube.com/watch?v=b0ve2nHEVWw">video</a>. Dipy.viz provides many visualization
+capabilities. However we were not happy with interactive capabilities found in existing GUIs. For this reason
+we built our own UI engine. No Qt! Everything is integrated in the VTK scene. See example below that was
+generated during our 2016 GSoC participation. This is an example of an orbital orbital menu.</p>
+<img alt="http://i.giphy.com/b0pJ7djNSIWFa.gif" class="align-center" src="http://i.giphy.com/b0pJ7djNSIWFa.gif" />
+<p>In this project you will extend this work and add more futuristic widgets. The motto of this project is make
+everything interactive without performance issues. See also figure of Project 5.</p>
+<p>Difficulty: intermediate</p>
+<p>Skills required: Python, OpenGL and VTK</p>
+<p>Mentors: <a class="reference external" href="mailto:dmreagan&#37;&#52;&#48;iu&#46;edu">David Reagan</a> and <a class="reference external" href="mailto:ranveeraggarwal&#37;&#52;&#48;gmail&#46;com">Ranveer Aggarwal</a> and
+<a class="reference external" href="mailto:garyfallidis&#37;&#52;&#48;gmail&#46;com">Eleftherios Garyfallidis</a></p>
+</li>
+<li><p><strong>Improve performance of nonrigid image registration</strong></p>
+<p>Description: We have some really nice code for nonrigid registration that needs to be parallelized. The code
+is written in Python and Cython. You will need to work primarily on adding multithreading (OpenMP)
+capabilities in our Symmetric Normalization framework. Start by playing with the following tutorials</p>
+<p><a class="github reference external" href="https://github.com/nipy/dipy/blob/master/doc/examples/affine_registration_3d.py">nipy/dipy</a>
+<a class="github reference external" href="https://github.com/nipy/dipy/blob/master/doc/examples/syn_registration_2d.py">nipy/dipy</a>
+<a class="github reference external" href="https://github.com/nipy/dipy/blob/master/doc/examples/syn_registration_3d.py">nipy/dipy</a></p>
+<p>Difficulty: intermediate.</p>
+<p>Skills required: Familiarity with OpenMP, Cython, Python, Numpy.</p>
+<p>Mentor: <a class="reference external" href="mailto:skab12&#37;&#52;&#48;gmail&#46;com">Serge Koudoro</a> and <a class="reference external" href="mailto:garyfallidis&#37;&#52;&#48;gmail&#46;com">Eleftherios Garyfallidis</a></p>
+</li>
+<li><p><strong>Extend Clustering Framework</strong></p>
+<p>Description: QuickBundles and QuickBundlesX are extremely fast algorithms that can be used in a series of
+fields and datasets. We initially used this algorithm to cluster streamlines. Your job will be to extend our
+existing framework to new datasets. For, example implement new metrics that allow to cluster surfaces,
+images, text or other. Also, you will have to work on a research component of the algorithm that is related
+to reducing the number of clusters in dense datasets.</p>
+<p>Difficulty: intermediate</p>
+<p>Skills required: Python/Cython, machine learning. Especially, unsupervised learning. Knowledge of scikit-
+learn is an advantage.</p>
+<p>Mentor: <a class="reference external" href="mailto:garyfallidis&#37;&#52;&#48;gmail&#46;com">Eleftherios Garyfallidis</a> and <a class="reference external" href="mailto:skab12&#37;&#52;&#48;gmail&#46;com">Serge Koudoro</a></p>
+</li>
+<li><p><strong>Extend Visualization - Focus in GLSL</strong></p>
+<p>Description: Our new visualization engine supports GLSL shading language. Join our effort to built stunning
+visualizations of brain images and other scientific datasets. You will have to program vertex and fragment
+shaders to generate different effects on VTK polydata. For examples, see code <a class="reference external" href="https://github.com/dmreagan/vtk-shaders">here</a>. Here is an example without shaders</p>
+<a class="reference internal image-reference" href="https://media.giphy.com/media/l49JEQvtIForHhvlC/giphy.gif"><img alt="https://media.giphy.com/media/l49JEQvtIForHhvlC/giphy.gif" class="align-center" src="https://media.giphy.com/media/l49JEQvtIForHhvlC/giphy.gif" style="width: 600px; height: 400px;" />
+</a>
+<p>You will have to update the code to enable shading when needed and if supported by the current computing
+system. Please also check tutorials starting with viz here</p>
+<p><a class="github reference external" href="https://github.com/nipy/dipy/tree/master/doc/examples">nipy/dipy</a></p>
+<p>Difficulty: high</p>
+<p>Skills required: GLSL, Python, OpenGL and VTK</p>
+<p>Mentors: <a class="reference external" href="mailto:dmreagan&#37;&#52;&#48;iu&#46;edu">David Reagan</a>, <a class="reference external" href="mailto:ranveeraggarwal&#37;&#52;&#48;gmail&#46;com">Ranveer Aggarwal</a> and
+<a class="reference external" href="mailto:garyfallidis&#37;&#52;&#48;gmail&#46;com">Eleftherios Garyfallidis</a></p>
+</li>
+<li><p><strong>Implement new models for microstructure imaging</strong></p>
+<p>Description: This is a model fitting project. You will be required to extend our new microstructure
+framework. You will be able to implement models such as Multi Tensor, NODDI, Axcaliber, CHARMED, Ball &amp;
+Sticks, Ball &amp; Rackets all with three crossings and also all the combinations of Zeppelin, Cylinder, Dot and
+Ball compartments. See MRI example below. How would you model these tiny structures?</p>
+<a class="reference internal image-reference" href="https://media3.giphy.com/media/4F2eiACLhUaZy/giphy.gif"><img alt="https://media3.giphy.com/media/4F2eiACLhUaZy/giphy.gif" class="align-center" src="https://media3.giphy.com/media/4F2eiACLhUaZy/giphy.gif" style="width: 460px; height: 460px;" />
+</a>
+<p>Difficulty: high</p>
+<p>Skills required: MSc or PhD level, mathematical optimization, Python, Numpy, Cython (bonus)</p>
+<p>Mentors: <a class="reference external" href="mailto:maryam&#46;afzali&#46;m&#37;&#52;&#48;gmail&#46;com">Maryam Afzali</a>, <a class="reference external" href="mailto:mauro&#46;zucchelli88&#37;&#52;&#48;gmail&#46;com">Mauro Zucchelli</a> and <a class="reference external" href="mailto:garyfallidis&#37;&#52;&#48;gmail&#46;com">Eleftherios Garyfallidis</a></p>
+</li>
+<li><p><strong>Extend and QA tracking framework</strong></p>
+<p>Description: Tractography is one of the great challenges in medical imaging. In DIPY we have implemented
+different tracking algorithms including deterministic, probabilistic and particle filtering algorithms. You
+will have to extend dipy.tracking with machine learning based algorithms. Also you will need to test your
+algorithm with different datasets of different resolutions.</p>
+<p>Difficulty: high</p>
+<p>Skills required: Python/Cython, knowledge of tractography. Available only for MSc or PhD students.</p>
+<p>Mentor: <a class="reference external" href="mailto:garyfallidis&#37;&#52;&#48;gmail&#46;com">Eleftherios Garyfallidis</a>, <a class="reference external" href="mailto:skab12&#37;&#52;&#48;gmail&#46;com">Serge Koudoro</a>, <a class="reference external" href="mailto:girard&#46;gabriel&#37;&#52;&#48;gmail&#46;com">Gabriel Girard</a> and <a class="reference external" href="mailto:arokem&#37;&#52;&#48;gmail&#46;com">Ariel Rokem</a>.</p>
+</li>
+</ol>
 </section>
 
 <div class="section ablog__blog_comments">
@@ -1077,11 +1133,11 @@ document.write(`
   <span class="ablog__prev">
     
     
-    <a href="../2021/2021_01_15_serge_gsoc.html">
+    <a href="../2016/2016_08_19_Bishakh.html">
       
       <i class="fa fa-arrow-circle-left"></i>
       
-      <span>Google Summer of Code 2021</span>
+      <span>Google Summer of Code Progress August 19</span>
     </a>
     
   </span>
@@ -1089,8 +1145,8 @@ document.write(`
   <span class="ablog__next">
     
     
-    <a href="../2023/2023_02_02_serge_gsoc.html">
-      <span>Google Summer of Code 2023</span>
+    <a href="../2020/2020_02_05_serge_gsoc_announcement.html">
+      <span>Google Summer of Code 2020</span>
       
       <i class="fa fa-arrow-circle-right" ></i>
       
@@ -1131,19 +1187,13 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Google Summer of Code 2022</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Google Summer of Code 2018</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-dipy">Introduction to DIPY</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-become-a-part-of-dipy-s-google-summer-of-code-2022">How to become a part of DIPY’s Google Summer of Code 2022</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-become-a-part-of-dipy-s-google-summer-of-code-2018">How to become a part of DIPY’s Google Summer of Code 2018</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advice">Advice</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#projects">Projects</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gpu-parallelization-of-dipy-algorithms">GPU parallelization of DIPY algorithms</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-pythonic-implementation-of-topup">A pythonic implementation of topup</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extend-dipy-horizon-workflow-for-visualization">Extend DIPY Horizon workflow for Visualization</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-mutual-information-for-non-rigid-registration">Add mutual information for non-rigid registration</a></li>
-</ul>
-</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#projects">Projects</a></li>
 </ul>
 
   </nav></div>
