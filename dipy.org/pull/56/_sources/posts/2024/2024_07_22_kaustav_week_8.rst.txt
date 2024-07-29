@@ -83,6 +83,4 @@ The eighth week of the Coding phase has been highly productive, allowing me to a
 
 I continue to be grateful for the guidance and support provided by my mentor, `Serge Koudoro <https://github.com/skoudoro>`__, and the entire DIPY community. Their insights and feedback have been instrumental in shaping my work and driving this project forward.
 
-As we move into the final weeks of the GSoC period, I'm excited to see how much more we can accomplish. There's still work to be done, but I'm confident that we're making significant strides in improving DIPY's web presence and documentation.
-
 Stay tuned for more updates as I continue to work on enhancing DIPY! Thank you for reading, and I look forward to sharing more progress next week.
