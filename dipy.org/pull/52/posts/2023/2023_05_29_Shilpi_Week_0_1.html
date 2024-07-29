@@ -825,32 +825,32 @@ document.write(`
   
   
   <li>
+    <a href="../2024/2024_07_15_kaustav_week_7.html">
+      15 July - My Journey Continues: Week 7 Progress with DIPY
+    </a>
+  </li>
+  
+  <li>
+    <a href="../2024/2024_07_12_Inigo_week_7.html">
+      12 July - Week 7 into GSoC 2024: Starting to see the light at the end of the VAE
+    </a>
+  </li>
+  
+  <li>
     <a href="../2024/2024_07_07_kaustav_week_6.html">
       07 July - My Journey Continues: Week 6 Progress with DIPY
     </a>
   </li>
   
   <li>
+    <a href="../2024/2024_07_06_Inigo_week_6.html">
+      06 July - Week 6 into GSoC 2024: Stuck with the Variational AutoEncoder, problems with Keras
+    </a>
+  </li>
+  
+  <li>
     <a href="../2024/2024_07_01_kaustav_week_5.html">
       01 July - My Journey Continues: Week 5 Progress with DIPY
-    </a>
-  </li>
-  
-  <li>
-    <a href="../2024/2024_06_28_Inigo_week_5.html">
-      28 June - Week 5 into GSoC 2024: Vacation, starting with the conditional AutoEncoder
-    </a>
-  </li>
-  
-  <li>
-    <a href="../2024/2024_06_30_kaustav_week_4.html">
-      23 June - My Journey Continues: Week 4 Progress with DIPY
-    </a>
-  </li>
-  
-  <li>
-    <a href="../2024/2024_06_21_Inigo_week_4.html">
-      21 June - Week 4 into GSoC 2024: Weight transfer experiments, hardships, and results!
     </a>
   </li>
   
@@ -880,13 +880,19 @@ document.write(`
   
   
   <li>
-    <a href="../../blog/category/gsoc.html">gsoc (36)</a>
+    <a href="../../blog/category/gsoc.html">gsoc (58)</a>
   </li>
   
   
   
   <li>
     <a href="../../blog/category/gsoc-announcement.html">gsoc announcement (8)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../../blog/category/gsod.html">gsod (1)</a>
   </li>
   
   
@@ -908,7 +914,7 @@ document.write(`
   
   
   <li>
-    <a href="../../blog/2024.html">2024 (14)</a>
+    <a href="../../blog/2024.html">2024 (17)</a>
   </li>
   
   
@@ -932,7 +938,7 @@ document.write(`
   
   
   <li>
-    <a href="../../blog/2020.html">2020 (2)</a>
+    <a href="../../blog/2020.html">2020 (3)</a>
   </li>
   
   
@@ -944,13 +950,13 @@ document.write(`
   
   
   <li>
-    <a href="../../blog/2016.html">2016 (1)</a>
+    <a href="../../blog/2016.html">2016 (7)</a>
   </li>
   
   
   
   <li>
-    <a href="../../blog/2015.html">2015 (1)</a>
+    <a href="../../blog/2015.html">2015 (14)</a>
   </li>
   
   
@@ -1064,7 +1070,7 @@ make a figure similar to figure 1 of the 2021 CTI paper:
 <h2>Did I get stuck anywhere<a class="headerlink" href="#did-i-get-stuck-anywhere" title="Link to this heading">#</a></h2>
 <p>I got stuck while creating <a class="reference external" href="https://github.com/dipy/dipy/pull/2813">this</a> PR. I had to rebase a bunch of commits, and this was a new concept to me, so it took me a while to figure it out. Due to rebasing, I ended up creating a bunch of other commits, which made the commit history of this PR a mess. So, I had to learn about the concept of squashing the commits.</p>
 <p>I also got stuck a lot while trying to find out the perpendicular directions to the vectors used in <code class="docutils literal notranslate"><span class="pre">gtab1</span></code>. I was supposed to implement the following formula:</p>
-<a class="reference internal image-reference" href="https://github.com/dipy/dipy/blob/09a8c4f8436f995e55231fb3d11fbfe6749610a9/_static/images/formula_.png?raw=true"><img alt="formula cti gtab" src="https://github.com/dipy/dipy/blob/09a8c4f8436f995e55231fb3d11fbfe6749610a9/_static/images/formula_.png?raw=true" style="width: 400px;" />
+<a class="reference internal image-reference" href="../../_images/formula_.png"><img alt="formula cti gtab" src="../../_images/formula_.png" style="width: 400px;" />
 </a>
 <p>I had to spend a lot of time figuring out how to combine 3 vectors of shape (81, 3) to get V. And also working on the function which would give me the perpendicular vector to the vector in <code class="docutils literal notranslate"><span class="pre">gtab1</span></code>.</p>
 <p>I got a bunch of <code class="docutils literal notranslate"><span class="pre">ValueErrors</span></code> saying: could not broadcast input array from shape (3,3,1) into shape (3,3) and some <code class="docutils literal notranslate"><span class="pre">IndexError</span></code> saying: shape mismatch: indexing arrays could not be broadcast together with shapes (81,) (3,1) (3,).</p>
