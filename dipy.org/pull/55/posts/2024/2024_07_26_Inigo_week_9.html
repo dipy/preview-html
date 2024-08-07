@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>DIPY &#8212; Project name not set  documentation</title>
+    <title>DIPY &#8212; Diffusion Imaging in Python  documentation</title>
   
   
   
@@ -825,6 +825,12 @@ document.write(`
   
   
   <li>
+    <a href="2024_07_22_kaustav_week_8.html">
+      22 July - My Journey Continues: Week 8 Progress with DIPY
+    </a>
+  </li>
+  
+  <li>
     <a href="2024_07_19_Inigo_week_8.html">
       19 July - Week 8 into GSoC 2024: Further advances with the VAE model
     </a>
@@ -845,12 +851,6 @@ document.write(`
   <li>
     <a href="2024_07_07_kaustav_week_6.html">
       07 July - My Journey Continues: Week 6 Progress with DIPY
-    </a>
-  </li>
-  
-  <li>
-    <a href="2024_07_06_Inigo_week_6.html">
-      06 July - Week 6 into GSoC 2024: Stuck with the Variational AutoEncoder, problems with Keras
     </a>
   </li>
   
@@ -880,13 +880,25 @@ document.write(`
   
   
   <li>
-    <a href="../../blog/category/gsoc.html">gsoc (60)</a>
+    <a href="../../blog/category/gsoc.html">gsoc (61)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../../blog/category/gsoc-announcement.html">gsoc announcement (8)</a>
   </li>
   
   
   
   <li>
     <a href="../../blog/category/gsod.html">gsod (1)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../../blog/category/gsod-announcement.html">gsod announcement (1)</a>
   </li>
   
   
@@ -902,31 +914,49 @@ document.write(`
   
   
   <li>
-    <a href="../../blog/2024.html">2024 (18)</a>
+    <a href="../../blog/2024.html">2024 (20)</a>
   </li>
   
   
   
   <li>
-    <a href="../../blog/2023.html">2023 (23)</a>
+    <a href="../../blog/2023.html">2023 (24)</a>
   </li>
   
   
   
   <li>
-    <a href="../../blog/2020.html">2020 (1)</a>
+    <a href="../../blog/2022.html">2022 (1)</a>
   </li>
   
   
   
   <li>
-    <a href="../../blog/2016.html">2016 (6)</a>
+    <a href="../../blog/2021.html">2021 (1)</a>
   </li>
   
   
   
   <li>
-    <a href="../../blog/2015.html">2015 (13)</a>
+    <a href="../../blog/2020.html">2020 (3)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../../blog/2018.html">2018 (1)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../../blog/2016.html">2016 (7)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../../blog/2015.html">2015 (14)</a>
   </li>
   
   
@@ -989,13 +1019,16 @@ document.write(`
 <section id="what-i-did-this-week">
 <h2>What I did this week<a class="headerlink" href="#what-i-did-this-week" title="Link to this heading">#</a></h2>
 <p>This week was a bit shorter than usual because Thursday was a holiday in the Basque Country, and today we had an outdoor activity with my lab mates (we went kayaking to the Urdaibai Biosphere Reserve). Nevertheless, it was full of advances and interesting scientific matters.</p>
-<p>As I mentioned in my last blog post, this week I worked on the implementation of the conditional VAE based on <cite>this implementation &lt;https://github.com/QingyuZhao/VAE-for-Regression/tree/master&gt;</cite> of this <cite>paper &lt;https://doi.org/10.1007/978-3-030-32245-8_91&gt;</cite>.</p>
-<p>As a refresher, the main idea behind conditional generative models is being able to generate new data with some desired properties or parameters. To achieve this, it is common to organize the latent representation in a way that allows locating the regions in which the desired properties are found. For example, imagine our VAE learned a latent representation of images of cats with different fur lengths. If we do not condition our latent space on the fur length, our model might not learn about this distinctive feature found in the data space, and cats with drastically different fur lengths may be closely clustered together in the latent space. But with conditioning, we can tell the model to cluster the images along a “fur-length” dimension, so if we sample 2 images from a line that varies along that dimension but in opposite sides, we get a cat with very short fur, and another one, with very long fur. This results in a generative process that can be tuned on demand!</p>
-<p>However, there are many methods to condition a Variational AutoEncoder, and they usually depend on the type of variable we want to condition on, so the methods for categoric variables (cat vs. dog, bundle_1_fiber vs. bundle_2_fiber, etc.) and continuous ones (age of the person, length of a streamline) are normally not applicable to both types. In the case of the FiberCup dataset, I chose to condition the latent space on the length of the streamlines, which is a continuous variable and it is a fairly easy thing to learn from the morphology of the streamlines.</p>
-<p>After implementing the conditional VAE as in the provided reference and training it for 64 epochs (early stopped due to lack of improvement in the MSE) I got a very crappy looking reconstruction, but the latent space seems to be organized differently compared to the vanilla VAE, which suggests that the conditioning is doing something (good or not, we will see…).</p>
+<p>As I mentioned in my last blog post, this week I worked on the implementation of the conditional VAE based on <a class="reference external" href="https://github.com/QingyuZhao/VAE-for-Regression/tree/master">this implementation</a> of this <a class="reference external" href="https://doi.org/10.1007/978-3-030-32245-8_91">paper</a>.</p>
+<p>As a refresher, the main idea behind conditional generative models is being able to generate new data with some desired properties or parameters. To achieve this, it is common to organize the latent representation in a way that allows locating the regions in which the desired properties are found.</p>
+<p>For example, imagine our VAE learned a latent representation of images of cats with different fur lengths. If we do not condition our latent space on the fur length, our model might not learn about this distinctive feature found in the data space, and cats with drastically different fur lengths may be closely clustered together in the latent space. But with conditioning, we can tell the model to cluster the images along a “fur-length” dimension, so if we sample 2 images from a line that varies along that dimension but in opposite sides, we get a cat with very short fur, and another one, with very long fur. This results in a generative process that can be tuned on demand!</p>
+<p>However, there are many methods to condition a Variational AutoEncoder, and they usually depend on the type of variable we want to condition on, so the methods for categoric variables (cat vs. dog, bundle_1_fiber vs. bundle_2_fiber, etc.) and continuous ones (age of the person, length of a streamline) are normally not applicable to both types.</p>
+<p>In the case of the FiberCup dataset, I chose to condition the latent space on the length of the streamlines, which is a continuous variable and it is a fairly easy thing to learn from the morphology of the streamlines.</p>
+<p>After implementing the conditional VAE as in the provided reference and training it for 64 epochs (early stopped due to lack of improvement in the MSE) I did not get a decent reconstruction, but the latent space seems to be organized differently compared to the vanilla VAE, which suggests that the conditioning is doing something (good or not, we will see…).</p>
 <a class="reference internal image-reference" href="../../_images/cvae_first_reconstruction_result.png"><img alt="First reconstruction of the training data of the conditional VAE (cVAE)." src="../../_images/cvae_first_reconstruction_result.png" style="width: 600px;" />
 </a>
-<p>On the other hand, note that the FiberCup has 7 distinct bundles, and both latent spaces show (when 2D-projected with the t-SNE algorithm) 7 clusters, suggesting that the network does know about the different bundles. Samples/streamlines are colored according to their length, and even if the bundle to which they belong is not plotted, we know that each cluster is formed by streamlines of different bundles because each bundle has a distinctive length. Note that the t-SNE representation may have aligned other dimensions more meaningful to the algorithm that do not necessarily include the conditioning variable (streamline length). Maybe the authors of the code I based mine were lucky to get the alignment, or smart enough to manipulate the conditioning variable (normalization, Z-scoring, etc.) to make t-SNE grab this information and put it along an axis in their plots.</p>
+<p>On the other hand, note that the FiberCup has 7 distinct bundles, and both latent spaces show (when 2D-projected with the t-SNE algorithm) 7 clusters, suggesting that the network does know about the different bundles. Samples/streamlines are colored according to their length, and even if the bundle to which they belong is not plotted, we know that each cluster is formed by streamlines of different bundles because each bundle has a distinctive length.</p>
+<p>Note that the t-SNE representation may have aligned other dimensions more meaningful to the algorithm that do not necessarily include the conditioning variable (streamline length). Maybe the authors of the code I based mine were lucky to get the alignment, or smart enough to manipulate the conditioning variable (normalization, Z-scoring, etc.) to make t-SNE grab this information and put it along an axis in their plots.</p>
 <a class="reference internal image-reference" href="../../_images/latent_space_comparison_VAE_cVAE_colored_by_streamline_length.png"><img alt="t-SNE projections of the latent space (only plausible fibers) of the conditional VAE and the vanilla VAE." src="../../_images/latent_space_comparison_VAE_cVAE_colored_by_streamline_length.png" style="width: 600px;" />
 </a>
 </section>
@@ -1015,7 +1048,7 @@ document.write(`
 </dd>
 </dl>
 </li>
-<li><p>To try out an adversarial framework, which is 1) easier to implement 2) easier to understand, and 3) likely to also work (we’ll see if better or not). The idea is to have a discriminator that tries to predict the conditioning variable from the latent space, and the encoder tries to fool the discriminator. This way, the encoder learns to encode the conditioning variable in the latent space, and the discriminator learns to predict it. This is a very common approach in GANs, and it is called “Conditional GAN” (cGAN). As a result, we would have what I would call a conditional adversarial VAE (CA-VAE). You can read more about adversarial VAEs <a class="reference external" href="https://arxiv.org/pdf/2012.11551">in this work</a> or <a class="reference external" href="https://arxiv.org/pdf/1702.08423">in this one</a></p></li>
+<li><p>To try out an adversarial framework, which is 1) easier to implement 2) easier to understand, and 3) likely to also work (we’ll see if better or not). The idea is to have a discriminator that tries to predict the conditioning variable from the latent space, and the encoder tries to fool the discriminator. This way, the encoder learns to encode the conditioning variable in the latent space, and the discriminator learns to predict it. This is a very common approach in GANs, and it is called “Conditional GAN” (cGAN). As a result, we would have what I would call a conditional adversarial VAE (CA-VAE). You can read more about adversarial VAEs <a class="reference external" href="https://arxiv.org/pdf/2012.11551">in this work</a> or <a class="reference external" href="https://arxiv.org/pdf/1702.08423">in this one</a>.</p></li>
 </ol>
 </section>
 <section id="did-i-get-stuck-anywhere">
@@ -1034,11 +1067,11 @@ document.write(`
   <span class="ablog__prev">
     
     
-    <a href="2024_07_19_Inigo_week_8.html">
+    <a href="2024_07_22_kaustav_week_8.html">
       
       <i class="fa fa-arrow-circle-left"></i>
       
-      <span>Week 8 into GSoC 2024: Further advances with the VAE model</span>
+      <span>My Journey Continues: Week 8 Progress with DIPY</span>
     </a>
     
   </span>
