@@ -11,7 +11,8 @@ What I did this week
 
 This week was a bit shorter than usual because Thursday was a holiday in the Basque Country, and today we had an outdoor activity with my lab mates (we went kayaking to the Urdaibai Biosphere Reserve). Nevertheless, it was full of advances and interesting scientific matters.
 
-As I mentioned in my last blog post, this week I worked on the implementation of the conditional VAE based on `this implementation <https://github.com/QingyuZhao/VAE-for-Regression/tree/master>`_ of this `paper <https://doi.org/10.1007/978-3-030-32245-8_91>`_.
+As I mentioned in my last blog post, this week I worked on the implementation of the conditional VAE based on `this implementation <https://github.com/QingyuZhao/VAE-for-Regression/tree/master>`_ .
+
 
 As a refresher, the main idea behind conditional generative models is being able to generate new data with some desired properties or parameters. To achieve this, it is common to organize the latent representation in a way that allows locating the regions in which the desired properties are found.
 
