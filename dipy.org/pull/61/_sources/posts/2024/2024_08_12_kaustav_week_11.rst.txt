@@ -11,12 +11,12 @@ Hello everyone! Week 11 has been another week of progress, although it came with
 Creating a Docker Image for DIPY
 --------------------------------
 
-This week, I focused on creating a Docker image for DIPY. However, I ran into some issues related to the `fury` and `vtk` packages due to version incompatibilities. These packages are crucial for the visualization components of DIPY, and ensuring they work correctly within the Docker environment has been a bit tricky.
+This week, I focused on creating a Docker image for DIPY. However, I ran into some issues related to the `FURY` and `VTK` packages due to version incompatibilities. These packages are crucial for the visualization components of DIPY, and ensuring they work correctly within the Docker environment has been a bit tricky.
 
 The version conflicts have caused some build failures, and I’ve been troubleshooting the issue by testing different configurations and dependencies. While I haven’t completely resolved the issue yet, I’m hopeful that I can find a solution soon. I’ll continue to work on this in the coming days, as getting this Docker image ready is important for our continuous integration processes.
 
 .. image:: /_static/images/gsoc/2024/kaustav/docker_issue_fury.png
-    :alt: Docker Fury VTK issue
+    :alt: Docker FURY VTK issue
     :width: 800
 
 Tutorial Fixes PR Update
@@ -38,7 +38,7 @@ Next Week
 
 Looking ahead to next week, my priorities will be:
 
-1. **Fixing the Docker Image Issues**: I’ll continue troubleshooting the `fury` and `vtk` package issues within the Docker environment, aiming to get a working Docker image for DIPY.
+1. **Fixing the Docker Image Issues**: I’ll continue troubleshooting the `FURY` and `VTK` package issues within the Docker environment, aiming to get a working Docker image for DIPY.
 
 2. **Completing the Tutorial Fixes**: I plan to finish the remaining 40% of the tutorial updates, ensuring that the PR is ready for review and merging.
 

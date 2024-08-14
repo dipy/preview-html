@@ -23,8 +23,8 @@ While the documentation gave me a good start, much of my learning came through t
 
 I also explored some video tutorials on YouTube.
 
-1. https://www.youtube.com/watch?v=pTFZFxd4hOI&t=551s
-2. https://www.youtube.com/watch?v=GFgJkfScVNU&t=1432s
+1. `Docker Tutorial for Beginners <https://www.youtube.com/watch?v=pTFZFxd4hOI&t=551s>`_
+2. `Learn Docker in 1 Hour | Full Docker Course for Beginners <https://www.youtube.com/watch?v=GFgJkfScVNU&t=1432s>`_
 
 For reference, I was pointed to look at the pyAFQ docker as well. (https://github.com/yeatmanlab/pyAFQ)
 
