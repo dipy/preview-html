@@ -1,5 +1,5 @@
 Week 12 into GSoC 2024: Last weeks of the coding phase and admin stuff
-=======================================================================
+======================================================================
 
 .. post:: August 16 2024
     :author: Iñigo Tellaetxe
@@ -18,9 +18,7 @@ On the other hand, in case of shuffling the data for training, special care must
 Regarding the training, to be honest, the results are not very good, but it is a start because at least the loss is decreasing in all its components. The main problem with the results is that after training, the network reconstructs the training data as the same streamline every time, meaning that the model did not learn anything, and that it fell into `mode collapse <https://developers.google.com/machine-learning/gan/problems#mode-collapse>`_. After discussing it with my mentors, we arrived to 3 main points to help with the results:
 
 - As obvious as it sounds, reproducing the results of the repo I based the AAE implementation on would have been a great idea. I did not do it because I was already in the last weeks of the program, but I should have done it. If the original repo does not work, I would either fix it (and obviously submit a PR to it) or find another source of code inspiration. Lesson learned, a reproducibility check is key to ensure that the tool we are using is going to (potentially) work as expected.
-
 - Adjusting the learning rates of the optimizers. I used the default values I had been using in the previous weeks (6.8e-4), but it could be that they are not the best for this model. What seems correct is setting the learning rate of the discriminator optimizer to a fraction of the generator optimizer learning rate (in this case, a fifth), because even with such a small rate, the discriminator loss was decreasing. Nevertheless, this is likely to be happening due to mode collapse, where the generator was generating the same sample over and over again, leading to a super "good" discriminator. This problem is very well known in adversarial networks, and I will have to investigate ways to avoid it, like using a `Wasserstein Loss <http://arxiv.org/abs/1701.07875>`_ instead of a min-max scheme. 
-
 - Increasing model capacity by either adding more layers to the model or by increasing the latent space dimensionality. This is a common practice in deep learning, and it is likely that the model is not powerful enough to learn the data distribution.
 
 Apart from that, my mentor `Serge Koudoro <https://github.com/skoudoro>`_ mentioned that it would be nice to think of any already useful bits of code that could be merged in DIPY, so I am thinking about what could fit these requirements. Besides that, we also concluded that for now, the draft PR should include the vanilla AutoEncoder class and tests for instantiation, inference, and weight save/loading; as the translation to TensorFlow was successful and the results were good.
