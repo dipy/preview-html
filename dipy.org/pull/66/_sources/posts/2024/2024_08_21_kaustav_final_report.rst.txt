@@ -150,7 +150,7 @@ For the transition phase, we're providing warnings instead of completely blockin
 
 The implementation of this decorator was a significant part of the project. You can find the full pull request for the decorator here: `PR #3239 <https://github.com/dipy/dipy/pull/3239>`_
 
-After creating the decorator, we applied it systematically across various DIPY modules. This extensive work touched many parts of the codebase:
+After creating the decorator, I applied it systematically across various DIPY modules. This extensive work touched many parts of the codebase:
 
 - **align** `PR #3249 <https://github.com/dipy/dipy/pull/3249>`_: Applied to alignment algorithms.
 - **core** `PR #3251 <https://github.com/dipy/dipy/pull/3251>`_: Updated core functionality of DIPY.
@@ -200,6 +200,10 @@ Upon reviewing our image organization, it became apparent that the existing syst
 - Better tracking of image contributions over time
 - Improved ability to manage and update image assets
 
+.. code-block:: text
+
+   _static/images/gsoc/[year]/[name_of_contributor]
+
 This reorganization sets the stage for more efficient image management in the future.
 
 For more information, refer to: `Issue #50 <https://github.com/dipy/dipy.org/issues/50>`_
@@ -218,7 +222,7 @@ You can find more details in: `Issue #21 <https://github.com/dipy/dipy.org/issue
 d. Adding Sidebars to Blog Page
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-An enhancement suggested by the mentor was implemented: adding a sidebar to our ``blog.html`` page. Previously, the blog page lacked a sidebar, which made navigation less intuitive and user-friendly. The new sidebar significantly improves the blog's usability by providing:
+An enhancement suggested by my mentor was implemented: adding a sidebar to our ``blog.html`` page. Previously, the blog page lacked a sidebar, which made navigation less intuitive and user-friendly. The new sidebar significantly improves the blog's usability by providing:
 
 - Quick access to important navigational elements
 - Categories for easy content classification
@@ -373,40 +377,39 @@ The implementation of Docker is a critical step in modernizing DIPY's developmen
 -------------------
 
 1. Addition of Tutorials
-------------------------
+-------------------------
 
-As part of our ongoing efforts to improve DIPY's accessibility and user experience, I am planning to develop new tutorials. These tutorials will focus on two key areas:
+As part of my ongoing efforts to improve DIPY's accessibility and user experience, I am planning to develop new tutorials. These tutorials will focus on two key areas:
 
 a. 2D Registration
 ^^^^^^^^^^^^^^^^^^
 
-The planned 2D registration tutorial will cover:
+The 2D registration tutorial will cover:
 
-- Overview of 2D registration algorithms in DIPY
-- Step-by-step guide for performing 2D registration
-- Practical examples and use cases
-- Tips for optimizing registration results
+- **Overview of 2D Registration Algorithms**: An explanation of the different 2D registration algorithms in DIPY, with a focus on when and how to use them.
+- **Step-by-Step Guide**: A detailed, step-by-step process for performing 2D registration using DIPY, making it easy to follow along.
+- **Optimization Tips**: Tips for getting the best results from 2D registration, including parameter adjustments and troubleshooting.
 
 b. Docker Usage
 ^^^^^^^^^^^^^^^
 
 The Docker tutorial will include:
 
-- Introduction to Docker and its benefits for DIPY users
-- Setting up Docker for use with DIPY
-- Running DIPY in a Docker container
-- Best practices for using DIPY with Docker
-- Troubleshooting common Docker-related issues
+- **Introduction to Docker**: An overview of Docker and why it is useful for DIPY users.
+- **Setting Up Docker for DIPY**: Instructions for setting up Docker specifically for DIPY, including installation and configuration.
+- **Running DIPY in a Docker Container**: How to run DIPY within a Docker container, with common commands and workflows.
+- **Best Practices**: Advice on how to use Docker with DIPY effectively, focusing on performance and resource management.
+- **Troubleshooting**: Common issues you might encounter with Docker and how to solve them.
 
 Objectives
 ^^^^^^^^^^
 
-By adding these tutorials, we aim to:
+By adding these tutorials, I aim to:
 
-1. Lower the entry barrier for new DIPY users.
-2. Provide clear, practical guidance on using DIPY's features.
-3. Encourage adoption of best practices in neuroimaging analysis.
-4. Facilitate reproducible research through consistent environments.
+1. **Lower the Entry Barrier**: Make it easier for new DIPY users to get started.
+2. **Provide Clear Guidance**: Offer practical, easy-to-follow instructions on using DIPY.
+3. **Encourage Best Practices**: Help users adopt best practices in neuroimaging analysis.
+4. **Support Reproducible Research**: Teach users how to create consistent environments using Docker, which will help ensure reliable and reproducible results.
 
 |weekly-title|
 --------------

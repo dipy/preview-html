@@ -1130,7 +1130,7 @@ document.write(`
 <p>In this example, the decorator will issue a warning saying that <code class="docutils literal notranslate"><span class="pre">c</span></code> is being called as a positional argument when it should be a keyword argument.</p>
 <p>For the transition phase, we’re providing warnings instead of completely blocking the function execution. This approach allows for a smoother migration, giving developers time to update their code while still maintaining functionality.</p>
 <p>The implementation of this decorator was a significant part of the project. You can find the full pull request for the decorator here: <a class="reference external" href="https://github.com/dipy/dipy/pull/3239">PR #3239</a></p>
-<p>After creating the decorator, we applied it systematically across various DIPY modules. This extensive work touched many parts of the codebase:</p>
+<p>After creating the decorator, I applied it systematically across various DIPY modules. This extensive work touched many parts of the codebase:</p>
 <ul class="simple">
 <li><p><strong>align</strong> <a class="reference external" href="https://github.com/dipy/dipy/pull/3249">PR #3249</a>: Applied to alignment algorithms.</p></li>
 <li><p><strong>core</strong> <a class="reference external" href="https://github.com/dipy/dipy/pull/3251">PR #3251</a>: Updated core functionality of DIPY.</p></li>
@@ -1175,6 +1175,9 @@ document.write(`
 <li><p>Better tracking of image contributions over time</p></li>
 <li><p>Improved ability to manage and update image assets</p></li>
 </ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>_static/images/gsoc/[year]/[name_of_contributor]
+</pre></div>
+</div>
 <p>This reorganization sets the stage for more efficient image management in the future.</p>
 <p>For more information, refer to: <a class="reference external" href="https://github.com/dipy/dipy.org/issues/50">Issue #50</a></p>
 </section>
@@ -1190,7 +1193,7 @@ document.write(`
 </section>
 <section id="d-adding-sidebars-to-blog-page">
 <h3>d. Adding Sidebars to Blog Page<a class="headerlink" href="#d-adding-sidebars-to-blog-page" title="Link to this heading">#</a></h3>
-<p>An enhancement suggested by the mentor was implemented: adding a sidebar to our <code class="docutils literal notranslate"><span class="pre">blog.html</span></code> page. Previously, the blog page lacked a sidebar, which made navigation less intuitive and user-friendly. The new sidebar significantly improves the blog’s usability by providing:</p>
+<p>An enhancement suggested by my mentor was implemented: adding a sidebar to our <code class="docutils literal notranslate"><span class="pre">blog.html</span></code> page. Previously, the blog page lacked a sidebar, which made navigation less intuitive and user-friendly. The new sidebar significantly improves the blog’s usability by providing:</p>
 <ul class="simple">
 <li><p>Quick access to important navigational elements</p></li>
 <li><p>Categories for easy content classification</p></li>
@@ -1344,36 +1347,35 @@ document.write(`
 </section>
 <section id="addition-of-tutorials">
 <h2>1. Addition of Tutorials<a class="headerlink" href="#addition-of-tutorials" title="Link to this heading">#</a></h2>
-<p>As part of our ongoing efforts to improve DIPY’s accessibility and user experience, I am planning to develop new tutorials. These tutorials will focus on two key areas:</p>
+<p>As part of my ongoing efforts to improve DIPY’s accessibility and user experience, I am planning to develop new tutorials. These tutorials will focus on two key areas:</p>
 <section id="a-2d-registration">
 <h3>a. 2D Registration<a class="headerlink" href="#a-2d-registration" title="Link to this heading">#</a></h3>
-<p>The planned 2D registration tutorial will cover:</p>
+<p>The 2D registration tutorial will cover:</p>
 <ul class="simple">
-<li><p>Overview of 2D registration algorithms in DIPY</p></li>
-<li><p>Step-by-step guide for performing 2D registration</p></li>
-<li><p>Practical examples and use cases</p></li>
-<li><p>Tips for optimizing registration results</p></li>
+<li><p><strong>Overview of 2D Registration Algorithms</strong>: An explanation of the different 2D registration algorithms in DIPY, with a focus on when and how to use them.</p></li>
+<li><p><strong>Step-by-Step Guide</strong>: A detailed, step-by-step process for performing 2D registration using DIPY, making it easy to follow along.</p></li>
+<li><p><strong>Optimization Tips</strong>: Tips for getting the best results from 2D registration, including parameter adjustments and troubleshooting.</p></li>
 </ul>
 </section>
 <section id="b-docker-usage">
 <h3>b. Docker Usage<a class="headerlink" href="#b-docker-usage" title="Link to this heading">#</a></h3>
 <p>The Docker tutorial will include:</p>
 <ul class="simple">
-<li><p>Introduction to Docker and its benefits for DIPY users</p></li>
-<li><p>Setting up Docker for use with DIPY</p></li>
-<li><p>Running DIPY in a Docker container</p></li>
-<li><p>Best practices for using DIPY with Docker</p></li>
-<li><p>Troubleshooting common Docker-related issues</p></li>
+<li><p><strong>Introduction to Docker</strong>: An overview of Docker and why it is useful for DIPY users.</p></li>
+<li><p><strong>Setting Up Docker for DIPY</strong>: Instructions for setting up Docker specifically for DIPY, including installation and configuration.</p></li>
+<li><p><strong>Running DIPY in a Docker Container</strong>: How to run DIPY within a Docker container, with common commands and workflows.</p></li>
+<li><p><strong>Best Practices</strong>: Advice on how to use Docker with DIPY effectively, focusing on performance and resource management.</p></li>
+<li><p><strong>Troubleshooting</strong>: Common issues you might encounter with Docker and how to solve them.</p></li>
 </ul>
 </section>
 <section id="objectives">
 <h3>Objectives<a class="headerlink" href="#objectives" title="Link to this heading">#</a></h3>
-<p>By adding these tutorials, we aim to:</p>
+<p>By adding these tutorials, I aim to:</p>
 <ol class="arabic simple">
-<li><p>Lower the entry barrier for new DIPY users.</p></li>
-<li><p>Provide clear, practical guidance on using DIPY’s features.</p></li>
-<li><p>Encourage adoption of best practices in neuroimaging analysis.</p></li>
-<li><p>Facilitate reproducible research through consistent environments.</p></li>
+<li><p><strong>Lower the Entry Barrier</strong>: Make it easier for new DIPY users to get started.</p></li>
+<li><p><strong>Provide Clear Guidance</strong>: Offer practical, easy-to-follow instructions on using DIPY.</p></li>
+<li><p><strong>Encourage Best Practices</strong>: Help users adopt best practices in neuroimaging analysis.</p></li>
+<li><p><strong>Support Reproducible Research</strong>: Teach users how to create consistent environments using Docker, which will help ensure reliable and reproducible results.</p></li>
 </ol>
 </section>
 </section>
