@@ -66,7 +66,7 @@
 |main-title|
 ============
 
-.. post:: August 26 2024
+.. post:: August 22 2024
    :author: Iñigo Tellaetxe Elorriaga
    :tags: google
    :category: gsoc
@@ -76,7 +76,6 @@
 -  **Sub-Organization:** DIPY
 -  **Project:** `AI/ML in diffusion MRI processing <https://github.com/dipy/dipy/wiki/Google-Summer-of-Code-2024#project-5-project-ideas-using-aiml-in-diffusion-mri-processing>`_
 -  **Repository:** `TractoEncoder GSoC <https://github.com/itellaetxe/tractoencoder_gsoc>`_
-
 
 |project-abstract-title|
 ------------------------
