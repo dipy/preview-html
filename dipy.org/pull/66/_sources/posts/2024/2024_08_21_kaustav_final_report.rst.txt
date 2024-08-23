@@ -411,11 +411,6 @@ By adding these tutorials, I aim to:
 3. **Encourage Best Practices**: Help users adopt best practices in neuroimaging analysis.
 4. **Support Reproducible Research**: Teach users how to create consistent environments using Docker, which will help ensure reliable and reproducible results.
 
-|weekly-title|
---------------
-
-- My blog posts can be found on the DIPY website.
-
 |timeline-title|
 ----------------
 
