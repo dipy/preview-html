@@ -71,7 +71,7 @@
    :tags: google
    :category: gsoc
 
--  **Name:** Iñigo Tellaetxe Elorriaga
+-  **Name:** `Iñigo Tellaetxe Elorriaga <https://github.com/itellaetxe>`_
 -  **Organization:** Python Software Foundation
 -  **Sub-Organization:** DIPY
 -  **Project:** `AI/ML in diffusion MRI processing <https://github.com/dipy/dipy/wiki/Google-Summer-of-Code-2024#project-5-project-ideas-using-aiml-in-diffusion-mri-processing>`_

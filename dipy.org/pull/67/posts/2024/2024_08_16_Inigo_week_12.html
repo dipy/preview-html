@@ -56,9 +56,9 @@
                 gtag('js', new Date());
                 gtag('config', 'G-D610GKJZRC');
             </script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2024/2024_06_12_kaustav_week_2';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2024/2024_08_16_Inigo_week_12';</script>
     <script src="../../_static/js/dipy.js?v=4b4dfe59"></script>
-    <link rel="canonical" href="https://dipy.org/posts/2024/2024_06_12_kaustav_week_2.html" />
+    <link rel="canonical" href="https://dipy.org/posts/2024/2024_08_16_Inigo_week_12.html" />
     <link rel="icon" href="../../_static/dipy-favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -805,7 +805,7 @@ document.write(`
   
   <i class="fa fa-calendar"></i>
   
-  10 June 2024
+  16 August 2024
   
 </h2>
 <ul>
@@ -820,7 +820,7 @@ document.write(`
     </span>
   
   
-  <a href="../../blog/author/kaustav.html">Kaustav</a>
+  <a href="../../blog/author/inigo-tellaetxe.html">Iñigo Tellaetxe</a>
   
   
   
@@ -885,12 +885,6 @@ document.write(`
   </li>
   
   <li>
-    <a href="2024_08_16_Inigo_week_12.html">
-      16 August - Week 12 into GSoC 2024: Last weeks of the coding phase and admin stuff
-    </a>
-  </li>
-  
-  <li>
     <a href="2024_08_12_kaustav_week_11.html">
       12 August - My Journey Continues: Week 11 Progress with DIPY
     </a>
@@ -899,6 +893,12 @@ document.write(`
   <li>
     <a href="2024_08_09_Inigo_week_11.html">
       09 August - Week 11 into GSoC 2024: The Adversarial AutoEncoder
+    </a>
+  </li>
+  
+  <li>
+    <a href="2024_08_05_kaustav_week_10.html">
+      05 August - My Journey Continues: Week 10 Progress with DIPY
     </a>
   </li>
   
@@ -1062,45 +1062,35 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-<section id="my-journey-continues-week-2-progress-with-dipy">
-<h1>My Journey Continues: Week 2 Progress with DIPY<a class="headerlink" href="#my-journey-continues-week-2-progress-with-dipy" title="Link to this heading">#</a></h1>
-<p>Greetings, everyone!
-It’s time for another update on my Google Summer of Code (GSoC) journey with DIPY. The second week of the Coding phase has been equally productive and exciting, with significant advancements in both tasks.</p>
-<section id="decorator-function-refinement">
-<h2>Decorator Function Refinement<a class="headerlink" href="#decorator-function-refinement" title="Link to this heading">#</a></h2>
-<p>Building upon the initial implementation from the previous week, I have invested significant efforts in refining and correcting the decorator function.
-With the guidance of my mentor, <a class="reference external" href="https://github.com/skoudoro">Serge Koudoro</a>, I have meticulously reviewed the code, identified areas for improvement, and made necessary changes to enhance its performance, readability, and maintainability.</p>
+<section id="week-12-into-gsoc-2024-last-weeks-of-the-coding-phase-and-admin-stuff">
+<h1>Week 12 into GSoC 2024: Last weeks of the coding phase and admin stuff<a class="headerlink" href="#week-12-into-gsoc-2024-last-weeks-of-the-coding-phase-and-admin-stuff" title="Link to this heading">#</a></h1>
+<section id="what-i-did-this-week">
+<h2>What I did this week<a class="headerlink" href="#what-i-did-this-week" title="Link to this heading">#</a></h2>
+<p>This week I spent more time fixing and enhancing the adversarial AutoEncoder (AAE) implementation, as well as writing the final GSoC 2024 post. I also opened a draft PR to include in the final post and have a tangible place to publish my work as a PR.</p>
+<p>I managed to train the AAE after fixing the instantiation and training loop work. I also generated a dataset based on a Python dictionary object with three keys: streamlines (contained in <code class="docutils literal notranslate"><span class="pre">np.array</span></code> s), bundle ( <code class="docutils literal notranslate"><span class="pre">int</span></code> encoding which bundle the streamline belongs to), and attribute (<code class="docutils literal notranslate"><span class="pre">float</span></code>, continuous variable related to the streamline). As each key contains a <code class="docutils literal notranslate"><span class="pre">list</span></code>, unpacking each component of the dataset separately maintains the order and relation of the components between them, thus this simple approach can be used to store our data, which was saved in the pickle format, native to Python.</p>
+<p>On the other hand, in case of shuffling the data for training, special care must be taken to apply the same shuffling pattern to every component (streamlines, bundle class, continuous attribute) , unless we want to destroy the correspondence between the data and its class and attribute.</p>
+<p>Regarding the training, to be honest, the results are not very good, but it is a start because at least the loss is decreasing in all its components. The main problem with the results is that after training, the network reconstructs the training data as the same streamline every time, meaning that the model did not learn anything, and that it fell into <a class="reference external" href="https://developers.google.com/machine-learning/gan/problems#mode-collapse">mode collapse</a>. After discussing it with my mentors, we arrived to 3 main points to help with the results:</p>
+<ul class="simple">
+<li><p>As obvious as it sounds, reproducing the results of the repo I based the AAE implementation on would have been a great idea. I did not do it because I was already in the last weeks of the program, but I should have done it. If the original repo does not work, I would either fix it (and obviously submit a PR to it) or find another source of code inspiration. Lesson learned, a reproducibility check is key to ensure that the tool we are using is going to (potentially) work as expected.</p></li>
+<li><p>Adjusting the learning rates of the optimizers. I used the default values I had been using in the previous weeks (6.8e-4), but it could be that they are not the best for this model. What seems correct is setting the learning rate of the discriminator optimizer to a fraction of the generator optimizer learning rate (in this case, a fifth), because even with such a small rate, the discriminator loss was decreasing. Nevertheless, this is likely to be happening due to mode collapse, where the generator was generating the same sample over and over again, leading to a super “good” discriminator. This problem is very well known in adversarial networks, and I will have to investigate ways to avoid it, like using a <a class="reference external" href="http://arxiv.org/abs/1701.07875">Wasserstein Loss</a> instead of a min-max scheme.</p></li>
+<li><p>Increasing model capacity by either adding more layers to the model or by increasing the latent space dimensionality. This is a common practice in deep learning, and it is likely that the model is not powerful enough to learn the data distribution.</p></li>
+</ul>
+<p>Apart from that, my mentor <a class="reference external" href="https://github.com/skoudoro">Serge Koudoro</a> mentioned that it would be nice to think of any already useful bits of code that could be merged in DIPY, so I am thinking about what could fit these requirements. Besides that, we also concluded that for now, the draft PR should include the vanilla AutoEncoder class and tests for instantiation, inference, and weight save/loading; as the translation to TensorFlow was successful and the results were good.</p>
+<p>Lastly, I also progressed a bit with the last post, writing a bit more about the work I already completed.</p>
 </section>
-<section id="comprehensive-testing-and-bug-fixing">
-<h2>Comprehensive Testing and Bug Fixing<a class="headerlink" href="#comprehensive-testing-and-bug-fixing" title="Link to this heading">#</a></h2>
-<p>Alongside the refinement process, I have written comprehensive tests to ensure the decorator function’s robustness and reliability.
-These tests have been instrumental in identifying and resolving bugs, allowing me to thoroughly validate the decorator’s functionality across various scenarios and cases.</p>
+<section id="what-is-coming-up-next-week">
+<h2>What is coming up next week<a class="headerlink" href="#what-is-coming-up-next-week" title="Link to this heading">#</a></h2>
+<p>Next week I will:</p>
+<ul class="simple">
+<li><p>Open the draft PR for the vanilla AutoEncoder class and tests.</p></li>
+<li><p>Finish the final post, linking it to the draft PR. I will probably do this on the weekend so I can have a first version on Monday and thus have a couple of days to polish it.</p></li>
+<li><p>Polish the final post with my mentors <a class="reference external" href="https://github.com/jhlegarreta">Jon Haitz Legarreta</a>, <a class="reference external" href="https://github.com/pjsjongsung">Jong Sung Park</a>, and <a class="reference external" href="https://github.com/skoudoro">Serge Koudoro</a>.</p></li>
+</ul>
 </section>
-<section id="difficulties-challenges">
-<h2>Difficulties &amp; Challenges<a class="headerlink" href="#difficulties-challenges" title="Link to this heading">#</a></h2>
-<p>I didn’t face any particular difficulty with my task this week, as it was pretty straightforward. I just had concerns about how the versioning would work out but I made proper test case scenarios for that as well.</p>
-</section>
-<section id="documentation-updates">
-<h2>Documentation Updates<a class="headerlink" href="#documentation-updates" title="Link to this heading">#</a></h2>
-<p>To ensure the long-term maintainability and usability of the decorator, I have updated the necessary documentation with Numpy standard.
-This includes clear explanations of the decorator’s functionality, guidelines for its usage, and examples to assist other contributors and users in leveraging its capabilities effectively.</p>
-</section>
-<section id="lazy-loading-research">
-<h2>Lazy Loading Research<a class="headerlink" href="#lazy-loading-research" title="Link to this heading">#</a></h2>
-<p>In addition to decorators, I looked and tested some implementations of lazy loading in some libraries.
-1. Scipy
-2. Numpy
-3. Matplotlib</p>
-</section>
-<section id="next-week">
-<h2>Next Week<a class="headerlink" href="#next-week" title="Link to this heading">#</a></h2>
-<p>The plan next week is to implement decorator functions to all modules in DIPY and put up PRs. My main PR at the moment is <a class="github reference external" href="https://github.com/dipy/dipy/pull/3239">dipy/dipy#3239</a> .</p>
-</section>
-<section id="final-thoughts">
-<h2>Final Thoughts<a class="headerlink" href="#final-thoughts" title="Link to this heading">#</a></h2>
-<p>The second week of the Coding phase has been dedicated to refining and correcting the decorator function, laying a solid foundation for its seamless integration into DIPY’s codebase.</p>
-<p>Stay tuned for more updates as I continue to work on enhancing DIPY!</p>
-<p>Thank you for reading!</p>
+<section id="did-i-get-stuck-anywhere">
+<h2>Did I get stuck anywhere<a class="headerlink" href="#did-i-get-stuck-anywhere" title="Link to this heading">#</a></h2>
+<p>I did not get stuck this week, but I had to spend a lot of time fixing the AAE implementation, and I am not super happy with the results. Again, this is research, and it is normal to have setbacks, but I would not call this getting “stuck”. Even if I am not going to achieve the objectives I had originally set for the end of the program, I am happy with the progress I made and the things I learned. I believe that I will contribute to DIPY in a substantial way in the future because my project has the potential to do so.</p>
+<p>Until the last post!</p>
 </section>
 </section>
 
@@ -1113,11 +1103,11 @@ This includes clear explanations of the decorator’s functionality, guidelines 
   <span class="ablog__prev">
     
     
-    <a href="2024_06_07_Inigo_week_2.html">
+    <a href="2024_08_12_kaustav_week_11.html">
       
       <i class="fa fa-arrow-circle-left"></i>
       
-      <span>Second Week into GSoC 2024: Refactoring the AutoEncoder, preliminary results</span>
+      <span>My Journey Continues: Week 11 Progress with DIPY</span>
     </a>
     
   </span>
@@ -1125,8 +1115,8 @@ This includes clear explanations of the decorator’s functionality, guidelines 
   <span class="ablog__next">
     
     
-    <a href="2024_06_14_Inigo_week_3.html">
-      <span>Third Week into GSoC 2024: Replicating training parameters, approaching replication</span>
+    <a href="2024_08_19_kaustav_week_12.html">
+      <span>My Journey Continues: Week 12 Progress with DIPY</span>
       
       <i class="fa fa-arrow-circle-right" ></i>
       
@@ -1166,13 +1156,9 @@ This includes clear explanations of the decorator’s functionality, guidelines 
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decorator-function-refinement">Decorator Function Refinement</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comprehensive-testing-and-bug-fixing">Comprehensive Testing and Bug Fixing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#difficulties-challenges">Difficulties &amp; Challenges</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-updates">Documentation Updates</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lazy-loading-research">Lazy Loading Research</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-week">Next Week</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-thoughts">Final Thoughts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-i-did-this-week">What I did this week</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-coming-up-next-week">What is coming up next week</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#did-i-get-stuck-anywhere">Did I get stuck anywhere</a></li>
 </ul>
   </nav></div>
 
