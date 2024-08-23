@@ -24,10 +24,6 @@
 
    <span class="gsoc-title">Future Works</span>
 
-.. |weekly-title| raw:: html
-
-   <span class="gsoc-title">GSoC Weekly</span>
-
 .. |timeline-title| raw:: html
 
    <span class="gsoc-title">Timeline</span>
