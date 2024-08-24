@@ -36,6 +36,10 @@
 
    <span class="gsoc-title">Pull Requests</span>
 
+.. |blogging-title| raw:: html
+
+    <span class="gsoc-title">Weekly Blogging</span>
+
 .. |conclusions-title| raw:: html
 
    <span class="gsoc-title">Conclusions</span>
@@ -137,7 +141,7 @@ The objective of the project is to generate synthetic human tractograms with tun
       :align: center
       :width: 600
   
-    We see that the Keras result is very similar to the PyTorch result, though the fiber crossings are not as well resolved in the Keras result. This is not a thing to worry since this is not systematic, as seen in other sets of unseen data.
+      We see that the Keras result is very similar to the PyTorch result, though the fiber crossings are not as well resolved in the Keras result. This is not a thing to worry since this is not systematic, as seen in other sets of unseen data.
 
 
 * **Implemented a Variational AutoEncoder (VAE) architecture based on the** `FINTA <https://doi.org/10.1016/j.media.2021.102126>`_ **AE architecture.**
@@ -162,7 +166,7 @@ The objective of the project is to generate synthetic human tractograms with tun
       :align: center
       :width: 600
 
-    The bottom row shows two sets of unseen plausible streamlines, run through the model (encode & decode). We can see that the reconstruction fidelity is not as good as the vanilla AE, but it is still acceptable, considering that the model was only trained for 120 epochs, which took around 2 hours in my GPU-less laptop.
+      The bottom row shows two sets of unseen plausible streamlines, run through the model (encode & decode). We can see that the reconstruction fidelity is not as good as the vanilla AE, but it is still acceptable, considering that the model was only trained for 120 epochs, which took around 2 hours in my GPU-less laptop.
 
 
 * **Implemented a conditional Variational Autoencoder (condVAE) architecture based on the** `Variational AutoEncoders for Regression <https://doi.org/10.1007/978-3-030-32245-8_91>`_ **paper.**
@@ -186,7 +190,7 @@ The objective of the project is to generate synthetic human tractograms with tun
       :align: center
       :width: 600
 
-    We observe that the condVAE model clusters are elongated, which made us arrive to the conclusion that the conditioning might be doing something, but it was yet not clear if it was what we wanted to achieve. Using the length of the streamlines as the conditioning variable was not the best choice because this parameter is very consistent inside each bundle of the FiberCup dataset, and knowing that each cluster corresponds to a bundle (7 clusters, 7 morphologically different bundles), we had not foreseen that each cluster was going to have a consistent coloring for the length attribute (which is quite obvious, once you know this). The conclusion of this exercise was that the model was doing something differently compared to the VAE, which could be good, or not.
+      We observe that the condVAE model clusters are elongated, which made us arrive to the conclusion that the conditioning might be doing something, but it was yet not clear if it was what we wanted to achieve. Using the length of the streamlines as the conditioning variable was not the best choice because this parameter is very consistent inside each bundle of the FiberCup dataset, and knowing that each cluster corresponds to a bundle (7 clusters, 7 morphologically different bundles), we had not foreseen that each cluster was going to have a consistent coloring for the length attribute (which is quite obvious, once you know this). The conclusion of this exercise was that the model was doing something differently compared to the VAE, which could be good, or not.
 
   * Another aspect to validate was the capability of the model to correctly capture the conditioning variable in the training data. To do so, we retrained the model until we got a close-to-zero *label loss* (in charge of capturing this variability), and computed the :math:`MSE` and the :math:`R^2` metrics between the predicted and the true conditioning variable. In addition, we plotted the latent space 2D projection again. The results are shown in the figure below:
 
@@ -196,7 +200,7 @@ The objective of the project is to generate synthetic human tractograms with tun
       :align: center
       :width: 600
 
-    We got an :math:`\text{MSE}=50.371` and an :math:`R^2=0.941`, and the latent space was organized in 7 clusters (the middle line is actually 2 lines, there is a small separation in the middle), which correspond to the 7 bundles of the FiberCup dataset, thus we saw that the model was indeed capable of predicting the conditioning variable fairly well. From left to right, the streamlines get shorter (the color gets lighter) with a gradient in the latent space that is aligned with the conditioning variable. The morphology of the leftmost clusters would indicate that they are the most variable in length, contrary to the middle clusters (the straighter lines), which are almost in the same horizontal coordinate. Having the t-SNE projection aligned with the conditioning variable is a good sign, that some dimension in the latent space was correctly tied to the conditioning variable.
+      We got an :math:`\text{MSE}=50.371` and an :math:`R^2=0.941`, and the latent space was organized in 7 clusters (the middle line is actually 2 lines, there is a small separation in the middle), which correspond to the 7 bundles of the FiberCup dataset, thus we saw that the model was indeed capable of predicting the conditioning variable fairly well. From left to right, the streamlines get shorter (the color gets lighter) with a gradient in the latent space that is aligned with the conditioning variable. The morphology of the leftmost clusters would indicate that they are the most variable in length, contrary to the middle clusters (the straighter lines), which are almost in the same horizontal coordinate. Having the t-SNE projection aligned with the conditioning variable is a good sign, that some dimension in the latent space was correctly tied to the conditioning variable.
 
   * As the last experiment to validate the capabilities of this model and architecture, I proceeded to generate synthetic streamlines conditioned on their length. Theoretically, the model should be able to generate samples of specific lengths, and each length should be related to a specific bundle, as shorter fibers look different than the longer ones. Nonetheless, there was a major flaw in the generative process that my mentor `Jong Sung <https://github.com/pjsjongsung>`_ had detected just before going into this step. When looking at the architecture of the model, the generative process would start from the :math:`r` variable, setting it to a desired quantity, and then running the input through ``D5`` and ``D6``, then adding noise like :math:`z=\mu_{p_z}+\sigma_{p_z}\odot\epsilon`, and decoding this output. 
 
@@ -276,6 +280,10 @@ I am super grateful for the opportunity to participate in the Google Summer of C
 
 I would like to thank again my mentors, `Jon Haitz <https://github.com/jhlegarreta>`_, `Jong Sung <https://github.com/pjsjongsung>`_ and `Serge <https://github.com/skoudoro>`_, their time, patience, attention, support, and expertise throughout the program. They have been a key part of my success. On the other hand, I would like to thank my fellow GSoC students, `Kaustav <https://github.com/deka27>`_, `Wachiou <https://github.com/WassCodeur>`_, and `Robin <https://github.com/robinroy03>`_, for their support and collaboration. It has been a pleasure to work with them and to learn from them.
 
+|blogging-title|
+----------------
+
+* My blog posts can be found at `DIPY website <https://dipy.org/blog/author/inigo-tellaetxe.html>`_ and `Python GSoC Mastodon server <https://social.python-gsoc.org/@itellaetxe>`_.
 
 |timeline-title|
 ----------------
