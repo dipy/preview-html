@@ -1148,7 +1148,7 @@ Validated the results using the FiberCup dataset. The model is found in the <cod
 <a class="custom-gsoc-margin reference internal image-reference" href="../../_images/vanilla_vae_120_epoch_results.png"><img alt="VAE architecture results on the FiberCup dataset." class="custom-gsoc-margin" src="../../_images/vanilla_vae_120_epoch_results.png" style="width: 600px;" />
 </a>
 <figcaption>
-<p><span class="caption-text">The bottom row shows two sets of unseen plausible streamlines, run through the model (encode &amp; decode). We can see that the reconstruction fidelity is not as good as the vanilla AE, but it is still acceptable, considering that the model was only trained for 120 epochs, which took around 2 hours in my GPU-less laptop.</span><a class="headerlink" href="#id19" title="Link to this image">#</a></p>
+<p><span class="caption-text">The bottom row shows a set of unseen test data, and its reconstruction, after running it through the model (encode &amp; decode). We can see that the reconstruction fidelity is not as good as the vanilla AE, but it is still acceptable, considering that the model was only trained for 120 epochs, which took around 2 hours in my GPU-less laptop.</span><a class="headerlink" href="#id19" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </li>
@@ -1164,7 +1164,7 @@ Validated the results using the FiberCup dataset. The model is found in the <cod
 </li>
 <li><p><strong>Implemented validation strategies of the condVAE model</strong> to check that the model can capture the variability of the conditioning variable.</p>
 <ul>
-<li><p>By exploring the latent space of the VAE and condVAE models, we can compare the organization of the samples in the latent space, and see whether there is a difference aligned with the conditioning variable. After training for 64 epochs just to check how the model was progressing, I projected the 32-dimensional latent space using the t-SNE algorithm, to visualize it easily. This particular algorithm was chosen due to its popularity, speed, and availability in widespread libraries like <cite>scikit-learn</cite>. The projections only show the plausible fibers The results are shown in the figures below:</p>
+<li><p>By exploring the latent space of the VAE and condVAE models, we can compare the organization of the samples in the latent space, and see whether there is a difference aligned with the conditioning variable. After training for 64 epochs just to check how the model was progressing, I projected the 32-dimensional latent space using the t-SNE algorithm, to visualize it easily. This particular algorithm was chosen due to its popularity, speed, and availability in widespread libraries like <cite>scikit-learn</cite>. The projections only show the plausible fibers. The results are shown in the figures below:</p>
 <figure class="align-center" id="id20">
 <a class="custom-gsoc-margin reference internal image-reference" href="../../_images/latent_space_comparison_VAE_cVAE_colored_by_streamline_length.png"><img alt="t-SNE latent space comparison between condVAE and VAE models." class="custom-gsoc-margin" src="../../_images/latent_space_comparison_VAE_cVAE_colored_by_streamline_length.png" style="width: 600px;" />
 </a>

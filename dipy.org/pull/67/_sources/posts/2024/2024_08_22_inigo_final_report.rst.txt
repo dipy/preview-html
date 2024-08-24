@@ -166,7 +166,7 @@ The objective of the project is to generate synthetic human tractograms with tun
       :align: center
       :width: 600
 
-      The bottom row shows two sets of unseen plausible streamlines, run through the model (encode & decode). We can see that the reconstruction fidelity is not as good as the vanilla AE, but it is still acceptable, considering that the model was only trained for 120 epochs, which took around 2 hours in my GPU-less laptop.
+      The bottom row shows a set of unseen test data, and its reconstruction, after running it through the model (encode & decode). We can see that the reconstruction fidelity is not as good as the vanilla AE, but it is still acceptable, considering that the model was only trained for 120 epochs, which took around 2 hours in my GPU-less laptop.
 
 
 * **Implemented a conditional Variational Autoencoder (condVAE) architecture based on the** `Variational AutoEncoders for Regression <https://doi.org/10.1007/978-3-030-32245-8_91>`_ **paper.**
@@ -182,7 +182,7 @@ The objective of the project is to generate synthetic human tractograms with tun
 
 * **Implemented validation strategies of the condVAE model** to check that the model can capture the variability of the conditioning variable.
 
-  * By exploring the latent space of the VAE and condVAE models, we can compare the organization of the samples in the latent space, and see whether there is a difference aligned with the conditioning variable. After training for 64 epochs just to check how the model was progressing, I projected the 32-dimensional latent space using the t-SNE algorithm, to visualize it easily. This particular algorithm was chosen due to its popularity, speed, and availability in widespread libraries like `scikit-learn`. The projections only show the plausible fibers The results are shown in the figures below:
+  * By exploring the latent space of the VAE and condVAE models, we can compare the organization of the samples in the latent space, and see whether there is a difference aligned with the conditioning variable. After training for 64 epochs just to check how the model was progressing, I projected the 32-dimensional latent space using the t-SNE algorithm, to visualize it easily. This particular algorithm was chosen due to its popularity, speed, and availability in widespread libraries like `scikit-learn`. The projections only show the plausible fibers. The results are shown in the figures below:
 
     .. figure:: /_static/images/gsoc/2024/inigo/latent_space_comparison_VAE_cVAE_colored_by_streamline_length.png
       :class: custom-gsoc-margin
