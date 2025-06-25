@@ -1,0 +1,3840 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="The 2025 Dipy Workshop is a 5-day event focused on diffusion MRI, featuring expert speakers and hands-on sessions." name="description" />
+<meta content="Dipy, Workshop, Diffusion MRI, Neuroimaging, Tractography" name="keywords" />
+
+    <title>Dipy Workshop 2025 &#8212; workshop.dipy.org  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/css/workshop.css?v=71dd76fe" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <script src="_static/js/workshop.js?v=6e049816"></script>
+    <script src="_static/js/countdown.js?v=0ae13323"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+     
+  
+
+<a class="navbar-brand logo" href="https://dipy.org">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="_static/dipy-logo.png" class="logo__image only-light" alt="workshop.dipy.org  documentation - Home"/>
+    <img src="_static/dipy-logo.png" class="logo__image only-dark pst-js-only" alt="workshop.dipy.org  documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+  </div>
+  
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="home" id="home">
+    <div class="gradient"></div>
+    <div class="simpleslide100">
+        
+        <div
+            class="simpleslide100-item bg-img1"
+            style="background-image: url('_static/images/dipy_odf_vs_2018-10-03.png');"
+        ></div>
+        
+        <div
+            class="simpleslide100-item bg-img1"
+            style="background-image: url('_static/images/CST.png');"
+        ></div>
+        
+        <div
+            class="simpleslide100-item bg-img1"
+            style="background-image: url('_static/images/msd_odfs.png');"
+        ></div>
+        
+    </div>
+    <div class="content-section">
+        <h1 class="content-title l1-txt1 p-b-10">DIPY WORKSHOP 2025</h1>
+        <div class="speaker-divider m-b-40"></div>
+        <h5 class="m2-txt2 p-b-25">Online Edition</h5>
+        <p class="m2-txt3 p-b-10">March 17 - 21, 2025</p>
+        <p class="m2-txt4 p-b-48">Online</p>
+        <p class="m2-txt5-light p-b-48">Managed by: GRG, Bloomington, IN</p>
+
+        <small id="countdown-stop" style="display: none" class="m2-txt1 p-b-25">
+            <b class="m2-txt2">Workshop</b>
+            has been started
+            <br />
+            Don't miss it!
+        </small>
+
+        <small id="countdown-title" style="display: none" class="m2-txt1 p-b-25">
+            <b class="m2-txt2">Registration</b>
+            has been started
+            <br />
+            Don't miss it!
+        </small>
+
+        <div id="countdown" class="p-b-48">
+            <div class="number">
+                <span class="days time"></span>
+                <span class="text">Days</span>
+            </div>
+            <div class="number">
+                <span class="hours time"></span>
+                <span class="text">Hours</span>
+            </div>
+            <div class="number">
+                <span class="minutes time"></span>
+                <span class="text">Minutes</span>
+            </div>
+            <div class="number">
+                <span class="seconds time"></span>
+                <span class="text">Seconds</span>
+            </div>
+        </div>
+
+        <div class="p-b-25" id="reg-countdown-stop">
+            <a href="#Registration" role="button" class="btn btn-lg btn-secondary register-btn">
+                Register Now
+            </a>
+        </div>
+
+        <small id="reg-countdown-title" style="display: none" class="m2-txt1 p-b-25">
+            <b class="m2-txt2">Registration</b>
+            will start in ...
+        </small>
+
+        <div id="reg-countdown" class="p-b-48">
+            <div class="number">
+                <span class="days time"></span>
+                <span class="text">Days</span>
+            </div>
+            <div class="number">
+                <span class="hours time"></span>
+                <span class="text">Hours</span>
+            </div>
+            <div class="number">
+                <span class="minutes time"></span>
+                <span class="text">Minutes</span>
+            </div>
+            <div class="number">
+                <span class="seconds time"></span>
+                <span class="text">Seconds</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        setupHomeCarousel(".simpleslide100", ".simpleslide100-item");
+        initializeClock("countdown", "2024-08-01T00:00:00-04:00", "2025-03-17T09:00:00-04:00", []);
+        initializeClock("reg-countdown", 0, "2024-08-01T00:00:00-04:00", []);
+        setTimeout(() => {
+            hideAfterDate("2025-03-21T17:00:00", "reg-countdown-stop");
+            messageAfterDate(
+                "2025-03-21T17:00:00",
+                "countdown-stop",
+                "<b class='m2-txt2'>Workshop</b> has been ended. <br/> See you next year!");
+         }, 1000);
+    </script>
+</section><section id="about">
+<h1>About<a class="headerlink" href="#about" title="Link to this heading">#</a></h1>
+<section class="full-page about" id="about">
+<div class="full-page-heading docutils container">
+<div class="speaker-divider m-b-40 docutils container">
+</div>
+</div>
+<div class="full-page-content about-content p-t-20 docutils container">
+<div class="flex-col-c-m pos-absolute watermark-wrapper docutils container">
+<img alt="" class="watermark" src="_images/dipy-watermark.svg" />
+</div>
+<p class="s2-txt4 txt-justify fs-18">Attention grads, researchers, physicists, radiologists, doctors and technicians interested in medical imaging! Join us for an exciting online workshop hosted by DIPY. Our comprehensive program is designed to equip you with the skills and knowledge needed to master the latest techniques and tools in structural and diffusion imaging.</p>
+<p class="s2-txt4 txt-justify fs-18 p-t-20">Our team of expert instructors will guide you through the fundamentals of diffusion theory, data pre-processing, fiber tracking, and much more. You’ll have the opportunity to learn from industry-leading professionals, ask questions, and network with like-minded peers.</p>
+<p class="s2-txt4 txt-justify fs-18 p-t-20">Whether you’re new to diffusion imaging or an experienced practitioner, this workshop is perfect for you. Our curriculum is tailored to meet the needs of individuals at all levels of expertise. Don’t miss this chance to enhance your skills and advance your career.</p>
+<p class="s2-txt4 txt-justify fs-18 p-t-20">Register today to secure your spot in this highly anticipated event. We can’t wait to see you in the event!</p>
+<p class="s2-txt2 txt-right p-t-20">– DIPY Team!</p>
+</div>
+</section>
+</section>
+<section id="speakers">
+<h1>Speakers<a class="headerlink" href="#speakers" title="Link to this heading">#</a></h1>
+<div class="speakers">
+    <div class="row"><!-- Consider adding more specific classes if needed -->
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/garyfallidis.jpg" alt="Eleftherios Garyfallidis"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">Eleftherios Garyfallidis</h3>
+                    <p class="p-t-10">Chair, DIPY Founder &amp; Lead Developer</p>
+                    <p class="s2-text3">Associate Professor, Indiana University</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/Simon.jpeg" alt="Simon Warfield"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">Simon Warfield</h3>
+                    <p class="p-t-10">Director of Radiology Research, Thorne Griscom Professor of Radiology</p>
+                    <p class="s2-text3">Harvard Medical School</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/Franco.webp" alt="Franco Pestilli"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">Franco Pestilli</h3>
+                    <p class="p-t-10">Associate Professor, Department of Psychology and Neuroscience</p>
+                    <p class="s2-text3">The University of Texas at Austin</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/rokem.jpg" alt="Ariel Rokem"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">Ariel Rokem</h3>
+                    <p class="p-t-10">Associate DIPY Lead, eScience Institute</p>
+                    <p class="s2-text3">Research Associate Professor, University of Washington, Seattle</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/Maxime.jpeg" alt="Maxime Descoteaux"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">Maxime Descoteaux</h3>
+                    <p class="p-t-10">DIPY Scientific Advisor</p>
+                    <p class="s2-text3">Professor in Computer Science, University of Sherbrooke, CA</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/Marco.avif" alt="Marco Palombo"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">Marco Palombo</h3>
+                    <p class="p-t-10">Associate Professor (Senior Lecturer)</p>
+                    <p class="s2-text3">Cardiff University</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/Alexandra.jpeg" alt="Alexandra Badea"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">Alexandra Badea</h3>
+                    <p class="p-t-10">Associate Professor Radiology &amp; Neurology</p>
+                    <p class="s2-text3">Duke University</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/Julien.jpeg" alt="Julien Cohen-Adad"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">Julien Cohen-Adad</h3>
+                    <p class="p-t-10">Associate Professor of Biomedical Engineering</p>
+                    <p class="s2-text3">Polytechnique Montreal</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/Aris.webp" alt="Aris Sotiras"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">Aris Sotiras</h3>
+                    <p class="p-t-10">Assistant Professor of Radiology</p>
+                    <p class="s2-text3">Washington University</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/Kelly.jpeg" alt="Kelly Chang"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">Kelly Chang</h3>
+                    <p class="p-t-10">Postdoctoral Research Scientist</p>
+                    <p class="s2-text3">University of Washington</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/girard.png" alt="Gabriel Girard"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">Gabriel Girard</h3>
+                    <p class="p-t-10">Research Scientist</p>
+                    <p class="s2-text3">University of Sherbrooke</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/henriques.jpeg" alt="Rafael Neto Henriques"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">Rafael Neto Henriques</h3>
+                    <p class="p-t-10">Postdoctoral Researcher</p>
+                    <p class="s2-text3">Champalimaud Centre for the Unknown, PT</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/wei.jpeg" alt="Wei Tang"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">Wei Tang</h3>
+                    <p class="p-t-10">Research Scientist</p>
+                    <p class="s2-text3">Indiana University</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/JHLegarreta.jpg" alt="Jon Haitz Legarreta Gorroño"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">Jon Haitz Legarreta Gorroño</h3>
+                    <p class="p-t-10">Postdoctoral Research Fellow</p>
+                    <p class="s2-text3">Harvard University</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/serge.png" alt="Serge Koudoro"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">Serge Koudoro</h3>
+                    <p class="p-t-10">DIPY Release Manager</p>
+                    <p class="s2-text3">Indiana University</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/Fadnavis.jpeg" alt="Shreyas Fadnavis"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">Shreyas Fadnavis</h3>
+                    <p class="p-t-10">Principal AI Engineer</p>
+                    <p class="s2-text3">Hologic, Inc.</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/Chandio.jpeg" alt="Bramsh Qamar Chandio"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">Bramsh Qamar Chandio</h3>
+                    <p class="p-t-10">Postdoctoral Scholar</p>
+                    <p class="s2-text3">University of Southern California</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/Maeliss.jpeg" alt="Maeliss Jallais"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">Maeliss Jallais</h3>
+                    <p class="p-t-10">Research Associate</p>
+                    <p class="s2-text3">Cardiff University</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/maharshi.jpeg" alt="Maharshi Gor"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">Maharshi Gor</h3>
+                    <p class="p-t-10">Research Associate</p>
+                    <p class="s2-text3">Indiana University</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/sreekar.jpeg" alt="Sreekar Chigurupati"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">Sreekar Chigurupati</h3>
+                    <p class="p-t-10">PhD Student</p>
+                    <p class="s2-text3">Indiana University</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/jspark.jpeg" alt="Jong Sung Park"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">Jong Sung Park</h3>
+                    <p class="p-t-10">PhD Student</p>
+                    <p class="s2-text3">Indiana University</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/John.jpeg" alt="John Kruper"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">John Kruper</h3>
+                    <p class="p-t-10">Graduate Student</p>
+                    <p class="s2-text3">University of Washington</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/Adam.jpeg" alt="Adam Saunders"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">Adam Saunders</h3>
+                    <p class="p-t-10">PhD student</p>
+                    <p class="s2-text3">Vanderbilt University</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/Aziza.jpeg" alt="Aziza Saber Jabdaragh"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">Aziza Saber Jabdaragh</h3>
+                    <p class="p-t-10">PhD Student</p>
+                    <p class="s2-text3">Indiana University</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/Mohamed.jpg" alt="Mohamed Abouagour"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">Mohamed Abouagour</h3>
+                    <p class="p-t-10">PhD Student</p>
+                    <p class="s2-text3">Indiana University</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/atharva.png" alt="Atharva Shah"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">Atharva Shah</h3>
+                    <p class="p-t-10">PhD Student</p>
+                    <p class="s2-text3">Indiana University</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div><section id="conference-management">
+<h2>Conference Management<a class="headerlink" href="#conference-management" title="Link to this heading">#</a></h2>
+<div class="speakers">
+    <div class="row"><!-- Consider adding more specific classes if needed -->
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/Prajwal.jpeg" alt="Sai Prajwal Reddy"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">Sai Prajwal Reddy</h3>
+                    <p class="p-t-10">PhD Student</p>
+                    <p class="s2-text3">Indiana University</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 p-b-40 flex-c">
+            <div class="speaker-card">
+                <div class="speaker-img"> <!-- Define styles for .speaker-profile -->
+                    
+                        
+                        
+                        
+                            
+                            
+                        
+                        <img src="_static/images/speakers/Kaustav.png" alt="Kaustav Deka"> <!-- Define styles for .speaker-image -->
+                    
+                </div>
+                <div class="speaker-data">
+                    <h3 class="m2-txt4">Kaustav Deka</h3>
+                    <p class="p-t-10">Graduate Student</p>
+                    <p class="s2-text3">University of Washington</p> <!-- Define styles for .speaker-info -->
+                    
+                    <div class="speaker-bio-rst" style="white-space: pre-wrap;"></div> <!-- Added class and basic style -->
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div></section>
+<section id="participants-from">
+<h2>Participants from<a class="headerlink" href="#participants-from" title="Link to this heading">#</a></h2>
+<div class="participants-section">
+    <div class="participants-carousel">
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.epfl.ch/en/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/EPFL.png"
+                     alt="École Polytechnique Fédérale de Lausanne"
+                     class="participant-logo">
+                <h5>École Polytechnique Fédérale de Lausanne</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.upenn.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/UPENN.png"
+                     alt="University of Pennsylvania"
+                     class="participant-logo">
+                <h5>University of Pennsylvania</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.utah.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/UTHA.png"
+                     alt="University of Utah"
+                     class="participant-logo">
+                <h5>University of Utah</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.bumc.bu.edu/busm/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/BUSM.jpeg"
+                     alt="Boston University School of Medicine"
+                     class="participant-logo">
+                <h5>Boston University School of Medicine</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.emory.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/EMORY.png"
+                     alt="Emory University"
+                     class="participant-logo">
+                <h5>Emory University</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://medicine.iu.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/IUSM.png"
+                     alt="Indiana University School of Medicine"
+                     class="participant-logo">
+                <h5>Indiana University School of Medicine</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.uni-muenchen.de/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/LU.png"
+                     alt="Ludwig-Maximilians-Universität München"
+                     class="participant-logo">
+                <h5>Ludwig-Maximilians-Universität München</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.camh.ca/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/CAMH.jpg"
+                     alt="Centre for Addiction and Mental Health"
+                     class="participant-logo">
+                <h5>Centre for Addiction and Mental Health</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.usherbrooke.ca/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/USHER.png"
+                     alt="University of Sherbrooke"
+                     class="participant-logo">
+                <h5>University of Sherbrooke</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.harvard.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/HARVARD.png"
+                     alt="Harvard University"
+                     class="participant-logo">
+                <h5>Harvard University</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.mit.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/MIT.png"
+                     alt="Massachusetts Institute of Technology"
+                     class="participant-logo">
+                <h5>Massachusetts Institute of Technology</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://icahn.mssm.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/MSINAI.png"
+                     alt="Icahn School of Medicine at Mount Sinai"
+                     class="participant-logo">
+                <h5>Icahn School of Medicine at Mount Sinai</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.wisc.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/MWISCONSIN.png"
+                     alt="University of Wisconsin–Madison"
+                     class="participant-logo">
+                <h5>University of Wisconsin–Madison</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.jhu.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/JHOPKINS.png"
+                     alt="Johns Hopkins University"
+                     class="participant-logo">
+                <h5>Johns Hopkins University</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.uchicago.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/UCHICAGO.png"
+                     alt="University of Chicago"
+                     class="participant-logo">
+                <h5>University of Chicago</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.duke.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/DUKE.jpeg"
+                     alt="Duke University"
+                     class="participant-logo">
+                <h5>Duke University</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://mindresearchnetwork.org/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/THEMINDRESNET.jpeg"
+                     alt="Mind Research Network"
+                     class="participant-logo">
+                <h5>Mind Research Network</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.houstonmethodist.org/research/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/HMRI.jpeg"
+                     alt="Houston Methodist Research Institute"
+                     class="participant-logo">
+                <h5>Houston Methodist Research Institute</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.washington.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/UW.jpeg"
+                     alt="University of Washington"
+                     class="participant-logo">
+                <h5>University of Washington</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.berkeley.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/UCB.png"
+                     alt="University of California, Berkeley"
+                     class="participant-logo">
+                <h5>University of California, Berkeley</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.ucsd.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/UCSD.png"
+                     alt="University of California, San Diego"
+                     class="participant-logo">
+                <h5>University of California, San Diego</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.pennmedicine.org/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/PENNMED.png"
+                     alt="Penn Medicine (University of Pennsylvania Health System)"
+                     class="participant-logo">
+                <h5>Penn Medicine (University of Pennsylvania Health System)</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.arizona.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/UARIZONA.png"
+                     alt="University of Arizona"
+                     class="participant-logo">
+                <h5>University of Arizona</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://dellmed.utexas.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/DELLMEDSCHOOL.png"
+                     alt="Dell Medical School at The University of Texas at Austin"
+                     class="participant-logo">
+                <h5>Dell Medical School at The University of Texas at Austin</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.iupui.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/IUPUI.png"
+                     alt="Indiana University–Purdue University Indianapolis"
+                     class="participant-logo">
+                <h5>Indiana University–Purdue University Indianapolis</h5>
+            </a>
+        </div>
+        
+        
+
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.epfl.ch/en/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/EPFL.png"
+                     alt="École Polytechnique Fédérale de Lausanne"
+                     class="participant-logo">
+                <h5>École Polytechnique Fédérale de Lausanne</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.upenn.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/UPENN.png"
+                     alt="University of Pennsylvania"
+                     class="participant-logo">
+                <h5>University of Pennsylvania</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.utah.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/UTHA.png"
+                     alt="University of Utah"
+                     class="participant-logo">
+                <h5>University of Utah</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.bumc.bu.edu/busm/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/BUSM.jpeg"
+                     alt="Boston University School of Medicine"
+                     class="participant-logo">
+                <h5>Boston University School of Medicine</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.emory.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/EMORY.png"
+                     alt="Emory University"
+                     class="participant-logo">
+                <h5>Emory University</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://medicine.iu.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/IUSM.png"
+                     alt="Indiana University School of Medicine"
+                     class="participant-logo">
+                <h5>Indiana University School of Medicine</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.uni-muenchen.de/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/LU.png"
+                     alt="Ludwig-Maximilians-Universität München"
+                     class="participant-logo">
+                <h5>Ludwig-Maximilians-Universität München</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.camh.ca/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/CAMH.jpg"
+                     alt="Centre for Addiction and Mental Health"
+                     class="participant-logo">
+                <h5>Centre for Addiction and Mental Health</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.usherbrooke.ca/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/USHER.png"
+                     alt="University of Sherbrooke"
+                     class="participant-logo">
+                <h5>University of Sherbrooke</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.harvard.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/HARVARD.png"
+                     alt="Harvard University"
+                     class="participant-logo">
+                <h5>Harvard University</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.mit.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/MIT.png"
+                     alt="Massachusetts Institute of Technology"
+                     class="participant-logo">
+                <h5>Massachusetts Institute of Technology</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://icahn.mssm.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/MSINAI.png"
+                     alt="Icahn School of Medicine at Mount Sinai"
+                     class="participant-logo">
+                <h5>Icahn School of Medicine at Mount Sinai</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.wisc.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/MWISCONSIN.png"
+                     alt="University of Wisconsin–Madison"
+                     class="participant-logo">
+                <h5>University of Wisconsin–Madison</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.jhu.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/JHOPKINS.png"
+                     alt="Johns Hopkins University"
+                     class="participant-logo">
+                <h5>Johns Hopkins University</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.uchicago.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/UCHICAGO.png"
+                     alt="University of Chicago"
+                     class="participant-logo">
+                <h5>University of Chicago</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.duke.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/DUKE.jpeg"
+                     alt="Duke University"
+                     class="participant-logo">
+                <h5>Duke University</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://mindresearchnetwork.org/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/THEMINDRESNET.jpeg"
+                     alt="Mind Research Network"
+                     class="participant-logo">
+                <h5>Mind Research Network</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.houstonmethodist.org/research/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/HMRI.jpeg"
+                     alt="Houston Methodist Research Institute"
+                     class="participant-logo">
+                <h5>Houston Methodist Research Institute</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.washington.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/UW.jpeg"
+                     alt="University of Washington"
+                     class="participant-logo">
+                <h5>University of Washington</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.berkeley.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/UCB.png"
+                     alt="University of California, Berkeley"
+                     class="participant-logo">
+                <h5>University of California, Berkeley</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.ucsd.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/UCSD.png"
+                     alt="University of California, San Diego"
+                     class="participant-logo">
+                <h5>University of California, San Diego</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.pennmedicine.org/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/PENNMED.png"
+                     alt="Penn Medicine (University of Pennsylvania Health System)"
+                     class="participant-logo">
+                <h5>Penn Medicine (University of Pennsylvania Health System)</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.arizona.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/UARIZONA.png"
+                     alt="University of Arizona"
+                     class="participant-logo">
+                <h5>University of Arizona</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://dellmed.utexas.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/DELLMEDSCHOOL.png"
+                     alt="Dell Medical School at The University of Texas at Austin"
+                     class="participant-logo">
+                <h5>Dell Medical School at The University of Texas at Austin</h5>
+            </a>
+        </div>
+        
+        
+        
+        <div class="participant-card">
+            <a href="https://www.iupui.edu/" target="_blank">
+                
+                
+                    
+                
+                <img src="_static/images/universities/IUPUI.png"
+                     alt="Indiana University–Purdue University Indianapolis"
+                     class="participant-logo">
+                <h5>Indiana University–Purdue University Indianapolis</h5>
+            </a>
+        </div>
+        
+        
+    </div>
+</div></section>
+<section id="special-thanks">
+<h2>Special Thanks<a class="headerlink" href="#special-thanks" title="Link to this heading">#</a></h2>
+<section class="images-section" id="images">
+<div class="imgrid p-b-40">
+    <div class="heading-underline m-b-40"></div>
+    <div class="dis-flex flex-w flex-c"><!-- Consider adding more specific classes if needed -->
+        
+        
+        
+        
+        <a href="https://grg.luddy.indiana.edu/" class="imgrid-item" target="_blank">
+            <img
+              class="imgrid-image"
+              src="_static/images/universities/GRG.png"
+              alt="Garyfallidis Research Group (GRG)"
+              width="200"
+              height="200"
+            />
+        </a>
+        
+        
+        
+        
+        <a href="https://engineering.indiana.edu/index.html" class="imgrid-item" target="_blank">
+            <img
+              class="imgrid-image"
+              src="_static/images/universities/ISE.jpeg"
+              alt="Intelligent Systems Engineering (IU)"
+              width="200"
+              height="200"
+            />
+        </a>
+        
+    </div>
+</div></section>
+<p>Multiple speakers including <strong>Garyfallidis, Landman and Harezlak</strong> are funded by the
+<a class="reference external" href="https://www.nih.gov/">National Institutes of Health</a>. In addition, <strong>Koudoro, Rokem and Girard</strong> are funded from
+an EOSS grant through the <a class="reference external" href="https://chanzuckerberg.com/eoss/proposals/strengthening-computational-neuroanatomy-using-dipy/">Chan Zuckerberg Initiative</a>.</p>
+</section>
+</section>
+<section id="highlights">
+<h1>Highlights<a class="headerlink" href="#highlights" title="Link to this heading">#</a></h1>
+<div class="swipe-carousel-container">
+  <div class="sc-track">
+    
+    <div class="sc-card" data-index="1">
+      <img src="https://raw.githubusercontent.com/dipy/dipy_data/master/tractometry.png?raw=true" alt="Advanced tractometry">
+    </div>
+    
+    <div class="sc-card" data-index="2">
+      <img src="https://raw.githubusercontent.com/dipy/dipy_data/master/wrapping_bundles.png?raw=true" alt="Warping of bundles">
+    </div>
+    
+    <div class="sc-card" data-index="3">
+      <img src="https://raw.githubusercontent.com/dipy/dipy_data/master/illuminating_lines.png?raw=true" alt="Cinematic visualization">
+    </div>
+    
+    <div class="sc-card" data-index="4">
+      <img src="https://raw.githubusercontent.com/dipy/dipy_data/master/preprocess.png?raw=true" alt="State-of-the-art preprocessing">
+    </div>
+    
+    <div class="sc-card" data-index="5">
+      <img src="https://raw.githubusercontent.com/dipy/dipy_data/master/brain-extraction.png?raw=true" alt="Accurate brain extraction">
+    </div>
+    
+    <div class="sc-card" data-index="6">
+      <img src="https://raw.githubusercontent.com/dipy/dipy_data/master/generative_approach.png?raw=true" alt="Generative approaches for missing data">
+    </div>
+    
+  </div>
+</div>
+
+
+<div class="swipe-carousel-info">
+	<h3 class="sc-title"> Advanced tractometry </h3>
+  <p class="sc-description"> Advanced techniques in tractography for diffusion MRI. </p>
+</div>
+
+<div class="swipe-carousel-info">
+	<h3 class="sc-title"> Warping of bundles </h3>
+  <p class="sc-description"> Techniques for warping and aligning bundles in diffusion MRI. </p>
+</div>
+
+<div class="swipe-carousel-info">
+	<h3 class="sc-title"> Cinematic visualization </h3>
+  <p class="sc-description"> Cinematic techniques for visualizing diffusion MRI data. </p>
+</div>
+
+<div class="swipe-carousel-info">
+	<h3 class="sc-title"> State-of-the-art preprocessing </h3>
+  <p class="sc-description"> Advanced preprocessing techniques for diffusion MRI data. </p>
+</div>
+
+<div class="swipe-carousel-info">
+	<h3 class="sc-title"> Accurate brain extraction </h3>
+  <p class="sc-description"> Techniques for accurate brain extraction in diffusion MRI. </p>
+</div>
+
+<div class="swipe-carousel-info">
+	<h3 class="sc-title"> Generative approaches for missing data </h3>
+  <p class="sc-description"> Techniques for generative modeling of missing data in diffusion MRI. </p>
+</div>
+
+
+<script src="_static/js/swipe_carousel.js"></script></section>
+<section id="schedule">
+<h1>Schedule<a class="headerlink" href="#schedule" title="Link to this heading">#</a></h1>
+<section class="p-b-50" id="schedule">
+<div class="full-page-content program-content docutils container">
+<strong class="s2-txt2 fs-16">All times mentioned are according to EST Time Zone.</strong><div class="row docutils container">
+<div class="col-lg-6 col-sm-12 m-t-40">
+    <div class="program-day"> <!-- Mimics original structure -->
+        <h3 class="program-title m2-txt3 m-b-10">
+            Day 1 - 2025-03-17
+        </h3>
+        
+        <h5 class="program-title m2-txt4 p-b-20">Preprocessing</h5>
+        
+
+        <div class="row">
+            <div class="col-12">
+                <!-- Timeline Area -->
+                <div class="apland-timeline-area"> <!-- Use original CSS class -->
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Workshop Overview</h6>
+                                        <p>09:00 - 09:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/garyfallidis.jpg" alt="Eleftherios Garyfallidis"/>
+                                                
+                                                <span class="avatar-name">Eleftherios Garyfallidis</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Keynote: Diffusion MRI for characterizing development, disease and injury.</h6>
+                                        <p>10:00 - 10:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/Simon.jpeg" alt="Simon Warfield"/>
+                                                
+                                                <span class="avatar-name">Simon Warfield</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Introduction to DIPY Interfaces</h6>
+                                        <p>11:00 - 11:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/serge.png" alt="Serge Koudoro"/>
+                                                
+                                                <span class="avatar-name">Serge Koudoro</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <hr class="hr-text" data-content="Lunch Break" />
+                    
+
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">DeepN4: Learning N4ITK Bias Field Correction for T1-weighted Images</h6>
+                                        <p>13:00 - 13:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/Adam.jpeg" alt="Adam Saunders"/>
+                                                
+                                                <span class="avatar-name">Adam Saunders</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Brain Extraction and Tissue Classification</h6>
+                                        <p>14:00 - 14:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/jspark.jpeg" alt="Jong Sung Park"/>
+                                                
+                                                <span class="avatar-name">Jong Sung Park</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Image-based Registration</h6>
+                                        <p>15:00 - 15:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/serge.png" alt="Serge Koudoro"/>
+                                                
+                                                <span class="avatar-name">Serge Koudoro</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Distortion Correction</h6>
+                                        <p>16:00 - 16:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/sreekar.jpeg" alt="Sreekar Chigurupati"/>
+                                                
+                                                <span class="avatar-name">Sreekar Chigurupati</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Denoising with Patch2Self3</h6>
+                                        <p>17:00 - 17:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/Fadnavis.jpeg" alt="Shreyas Fadnavis"/>
+                                                
+                                                <span class="avatar-name">Shreyas Fadnavis</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Study Group Sessions</h6>
+                                        <p>18:00 - 18:30</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/dipy-all.svg" alt="All"/>
+                                                
+                                                <span class="avatar-name">All</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="col-lg-6 col-sm-12 m-t-40">
+    <div class="program-day"> <!-- Mimics original structure -->
+        <h3 class="program-title m2-txt3 m-b-10">
+            Day 2 - 2025-03-18
+        </h3>
+        
+        <h5 class="program-title m2-txt4 p-b-20">Reconstruction</h5>
+        
+
+        <div class="row">
+            <div class="col-12">
+                <!-- Timeline Area -->
+                <div class="apland-timeline-area"> <!-- Use original CSS class -->
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Keynote: Fast and robust simulation-based Bayesian inference with AI</h6>
+                                        <p>09:00 - 09:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/Maeliss.jpeg" alt="Maeliss Jallais"/>
+                                                
+                                                <span class="avatar-name">Maeliss Jallais</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Guided Practice</h6>
+                                        <p>10:00 - 10:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/serge.png" alt="Serge Koudoro"/>
+                                                
+                                                <span class="avatar-name">Serge Koudoro</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Diffusion Tensor and Kurtosis Imaging</h6>
+                                        <p>11:00 - 11:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/atharva.png" alt="Atharva Shah"/>
+                                                
+                                                <span class="avatar-name">Atharva Shah</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <hr class="hr-text" data-content="Lunch Break" />
+                    
+
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Spherical Harmonic Reconstruction</h6>
+                                        <p>13:00 - 13:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/Maxime.jpeg" alt="Maxime Descoteaux"/>
+                                                
+                                                <span class="avatar-name">Maxime Descoteaux</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Model-based Quantification of Microstructural Properties from Diffusion MRI</h6>
+                                        <p>14:00 - 14:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/henriques.jpeg" alt="Rafael Henriques"/>
+                                                
+                                                <span class="avatar-name">Rafael Henriques</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Advanced Diffusion MRI Sequences for Microstructural Quantification</h6>
+                                        <p>15:00 - 15:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/henriques.jpeg" alt="Rafael Henriques"/>
+                                                
+                                                <span class="avatar-name">Rafael Henriques</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Fractal Dimensions for Segmentation</h6>
+                                        <p>16:00 - 16:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/Aziza.jpeg" alt="Aziza Saber Jabdaragh"/>
+                                                
+                                                <span class="avatar-name">Aziza Saber Jabdaragh</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">WebGPU Mayhem</h6>
+                                        <p>17:00 - 17:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/maharshi.jpeg" alt="Maharshi Gor"/>
+                                                
+                                                <span class="avatar-name">Maharshi Gor</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">E-Posters (Present your work)</h6>
+                                        <p>18:00 - 18:30</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/dipy-all.svg" alt="All"/>
+                                                
+                                                <span class="avatar-name">All</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="col-lg-6 col-sm-12 m-t-40">
+    <div class="program-day"> <!-- Mimics original structure -->
+        <h3 class="program-title m2-txt3 m-b-10">
+            Day 3 - 2025-03-19
+        </h3>
+        
+        <h5 class="program-title m2-txt4 p-b-20">Tractography</h5>
+        
+
+        <div class="row">
+            <div class="col-12">
+                <!-- Timeline Area -->
+                <div class="apland-timeline-area"> <!-- Use original CSS class -->
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Overview: Handbook of Diffusion MR Tractography</h6>
+                                        <p>09:00 - 09:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/Maxime.jpeg" alt="Maxime Descoteaux"/>
+                                                
+                                                <span class="avatar-name">Maxime Descoteaux</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Introduction to computational neuroanatomy</h6>
+                                        <p>10:00 - 10:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/wei.jpeg" alt="Wei Tang"/>
+                                                
+                                                <span class="avatar-name">Wei Tang</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Tractography: Principles, Methods and the New Fast Tracking API</h6>
+                                        <p>11:00 - 11:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/girard.png" alt="Gabriel Girard"/>
+                                                
+                                                <span class="avatar-name">Gabriel Girard</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <hr class="hr-text" data-content="Lunch Break" />
+                    
+
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Keynote: Advanced Diffusion and Functional MRI for Brain Network Insights</h6>
+                                        <p>13:00 - 13:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/Alexandra.jpeg" alt="Alexandra Badea"/>
+                                                
+                                                <span class="avatar-name">Alexandra Badea</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Tractography Segmentation</h6>
+                                        <p>14:00 - 14:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/Mohamed.jpg" alt="Mohamed Abouagour"/>
+                                                
+                                                <span class="avatar-name">Mohamed Abouagour</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Tractography-based Registration</h6>
+                                        <p>15:00 - 15:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/Chandio.jpeg" alt="Bramsh Qamar Chandio"/>
+                                                
+                                                <span class="avatar-name">Bramsh Qamar Chandio</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Guided Practice</h6>
+                                        <p>16:00 - 16:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/serge.png" alt="Serge Koudoro"/>
+                                                
+                                                <span class="avatar-name">Serge Koudoro</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">E-Posters</h6>
+                                        <p>17:00 - 17:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/dipy-all.svg" alt="All"/>
+                                                
+                                                <span class="avatar-name">All</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="col-lg-6 col-sm-12 m-t-40">
+    <div class="program-day"> <!-- Mimics original structure -->
+        <h3 class="program-title m2-txt3 m-b-10">
+            Day 4 - 2025-03-20
+        </h3>
+        
+        <h5 class="program-title m2-txt4 p-b-20">Tractometry</h5>
+        
+
+        <div class="row">
+            <div class="col-12">
+                <!-- Timeline Area -->
+                <div class="apland-timeline-area"> <!-- Use original CSS class -->
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Keynote: Putting big data and AI to good use in neuroscience research</h6>
+                                        <p>09:00 - 09:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/Franco.webp" alt="Franco Pestilli"/>
+                                                
+                                                <span class="avatar-name">Franco Pestilli</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Bundle Analytics</h6>
+                                        <p>10:00 - 10:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/Chandio.jpeg" alt="Bramsh Qamar Chandio"/>
+                                                
+                                                <span class="avatar-name">Bramsh Qamar Chandio</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Guided Practice</h6>
+                                        <p>11:00 - 11:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/Chandio.jpeg" alt="Bramsh Qamar Chandio"/>
+                                                
+                                                <span class="avatar-name">Bramsh Qamar Chandio</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <hr class="hr-text" data-content="Lunch Break" />
+                    
+
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">New Frontiers in Bundle Analytics</h6>
+                                        <p>13:00 - 13:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/rokem.jpg" alt="Ariel Rokem"/>
+                                                
+                                                <span class="avatar-name">Ariel Rokem</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Deep Learning for Tractography</h6>
+                                        <p>14:00 - 14:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/JHLegarreta.jpg" alt="Jon Haitz Legarreta"/>
+                                                
+                                                <span class="avatar-name">Jon Haitz Legarreta</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Keynote : Bridging Quantitative MRI and Histology for White Matter Microstructure Imaging</h6>
+                                        <p>15:00 - 15:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/Julien.jpeg" alt="Julien Cohen-Adad"/>
+                                                
+                                                <span class="avatar-name">Julien Cohen-Adad</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Free water elimination in tractography</h6>
+                                        <p>16:00 - 16:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/Kelly.jpeg" alt="Kelly Chang"/>
+                                                
+                                                <span class="avatar-name">Kelly Chang</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Study Group Sessions</h6>
+                                        <p>17:00 - 17:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/dipy-all.svg" alt="All"/>
+                                                
+                                                <span class="avatar-name">All</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="col-lg-6 col-sm-12 m-t-40">
+    <div class="program-day"> <!-- Mimics original structure -->
+        <h3 class="program-title m2-txt3 m-b-10">
+            Day 5 - 2025-03-21
+        </h3>
+        
+        <h5 class="program-title m2-txt4 p-b-20">Mixed Topics</h5>
+        
+
+        <div class="row">
+            <div class="col-12">
+                <!-- Timeline Area -->
+                <div class="apland-timeline-area"> <!-- Use original CSS class -->
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Keynote: Advancing microstructure imaging via diffusion MRI: harnessing modern machine learning and advanced computational models</h6>
+                                        <p>09:00 - 09:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/Marco.avif" alt="Marco Palombo"/>
+                                                
+                                                <span class="avatar-name">Marco Palombo</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Demo Session</h6>
+                                        <p>10:00 - 10:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/dipy-all.svg" alt="All"/>
+                                                
+                                                <span class="avatar-name">All</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Keynote: Unsupervised multivariate pattern analysis for neuroimaging studies</h6>
+                                        <p>11:00 - 11:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/Aris.webp" alt="Aris Sotiras"/>
+                                                
+                                                <span class="avatar-name">Aris Sotiras</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <hr class="hr-text" data-content="Lunch Break" />
+                    
+
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">GPU-accelerated Diffusion MRI Tractography in DIPY</h6>
+                                        <p>13:00 - 13:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/John.jpeg" alt="John Kruper"/>
+                                                
+                                                <span class="avatar-name">John Kruper</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Guided Practice</h6>
+                                        <p>14:00 - 14:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/John.jpeg" alt="John Kruper"/>
+                                                
+                                                <span class="avatar-name">John Kruper</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">AI Huddle</h6>
+                                        <p>15:00 - 15:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/sreekar.jpeg" alt="Sreekar Chigurupati"/>
+                                                
+                                                <span class="avatar-name">Sreekar Chigurupati</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                    
+                    <!-- Single Timeline Content -->
+                    <div class="single-timeline-area">
+                        <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                            <!-- Date/Icon can go here if needed -->
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                    <div class="timeline-text">
+                                        <h6 class="timeline-text-title">Final Assembly</h6>
+                                        <p>16:00 - 16:45</p>
+                                        
+                                        <div class="timeline-speaker-wrapper">
+                                            <div class="avatar-wrapper">
+                                                
+                                                    
+                                                    
+                                                    
+                                                        
+                                                        
+                                                    
+                                                    <img class="avatar" src="_static/images/speakers/dipy-all.svg" alt="TBA"/>
+                                                
+                                                <span class="avatar-name">TBA</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+</div>
+</section>
+</section>
+<section id="registration">
+<h1>Registration<a class="headerlink" href="#registration" title="Link to this heading">#</a></h1>
+<p>Get the Early Birds 25% Discount before 3rd January 2025.</p>
+<div class="pricing-list m-t-100">
+    <div class="flex-col-c">
+        <h3 class="content-title l2-txt1 p-b-10 color-black txt-center">Student</h3>
+        <div class="speaker-divider m-b-10"></div>
+        <strong class="s2-txt2 fs-16 m-b-20"> Master's Degree Students, PhD Candidates, Postdocs should take this option. </strong>
+    </div>
+    <div class="dis-flex flex-sa flex-w">
+        
+        <div class="col-lg-5 col-sm-12 p-l-20 m-t-20">
+            <div class="payment-card">
+                <h4 class="payment-card-title m2-txt4">Basic</h4>
+                <h4 class="payment-card-amount">
+                    
+                    <s class="payment-strike-through">$400</s>
+                    
+                    <span>
+                        $300 
+                        <sup>&ast;</sup>
+                        
+                    </span>
+                </h4>
+                <div class="payment-benefits">
+                    <p class="m2-txt3 p-b-10">What will be included?</p>
+                    <ul class="s2-text3">
+                        
+                        <li>Listen to the talks live.</li>
+                        
+                        <li>Learn from the experts.</li>
+                        
+                        <li>Basic kit for diffusion imaging.</li>
+                        
+                        <li>Ability to upgrade during the workshop.</li>
+                        
+                        <li>Complete 5 days of workshop</li>
+                        
+                    </ul>
+                </div>
+                <div class="payment-purchase p-b-20 flex-c">
+                    <div>
+                        <button
+                            class="btn btn-lg btn-secondary register-btn"
+                            onclick="window.location.href='https://indianauniv.ungerboeck.com/prod/emc00/register.aspx?aat=6339736c62496b4d736c38766d4468385256652f62534c54694e2b56662b566436455441393567527a546b3d'"
+                        >
+                            Register NOW
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-5 col-sm-12 p-l-20 m-t-20">
+            <div class="payment-card">
+                <h4 class="payment-card-title m2-txt4">Premium</h4>
+                <h4 class="payment-card-amount">
+                    
+                    <s class="payment-strike-through">$800</s>
+                    
+                    <span>
+                        $600 
+                        <sup>&ast;</sup>
+                        
+                    </span>
+                </h4>
+                <div class="payment-benefits">
+                    <p class="m2-txt3 p-b-10">What will be included?</p>
+                    <ul class="s2-text3">
+                        
+                        <li>Everything in Basic.</li>
+                        
+                        <li>Up to 6 one-hour 1:1 with DIPY developers.</li>
+                        
+                        <li>Access to talks after the workshop.</li>
+                        
+                        <li>Access to materials after the workshop.</li>
+                        
+                        <li>Year-long support option.</li>
+                        
+                        <li>Attend Study Groups.</li>
+                        
+                        <li>Present your work.</li>
+                        
+                        <li>LinkedIn verifiable certificate.</li>
+                        
+                    </ul>
+                </div>
+                <div class="payment-purchase p-b-20 flex-c">
+                    <div>
+                        <button
+                            class="btn btn-lg btn-secondary register-btn"
+                            onclick="window.location.href='https://indianauniv.ungerboeck.com/prod/emc00/register.aspx?aat=6339736c62496b4d736c38766d4468385256652f62534c54694e2b56662b566436455441393567527a546b3d'"
+                        >
+                            Register NOW
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div><div class="pricing-list m-t-100">
+    <div class="flex-col-c">
+        <h3 class="content-title l2-txt1 p-b-10 color-black txt-center">Academic</h3>
+        <div class="speaker-divider m-b-10"></div>
+        <strong class="s2-txt2 fs-16 m-b-20"> Faculty, Research Scientists, Any Academic Personnel should take this option. </strong>
+    </div>
+    <div class="dis-flex flex-sa flex-w">
+        
+        <div class="col-lg-5 col-sm-12 p-l-20 m-t-20">
+            <div class="payment-card">
+                <h4 class="payment-card-title m2-txt4">Basic</h4>
+                <h4 class="payment-card-amount">
+                    
+                    <s class="payment-strike-through">$550</s>
+                    
+                    <span>
+                        $412.5 
+                        <sup>&ast;</sup>
+                        
+                    </span>
+                </h4>
+                <div class="payment-benefits">
+                    <p class="m2-txt3 p-b-10">What will be included?</p>
+                    <ul class="s2-text3">
+                        
+                        <li>Listen to the talks live.</li>
+                        
+                        <li>Learn from the experts.</li>
+                        
+                        <li>Basic kit for diffusion imaging.</li>
+                        
+                        <li>Ability to upgrade during the workshop.</li>
+                        
+                        <li>Complete 5 days of workshop</li>
+                        
+                    </ul>
+                </div>
+                <div class="payment-purchase p-b-20 flex-c">
+                    <div>
+                        <button
+                            class="btn btn-lg btn-secondary register-btn"
+                            onclick="window.location.href='https://indianauniv.ungerboeck.com/prod/emc00/register.aspx?aat=6339736c62496b4d736c38766d4468385256652f62534c54694e2b56662b566436455441393567527a546b3d'"
+                        >
+                            Register NOW
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-5 col-sm-12 p-l-20 m-t-20">
+            <div class="payment-card">
+                <h4 class="payment-card-title m2-txt4">Premium</h4>
+                <h4 class="payment-card-amount">
+                    
+                    <s class="payment-strike-through">$1100</s>
+                    
+                    <span>
+                        $825 
+                        <sup>&ast;</sup>
+                        
+                    </span>
+                </h4>
+                <div class="payment-benefits">
+                    <p class="m2-txt3 p-b-10">What will be included?</p>
+                    <ul class="s2-text3">
+                        
+                        <li>Everything in Basic.</li>
+                        
+                        <li>Up to 6 one-hour 1:1 with DIPY developers.</li>
+                        
+                        <li>Access to talks after the workshop.</li>
+                        
+                        <li>Access to materials after the workshop.</li>
+                        
+                        <li>Year-long support option.</li>
+                        
+                        <li>Attend Study Groups.</li>
+                        
+                        <li>Present your work.</li>
+                        
+                        <li>LinkedIn verifiable certificate.</li>
+                        
+                    </ul>
+                </div>
+                <div class="payment-purchase p-b-20 flex-c">
+                    <div>
+                        <button
+                            class="btn btn-lg btn-secondary register-btn"
+                            onclick="window.location.href='https://indianauniv.ungerboeck.com/prod/emc00/register.aspx?aat=6339736c62496b4d736c38766d4468385256652f62534c54694e2b56662b566436455441393567527a546b3d'"
+                        >
+                            Register NOW
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div><div class="pricing-list m-t-100">
+    <div class="flex-col-c">
+        <h3 class="content-title l2-txt1 p-b-10 color-black txt-center">Non - Academic</h3>
+        <div class="speaker-divider m-b-10"></div>
+        <strong class="s2-txt2 fs-16 m-b-20"> Industry Personnel, Medical Staff, Radiologists, Neurologists, etc. should take this option. </strong>
+    </div>
+    <div class="dis-flex flex-sa flex-w">
+        
+        <div class="col-lg-5 col-sm-12 p-l-20 m-t-20">
+            <div class="payment-card">
+                <h4 class="payment-card-title m2-txt4">Basic</h4>
+                <h4 class="payment-card-amount">
+                    
+                    <s class="payment-strike-through">$700</s>
+                    
+                    <span>
+                        $525 
+                        <sup>&ast;</sup>
+                        
+                    </span>
+                </h4>
+                <div class="payment-benefits">
+                    <p class="m2-txt3 p-b-10">What will be included?</p>
+                    <ul class="s2-text3">
+                        
+                        <li>Listen to the talks live.</li>
+                        
+                        <li>Learn from the experts.</li>
+                        
+                        <li>Basic kit for diffusion imaging.</li>
+                        
+                        <li>Ability to upgrade during the workshop.</li>
+                        
+                        <li>Complete 5 days of workshop</li>
+                        
+                    </ul>
+                </div>
+                <div class="payment-purchase p-b-20 flex-c">
+                    <div>
+                        <button
+                            class="btn btn-lg btn-secondary register-btn"
+                            onclick="window.location.href='https://indianauniv.ungerboeck.com/prod/emc00/register.aspx?aat=6339736c62496b4d736c38766d4468385256652f62534c54694e2b56662b566436455441393567527a546b3d'"
+                        >
+                            Register NOW
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-5 col-sm-12 p-l-20 m-t-20">
+            <div class="payment-card">
+                <h4 class="payment-card-title m2-txt4">Premium</h4>
+                <h4 class="payment-card-amount">
+                    
+                    <s class="payment-strike-through">$1300</s>
+                    
+                    <span>
+                        $975 
+                        <sup>&ast;</sup>
+                        
+                    </span>
+                </h4>
+                <div class="payment-benefits">
+                    <p class="m2-txt3 p-b-10">What will be included?</p>
+                    <ul class="s2-text3">
+                        
+                        <li>Everything in Basic.</li>
+                        
+                        <li>Up to 6 one-hour 1:1 with DIPY developers.</li>
+                        
+                        <li>Access to talks after the workshop.</li>
+                        
+                        <li>Access to materials after the workshop.</li>
+                        
+                        <li>Year-long support option.</li>
+                        
+                        <li>Attend Study Groups.</li>
+                        
+                        <li>Present your work.</li>
+                        
+                        <li>LinkedIn verifiable certificate.</li>
+                        
+                    </ul>
+                </div>
+                <div class="payment-purchase p-b-20 flex-c">
+                    <div>
+                        <button
+                            class="btn btn-lg btn-secondary register-btn"
+                            onclick="window.location.href='https://indianauniv.ungerboeck.com/prod/emc00/register.aspx?aat=6339736c62496b4d736c38766d4468385256652f62534c54694e2b56662b566436455441393567527a546b3d'"
+                        >
+                            Register NOW
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div></section>
+<section id="contact">
+<h1>Contact<a class="headerlink" href="#contact" title="Link to this heading">#</a></h1>
+<p>Contact us for more information by sending an email at <a class="reference external" href="mailto:workshop&#37;&#52;&#48;dipy&#46;org">workshop<span>&#64;</span>dipy<span>&#46;</span>org</a></p>
+<p>or joining our forum at <a class="github reference external" href="https://github.com/dipy/dipy/discussions">dipy/dipy#discussions</a></p>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+
+  <footer class="bd-footer">
+  </footer>
+<script>
+</script>
+
+  </body>
+</html>
