@@ -373,27 +373,27 @@ Highlights
 
 .. carousel::
    :template: _templates/swipe_carousel.html
-   
+
    .. carousel-item::
       :image: https://raw.githubusercontent.com/dipy/dipy_data/master/tractometry.png?raw=true
       :title: Advanced tractometry
       :description: Advanced techniques in tractography for diffusion MRI.
-   
+
    .. carousel-item::
       :image: https://raw.githubusercontent.com/dipy/dipy_data/master/wrapping_bundles.png?raw=true
       :title: Warping of bundles
       :description: Techniques for warping and aligning bundles in diffusion MRI.
-   
+
    .. carousel-item::
       :image: https://raw.githubusercontent.com/dipy/dipy_data/master/illuminating_lines.png?raw=true
       :title: Cinematic visualization
       :description: Cinematic techniques for visualizing diffusion MRI data.
-   
+
    .. carousel-item::
       :image: https://raw.githubusercontent.com/dipy/dipy_data/master/preprocess.png?raw=true
       :title: State-of-the-art preprocessing
       :description: Advanced preprocessing techniques for diffusion MRI data.
-   
+
    .. carousel-item::
       :image: https://raw.githubusercontent.com/dipy/dipy_data/master/brain-extraction.png?raw=true
       :title: Accurate brain extraction
