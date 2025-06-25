@@ -367,9 +367,9 @@ Multiple speakers including **Garyfallidis, Landman and Harezlak** are funded by
 an EOSS grant through the `Chan Zuckerberg Initiative <https://chanzuckerberg.com/eoss/proposals/strengthening-computational-neuroanatomy-using-dipy/>`_.
 
 
-----------
+##########
 Highlights
-----------
+##########
 
 .. carousel::
    :template: _templates/swipe_carousel.html
