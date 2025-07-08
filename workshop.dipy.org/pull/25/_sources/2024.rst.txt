@@ -214,16 +214,16 @@ Conference Management
    :template: _templates/speaker_template.html
 
    .. workshop-speaker::
-      :name: Sai Prajwal Reddy
-      :image: Prajwal.jpeg
-      :title: PhD Student
+      :name: Kelsey Daniel
+      :image: kelesy.jpg
+      :title: Senior Conference Manager
       :affiliation: Indiana University
 
    .. workshop-speaker::
-      :name: Kaustav Deka
-      :image: Kaustav.png
+      :name: Mansi Ranka
+      :image: mansi.png
       :title: Graduate Student
-      :affiliation: University of Washington
+      :affiliation: Indiana University
 
 -----------------
 Participants from
