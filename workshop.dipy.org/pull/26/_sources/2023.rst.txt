@@ -5,7 +5,7 @@
 .. title:: DIPY Workshop 2023
 
 .. workshop-home::
-   :year: 2024
+   :year: 2023
    :codename: Online Edition
    :reg_start_date: 2022-08-01 00:00
    :start_date: 2023-04-24 09:00
@@ -52,7 +52,7 @@ Speakers
   .. workshop-speaker::
     :name: Matthew Brett
     :image: matthew_sm.jpg
-    :title: Founder of NIBABEL
+    :title: Founder of NiBabel
     :affiliation: Associate Professor of Data Science, Birmingham University
 
   .. workshop-speaker::
