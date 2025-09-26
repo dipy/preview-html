@@ -677,21 +677,21 @@ Schedule
 ############
 Registration
 ############
-Get the Early Birds 25% Discount before 3rd January 2026.
+Get the Early Birds Discount before 3rd January 2026.
 
 .. pricing-list::
    :template: _templates/pricing_template.html
-   :title: One Price to get you started
+   :title: One Price for all to get you started
    :subtitle: Get the most of the workshop with easy pricing, no hidden fees.
 
    .. pricing-item::
-      :name: Students
+      :name: Students, Academic, Professionals
       :currency: $
-      :price: 300
-      :discount: 400
+      :price: 500
+      :discount: 650
       :registration_link: https://iubgrg-fireform.eas.iu.edu/online/form/index/grgdw2026
 
-      - For Master's Degree Students, PhD Candidates, Postdocs
+      - One price for all
       - Listen to the talks live.
       - Learn from the experts.
       - Basic kit for diffusion imaging.
@@ -701,29 +701,12 @@ Get the Early Birds 25% Discount before 3rd January 2026.
       - LinkedIn verifiable certificate.
 
    .. pricing-item::
-      :name: Academic
+      :name: Returning Participants
       :currency: $
-      :price: 600
-      :discount: 800
+      :price: 250
+      :discount: 300
       :registration_link: https://iubgrg-fireform.eas.iu.edu/online/form/index/grgdw2026
 
-      - For Faculty, Research Scientists, Any Academic Personnel
-      - Listen to the talks live.
-      - Learn from the experts.
-      - Basic kit for diffusion imaging.
-      - Attend Study Groups.
-      - Present your work.
-      - Complete 5 days of workshop
-      - LinkedIn verifiable certificate.
-
-   .. pricing-item::
-      :name: Professionals
-      :currency: $
-      :price: 600
-      :discount: 800
-      :registration_link: https://iubgrg-fireform.eas.iu.edu/online/form/index/grgdw2026
-
-      - For Industry Personnel, Medical Staff, Radiologists, Neurologists, etc.
       - Listen to the talks live.
       - Learn from the experts.
       - Basic kit for diffusion imaging.
@@ -741,8 +724,8 @@ Get the Early Birds 25% Discount before 3rd January 2026.
    .. pricing-item::
       :name: Recording Access
       :currency: $
-      :price: 412.5
-      :discount: 550
+      :price: 250
+      :discount: 350
       :registration_link: https://iubgrg-fireform.eas.iu.edu/online/form/index/grgdw2026
 
       - Only accessible if you register for the workshop.
@@ -752,14 +735,14 @@ Get the Early Birds 25% Discount before 3rd January 2026.
    .. pricing-item::
       :name: Coaching Package
       :currency: $
-      :price: 825
-      :discount: 1100
+      :price: 500
+      :discount: 750
       :registration_link: https://iubgrg-fireform.eas.iu.edu/online/form/index/grgdw2026
 
       - Only accessible if you register for the workshop.
       - Deep Dive into your data and project with expert guidance.
-      - Up to 6 one-hour 1:1 with DIPY developers.
-      - Year-long support option.
+      - Up to 3 one-hour 1:1 with DIPY developers.
+      - A Discount Year-long support option available.
 
 
 #######
