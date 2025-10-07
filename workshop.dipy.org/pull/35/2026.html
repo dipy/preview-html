@@ -33,7 +33,7 @@
 <link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="_static/css/new/workshop.css?v=6439a4f7" />
+    <link rel="stylesheet" type="text/css" href="_static/css/new/workshop.css?v=d6e8cf36" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
@@ -318,7 +318,7 @@
         </div>
 
         
-        <div class="hero-registration-container">
+        <div class="hero-registration-container" id="hero-registration-container">
             <div class="hero-registration-card">
                 <h3 class="hero-registration-title" id="countdown-title">
                     <b>Registration</b> has been started
@@ -394,35 +394,13 @@
         </div>
     </div>
 
-    
-    <div class="hero-carousel-indicators">
-        
-        <button
-            class="hero-carousel-indicator active"
-            data-index="0"
-            aria-label="Go to slide 1"
-        ></button>
-        
-        <button
-            class="hero-carousel-indicator "
-            data-index="1"
-            aria-label="Go to slide 2"
-        ></button>
-        
-        <button
-            class="hero-carousel-indicator "
-            data-index="2"
-            aria-label="Go to slide 3"
-        ></button>
-        
-    </div>
 
     <script>
         setupHomeCarousel(".hero-background-container", ".hero-background-image");
         initializeClock("countdown", "2025-10-01T00:00:00-04:00", "2026-03-16T09:00:00-04:00", []);
         initializeClock("reg-countdown", 0, "2025-10-01T00:00:00-04:00", []);
         setTimeout(() => {
-            hideAfterDate("2026-03-20T17:00:00", "reg-countdown-stop");
+            hideAfterDate("2026-03-20T17:00:00", "hero-registration-container");
             messageAfterDate(
                 "2026-03-20T17:00:00",
                 "countdown-stop",
@@ -1830,7 +1808,7 @@
 
         
         <div class="thanks-note">
-            <p>Multiple speakers including Garyfallidis, Landman and Harezlak are funded by the National Institutes of Health (NIH).</p>
+            <p>Multiple speakers including <b>Garyfallidis, Landman and Harezlak</b> are funded by the <br/><a href="https://www.nih.gov/">National Institutes of Health</a>.<br/> In addition, <b>Koudoro, Rokem and Girard</b> are funded froman EOSS grant through the <br/><a href="https://chanzuckerberg.com/eoss/proposals/strengthening-computational-neuroanatomy-using-dipy/">Chan Zuckerberg Initiative</a>.</p>
         </div>
         
     </div>
@@ -3644,7 +3622,7 @@
             <h2 class="registration-title">Registration</h2>
             <div class="title-underline title-underline-md"></div>
             
-            <p class="registration-subtitle">Get the Early Birds Discount before 3rd January 2026</p>
+            <p class="registration-subtitle">Get the Early Birds Discount before 4th January 2026</p>
             
         </div>
 

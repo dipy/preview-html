@@ -33,7 +33,7 @@
 <link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="_static/css/new/workshop.css?v=6439a4f7" />
+    <link rel="stylesheet" type="text/css" href="_static/css/new/workshop.css?v=d6e8cf36" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
@@ -318,7 +318,7 @@
         </div>
 
         
-        <div class="hero-registration-container">
+        <div class="hero-registration-container" id="hero-registration-container">
             <div class="hero-registration-card">
                 <h3 class="hero-registration-title" id="countdown-title">
                     <b>Registration</b> has been started
@@ -394,35 +394,13 @@
         </div>
     </div>
 
-    
-    <div class="hero-carousel-indicators">
-        
-        <button
-            class="hero-carousel-indicator active"
-            data-index="0"
-            aria-label="Go to slide 1"
-        ></button>
-        
-        <button
-            class="hero-carousel-indicator "
-            data-index="1"
-            aria-label="Go to slide 2"
-        ></button>
-        
-        <button
-            class="hero-carousel-indicator "
-            data-index="2"
-            aria-label="Go to slide 3"
-        ></button>
-        
-    </div>
 
     <script>
         setupHomeCarousel(".hero-background-container", ".hero-background-image");
         initializeClock("countdown", "2023-08-01T00:00:00-04:00", "2024-03-11T09:00:00-04:00", []);
         initializeClock("reg-countdown", 0, "2023-08-01T00:00:00-04:00", []);
         setTimeout(() => {
-            hideAfterDate("2024-03-15T17:00:00", "reg-countdown-stop");
+            hideAfterDate("2024-03-15T17:00:00", "hero-registration-container");
             messageAfterDate(
                 "2024-03-15T17:00:00",
                 "countdown-stop",
@@ -2122,34 +2100,44 @@
 </section></section>
 <section id="special-thanks">
 <h2>Special Thanks<a class="headerlink" href="#special-thanks" title="Link to this heading">#</a></h2>
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row sd-row-cols-4 sd-row-cols-xs-4 sd-row-cols-sm-4 sd-row-cols-md-4 sd-row-cols-lg-4 sd-g-5 sd-g-xs-5 sd-g-sm-5 sd-g-md-5 sd-g-lg-5 docutils">
-<div class="sd-col sd-d-flex-column docutils">
-</div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
-<img alt="Garyfallidis Research Group (GRG)" class="sd-card-img" src="_images/GRG.png" />
-<div class="sd-card-img-overlay docutils">
-<div class="sd-card-body docutils">
-</div>
-<a class="sd-stretched-link sd-hide-link-text reference external" href="https://grg.luddy.indiana.edu/"><span>https://grg.luddy.indiana.edu/</span></a></div>
-</div>
-</div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
-<img alt="Intelligent Systems Engineering (IU)" class="sd-card-img" src="_images/ISE.jpeg" />
-<div class="sd-card-img-overlay docutils">
-<div class="sd-card-body docutils">
-</div>
-<a class="sd-stretched-link sd-hide-link-text reference external" href="https://engineering.indiana.edu/index.html"><span>https://engineering.indiana.edu/index.html</span></a></div>
-</div>
-</div>
-</div>
-</div>
-<p>Multiple speakers including <strong>Garyfallidis, Landman and Harezlak</strong> are funded by the
-<a class="reference external" href="https://www.nih.gov/">National Institutes of Health</a>. In addition, <strong>Koudoro, Rokem and Girard</strong> are funded from
-an EOSS grant through the <a class="reference external" href="https://chanzuckerberg.com/eoss/proposals/strengthening-computational-neuroanatomy-using-dipy/">Chan Zuckerberg Initiative</a>.</p>
-</section>
+<section id="special-thanks" class="thanks-section">
+    <div class="section-container">
+        <div class="section-header">
+            <h2 class="section-title section-title-dark">Special Thanks</h2>
+            <div class="title-underline title-underline-md"></div>
+            
+        </div>
+
+        <div class="thanks-grid">
+            
+            <a href="https://grg.luddy.indiana.edu/" target="_blank" rel="noopener noreferrer" class="thanks-card">
+                <div class="thanks-image-wrapper">
+                    <img src="_static/images/universities/GRG.png" alt="Garyfallidis Research Group (GRG)" class="thanks-image" />
+                </div>
+                
+                <p class="thanks-name">Garyfallidis Research Group (GRG)</p>
+                
+            </a>
+            
+            <a href="https://engineering.indiana.edu/index.html" target="_blank" rel="noopener noreferrer" class="thanks-card">
+                <div class="thanks-image-wrapper">
+                    <img src="_static/images/universities/ISE.jpeg" alt="Intelligent Systems Engineering (IU)" class="thanks-image" />
+                </div>
+                
+                <p class="thanks-name">Intelligent Systems Engineering (IU)</p>
+                
+            </a>
+            
+        </div>
+
+        
+        <div class="thanks-note">
+            <p>Multiple speakers including <b>Garyfallidis, Landman and Harezlak</b> are funded by the <br/><a href="https://www.nih.gov/">National Institutes of Health</a>.<br/> In addition, <b>Koudoro, Rokem and Girard</b> are funded froman EOSS grant through the <br/><a href="https://chanzuckerberg.com/eoss/proposals/strengthening-computational-neuroanatomy-using-dipy/">Chan Zuckerberg Initiative</a>.</p>
+        </div>
+        
+    </div>
+    <div class="section-separator"></div>
+</section></section>
 </section>
 <section id="why">
 <h1>Why?<a class="headerlink" href="#why" title="Link to this heading">#</a></h1>
@@ -4779,6 +4767,14 @@ an EOSS grant through the <a class="reference external" href="https://chanzucker
 <section id="registration">
 <h1>Registration<a class="headerlink" href="#registration" title="Link to this heading">#</a></h1>
 
+<section id="registration" class="registration-section">
+    <div class="registration-container">
+        <div class="registration-header">
+            <h2 class="registration-title">Registration</h2>
+            <div class="title-underline title-underline-md"></div>
+            
+        </div>
+
 
 <div class="registration-main-packages">
             <div class="registration-section-header">
@@ -5690,9 +5686,80 @@ an EOSS grant through the <a class="reference external" href="https://chanzucker
 </section>
 <section id="contact">
 <h1>Contact<a class="headerlink" href="#contact" title="Link to this heading">#</a></h1>
-<p>Contact us for more information by sending an email at <a class="reference external" href="mailto:workshop&#37;&#52;&#48;dipy&#46;org">workshop<span>&#64;</span>dipy<span>&#46;</span>org</a></p>
-<p>or joining our forum at <a class="github reference external" href="https://github.com/dipy/dipy/discussions">dipy/dipy#discussions</a></p>
-</section>
+<section id="contact" class="contact-section">
+  <div class="contact-container">
+    <!-- Section Header -->
+    <div class="contact-header">
+      <h2 class="contact-title">
+        Contact
+      </h2>
+      <div class="title-underline title-underline-md"></div>
+      <p class="contact-subtitle">
+        Contact us for more information
+      </p>
+    </div>
+
+    <!-- Contact Cards -->
+    <div class="contact-cards-grid">
+      
+      <a
+        href="mailto:workshop@dipy.org"
+        class="contact-card"
+        
+      >
+        <!-- Icon -->
+        <div class="contact-icon-container">
+          
+          <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          
+        </div>
+
+        <!-- Content -->
+        <h3 class="contact-card-title">
+          Email Us
+        </h3>
+        <p class="contact-card-description">
+          Send us an email for inquiries
+        </p>
+        <p class="contact-card-link ">
+          workshop@dipy.org
+        </p>
+      </a>
+      
+      <a
+        href="https://github.com/dipy/dipy/discussions"
+        class="contact-card"
+        target="_blank" rel="noopener noreferrer"
+      >
+        <!-- Icon -->
+        <div class="contact-icon-container">
+          
+          <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+          </svg>
+          
+        </div>
+
+        <!-- Content -->
+        <h3 class="contact-card-title">
+          Join Our Forum
+        </h3>
+        <p class="contact-card-description">
+          Connect with the community
+        </p>
+        <p class="contact-card-link contact-card-link-small">
+          github.com/dipy/dipy/discussions
+        </p>
+      </a>
+      
+    </div>
+  </div>
+
+  <!-- Section Separator -->
+  <div class="section-separator"></div>
+</section></section>
 
 
                 </article>
