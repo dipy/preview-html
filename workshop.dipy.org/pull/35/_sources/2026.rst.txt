@@ -403,7 +403,7 @@ Schedule
       .. workshop-timeline-item::
          :time: 11:00 - 11:50
          :title: SUCOR
-         :info: Susceptibility distortion correction using deep learning approaches for improved data quality.
+         :info: Unbending the Magnetic Truth: The World’s Most Advanced Susceptibility Distortion Correction.
          :speaker: Sreekar Chigurupati
          :image: sreekar.jpeg
 
@@ -574,7 +574,7 @@ Schedule
       .. workshop-timeline-item::
          :time: 09:00 - 09:50
          :title: Thetan
-         :info: Most advanced clustering algorithm.
+         :info: Unmatched Precision. Unprecedented Power. The Definitive Clustering Algorithm for a New Era of Data Intelligence.
          :speaker: Eleftherios Garyfallidis
          :image: garyfallidis.jpg
 
@@ -588,7 +588,7 @@ Schedule
       .. workshop-timeline-item::
          :time: 11:00 - 11:50
          :title: DIPY Skyline
-         :info: Modern visualization platform for interactive exploration.
+         :info: The Crown Jewel of Insight: The World’s Most Advanced Modern Visualization Platform for Immersive Data Exploration.
          :speaker: Maharshi Gor
          :image: maharshi.jpeg
 
