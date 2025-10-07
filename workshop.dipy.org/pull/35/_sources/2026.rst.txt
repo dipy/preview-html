@@ -389,18 +389,21 @@ Schedule
       .. workshop-timeline-item::
          :time: 09:00 - 09:50
          :title: Workshop Overview
+         :info: Introduction to DIPY framework, workshop goals, and agenda. Learn about the 5-day journey through diffusion MRI analysis.
          :speaker: Eleftherios Garyfallidis
          :image: garyfallidis.jpg
 
       .. workshop-timeline-item::
          :time: 10:00 - 10:50
          :title: DIPY Auto & Cajal
+         :info: Explore automated preprocessing pipelines and Cajal tools for streamlined diffusion MRI data processing.
          :speaker: Serge Koudoro
          :image: serge.png
 
       .. workshop-timeline-item::
          :time: 11:00 - 11:50
          :title: SUCOR
+         :info: Susceptibility distortion correction using deep learning approaches for improved data quality.
          :speaker: Sreekar Chigurupati
          :image: sreekar.jpeg
 
@@ -411,12 +414,14 @@ Schedule
       .. workshop-timeline-item::
          :time: 13:00 - 13:50
          :title: Guided Practice
+         :info: Hands-on session applying preprocessing techniques learned in the morning sessions with expert guidance.
          :speaker: DIPY Team
          :image: dipy-all.svg
 
       .. workshop-timeline-item::
          :time: 14:00 - 14:50
          :title: Round Table: Best Practices in Preprocessing
+         :info: Interactive discussion sharing experiences, challenges, and solutions in diffusion MRI preprocessing.
          :speaker: Everyone
          :image: dipy-all.svg
 
@@ -429,18 +434,21 @@ Schedule
       .. workshop-timeline-item::
          :time: 09:00 - 09:50
          :title: Patch2Self3
+         :info: Advanced self-supervised denoising techniques for diffusion MRI using the latest Patch2Self algorithms.
          :speaker: TBA
          :image: dipy-all.svg
 
       .. workshop-timeline-item::
          :time: 10:00 - 10:50
          :title: DIPY Reconstruction Overview
+         :info: Comprehensive overview of reconstruction methods including DTI, DKI, CSD, and advanced multi-shell techniques.
          :speaker: TBA
          :image: dipy-all.svg
 
       .. workshop-timeline-item::
          :time: 11:00 - 11:50
          :title: FORCE
+         :info: The Pinnacle of Neuroimaging Innovation: The World’s Most Advanced Fiber Orientation Reconstruction, Setting an Unprecedented Standard for Brain Connectivity Mapping.
          :speaker: Atharva Shah
          :image: atharva.png
 
@@ -451,18 +459,21 @@ Schedule
       .. workshop-timeline-item::
          :time: 13:00 - 13:50
          :title: Guided Practice
+         :info: Hands-on implementation of reconstruction algorithms with real diffusion MRI datasets and parameter optimization.
          :speaker: DIPY Team
          :image: dipy-all.svg
 
       .. workshop-timeline-item::
          :time: 14:00 - 14:50
          :title: Round Table: Best Practices in Reconstruction
+         :info: Collaborative discussion on choosing appropriate reconstruction methods for different research scenarios.
          :speaker: Everyone
          :image: dipy-all.svg
-            
+
       .. workshop-timeline-item::
-         :time: 14:00 - 14:50
+         :time: 15:00 - 15:50
          :title: Presentations by Participants
+         :info: Participants showcase their research, methodologies, and challenges in diffusion MRI analysis.
          :speaker: Participants
          :image: dipy-all.svg
 
@@ -474,18 +485,21 @@ Schedule
       .. workshop-timeline-item::
          :time: 09:00 - 09:50
          :title: DIPY Tractography Overview
+         :info: Comprehensive introduction to fiber tracking algorithms including deterministic and probabilistic methods.
          :speaker: TBA
          :image: dipy-all.svg
 
       .. workshop-timeline-item::
          :time: 10:00 - 10:50
          :title: GLIDE
+         :info: Most optimized tractography algorithm.
          :speaker: TBA
          :image: dipy-all.svg
 
       .. workshop-timeline-item::
          :time: 11:00 - 11:50
          :title: DIPY Registration Overview
+         :info: Image registration techniques for aligning diffusion data across subjects and to anatomical templates.
          :speaker: TBA
          :image: dipy-all.svg
 
@@ -496,12 +510,14 @@ Schedule
       .. workshop-timeline-item::
          :time: 13:00 - 13:50
          :title: Guided Practice
+         :info: Practical tractography session generating fiber bundles and visualizing white matter pathways.
          :speaker: DIPY Team
          :image: dipy-all.svg
 
       .. workshop-timeline-item::
          :time: 14:00 - 14:50
          :title: Round Table: Best Practices in Tractography
+         :info: Discussion on parameter selection, validation methods, and common pitfalls in tractography analysis.
          :speaker: Everyone
          :image: dipy-all.svg
 
@@ -513,18 +529,21 @@ Schedule
       .. workshop-timeline-item::
          :time: 09:00 - 09:50
          :title: BUAN3
+         :info: Bundle Analytics - Statistical analysis of diffusion metrics along white matter bundles for group studies.
          :speaker: Bramsh Qamar Chandio
          :image: Chandio.jpeg
 
       .. workshop-timeline-item::
          :time: 10:00 - 10:50
          :title: BUAN3 - Continued
+         :info: Advanced BUAN features including multi-metric analysis, visualization, and statistical interpretation.
          :speaker: Bramsh Qamar Chandio
          :image: Chandio.jpeg
 
       .. workshop-timeline-item::
          :time: 11:00 - 11:50
          :title: PUMBA
+         :info: Probabilistic Unsupervised Multi-Bundle Atlas - automated bundle segmentation using machine learning.
          :speaker: Jong Sung Park
          :image: jspark.jpeg
 
@@ -535,12 +554,14 @@ Schedule
       .. workshop-timeline-item::
          :time: 13:00 - 13:50
          :title: Guided Practice
+         :info: Hands-on tractometry analysis extracting and analyzing diffusion metrics along major white matter pathways.
          :speaker: DIPY Team
          :image: dipy-all.svg
 
       .. workshop-timeline-item::
          :time: 14:00 - 14:50
          :title: Round Table: Best Practices in Tractometry
+         :info: Best practices for reproducible tractometry studies and interpreting tract-specific measures.
          :speaker: Everyone
          :image: dipy-all.svg
 
@@ -553,18 +574,21 @@ Schedule
       .. workshop-timeline-item::
          :time: 09:00 - 09:50
          :title: Thetan
+         :info: Most advanced clustering algorithm.
          :speaker: Eleftherios Garyfallidis
          :image: garyfallidis.jpg
 
       .. workshop-timeline-item::
          :time: 10:00 - 10:50
          :title: Thetan - Continued
+         :info: Deep dive into Thetan implementation, use cases.
          :speaker: Eleftherios Garyfallidis
          :image: garyfallidis.jpg
 
       .. workshop-timeline-item::
          :time: 11:00 - 11:50
          :title: DIPY Skyline
+         :info: Modern visualization platform for interactive exploration.
          :speaker: Maharshi Gor
          :image: maharshi.jpeg
 
@@ -575,18 +599,21 @@ Schedule
       .. workshop-timeline-item::
          :time: 13:00 - 13:50
          :title: Guided Practice
+         :info: Final hands-on session integrating all learned techniques into a complete analysis pipeline.
          :speaker: DIPY Team
          :image: dipy-all.svg
 
       .. workshop-timeline-item::
          :time: 14:00 - 14:50
          :title: Round Table: Best Practices in General
+         :info: Open forum discussing overall best practices, future directions, and Q&A for all workshop topics.
          :speaker: Everyone
          :image: dipy-all.svg
 
       .. workshop-timeline-item::
          :time: 15:00 - 15:30
          :title: Final Assembly
+         :info: Workshop wrap-up, certificate distribution, group photo, and farewell remarks. See you next year!
          :speaker: DIPY Team
          :image: dipy-all.svg
 

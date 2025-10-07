@@ -119,6 +119,9 @@
   box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
   border: 2px solid #ebebeb;
   transition: all 0.5s;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
 }
 
 .schedule-session-card:hover {
@@ -142,6 +145,21 @@
   margin-bottom: 1rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+}
+
+/* Session Info/Description */
+.schedule-session-info {
+  font-size: 0.875rem;
+  color: #6B7280;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  padding-left: 0.75rem;
+  border-left: 3px solid #F3F4F6;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .schedule-speaker-container {
@@ -217,15 +235,15 @@
   .schedule-section {
     padding: 4rem 0;
   }
-  
+
   .schedule-container {
     padding: 0 1.5rem;
   }
-  
+
   .schedule-title {
     font-size: 2.25rem;
   }
-  
+
   /* Responsive width handled by .title-underline-md in utils.css */
 }
 
@@ -233,15 +251,15 @@
   .schedule-section {
     padding: 5rem 0;
   }
-  
+
   .schedule-container {
     padding: 0 2rem;
   }
-  
+
   .schedule-header {
     margin-bottom: 4rem;
   }
-  
+
   .schedule-title {
     font-size: 3rem;
   }
@@ -251,13 +269,13 @@
   .schedule-section {
     padding: 6rem 0;
   }
-  
+
   .schedule-title {
     font-size: 3.75rem;
   }
-  
+
   /* Responsive width handled by .title-underline-md in utils.css */
-  
+
   .schedule-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
