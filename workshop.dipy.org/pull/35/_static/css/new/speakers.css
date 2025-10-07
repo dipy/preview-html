@@ -47,13 +47,7 @@
   margin-bottom: 1rem;
 }
 
-.speakers-title-underline {
-  width: 5rem;
-  height: 0.25rem;
-  background-color: #F58F00;
-  border-radius: 9999px;
-  margin: 0 auto 1.5rem;
-}
+/* Use .title-underline and .title-underline-sm from utils.css */
 
 .speakers-subtitle {
   font-size: 1.125rem;
@@ -222,9 +216,7 @@
     font-size: 2.25rem;
   }
   
-  .speakers-title-underline {
-    width: 6rem;
-  }
+  /* Responsive width handled by .title-underline-sm in utils.css */
   
   .speakers-subtitle {
     font-size: 1.25rem;
@@ -310,9 +302,7 @@
     font-size: 3.75rem;
   }
   
-  .speakers-title-underline {
-    width: 8rem;
-  }
+  /* Responsive width handled by .title-underline-sm in utils.css */
   
   .speakers-grid {
     grid-template-columns: repeat(3, 1fr);

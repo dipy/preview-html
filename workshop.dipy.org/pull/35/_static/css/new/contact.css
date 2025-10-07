@@ -23,13 +23,7 @@
   margin-bottom: 1rem;
 }
 
-.contact-title-underline {
-  width: 6rem;
-  height: 0.25rem;
-  background-color: #F58F00;
-  border-radius: 9999px;
-  margin: 0 auto 1.5rem;
-}
+/* Use .title-underline and .title-underline-md from utils.css */
 
 .contact-subtitle {
   font-size: 1.25rem;
@@ -133,9 +127,7 @@
     font-size: 3rem;
   }
   
-  .contact-title-underline {
-    width: 8rem;
-  }
+  /* Responsive width handled by .title-underline-md in utils.css */
   
   .contact-subtitle {
     font-size: 1.5rem;

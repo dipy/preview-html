@@ -59,13 +59,7 @@
   filter: drop-shadow(0 25px 25px rgba(0, 0, 0, 0.5));
 }
 
-.hero-title-underline {
-  width: 6rem;
-  height: 0.25rem;
-  background-color: #F58F00;
-  border-radius: 9999px;
-  margin-bottom: 0.75rem;
-}
+/* Use .title-underline and .title-underline-md from utils.css */
 
 .hero-subtitle {
   font-size: 1rem;
@@ -217,9 +211,7 @@
     font-size: 3rem;
   }
   
-  .hero-title-underline {
-    width: 8rem;
-  }
+  /* Responsive width handled by .title-underline-md in utils.css */
   
   .hero-subtitle {
     font-size: 1.125rem;
@@ -300,10 +292,7 @@
     margin-bottom: 1rem;
   }
   
-  .hero-title-underline {
-    width: 10rem;
-    margin-bottom: 1rem;
-  }
+  /* Responsive width handled by .title-underline-lg in utils.css */
   
   .hero-subtitle {
     font-size: 1.25rem;
@@ -360,9 +349,7 @@
     font-size: 4.5rem;
   }
   
-  .hero-title-underline {
-    width: 12rem;
-  }
+  /* Responsive width handled by .title-underline-xl in utils.css */
   
   .hero-subtitle {
     font-size: 1.5rem;

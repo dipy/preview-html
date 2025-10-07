@@ -681,7 +681,6 @@ Registration
    :template: _templates/pricing_template.html
    :section_title: Registration
    :section_subtitle: Get the Early Birds Discount before 3rd January 2026
-   :wrap_section:
    :title: Main Packages
    :subtitle: One Price for all to get you started
    :description: Get the most of the workshop with easy pricing, no hidden fees.
@@ -720,6 +719,7 @@ Registration
 
 .. pricing-list::
    :template: _templates/pricing_template.html
+   :wrap_section:
    :title: Optional Packages
    :subtitle: Need more flexibility? Check out our optional packages.
 

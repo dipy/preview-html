@@ -174,6 +174,11 @@ html, body {
   overflow-x: hidden !important;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 !important;
+  line-height: none !important;
+}
+
 /* Hide Sphinx-generated section headers (we use template headers instead) */
 .bd-article > section > h1,
 .bd-article > section > h2,
@@ -221,13 +226,55 @@ html, body {
   color: black;
 }
 
-/* Title Underlines */
-.title-underline {
-  width: 5rem;
+/* Title Underlines - Common utility class */
+.title-underline-heading {
   height: 0.25rem;
   background-color: #F58F00;
   border-radius: 9999px;
-  margin: 0 auto 1.5rem;
+  margin-top: 0.5rem;
+  width: 6rem;
+}
+
+.title-underline {
+  height: 0.25rem;
+  background-color: #F58F00;
+  border-radius: 9999px;
+  margin: 1.5rem auto;
+}
+
+/* Title underline width variants */
+.title-underline-sm {
+  width: 5rem;
+}
+
+.title-underline-md {
+  width: 6rem;
+}
+
+.title-underline-lg {
+  width: 8rem;
+}
+
+.title-underline-xl {
+  width: 10rem;
+}
+
+.title-underline-2xl {
+  width: 12rem;
+}
+
+/* Responsive underline widths */
+@media (min-width: 640px) {
+  .title-underline-sm { width: 6rem; }
+  .title-underline-md { width: 8rem; }
+}
+
+@media (min-width: 768px) {
+  .title-underline-lg { width: 10rem; }
+}
+
+@media (min-width: 1024px) {
+  .title-underline-xl { width: 12rem; }
 }
 
 /* Decorative Elements */

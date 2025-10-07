@@ -226,9 +226,7 @@
     font-size: 2.25rem;
   }
   
-  .schedule-title-underline {
-    width: 6rem;
-  }
+  /* Responsive width handled by .title-underline-md in utils.css */
 }
 
 @media (min-width: 768px) {
@@ -258,9 +256,7 @@
     font-size: 3.75rem;
   }
   
-  .schedule-title-underline {
-    width: 8rem;
-  }
+  /* Responsive width handled by .title-underline-md in utils.css */
   
   .schedule-grid {
     grid-template-columns: repeat(2, 1fr);
