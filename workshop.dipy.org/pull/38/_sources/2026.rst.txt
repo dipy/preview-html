@@ -114,8 +114,8 @@ Speakers
    .. workshop-speaker::
       :name: Rafael Neto Henriques
       :image: henriques.jpeg
-      :title: Postdoctoral Researcher
-      :affiliation: Champalimaud Centre for the Unknown, PT
+      :title: Assistant Professor
+      :affiliation: Institute of Biophysics and Biomedical Engineering, Department of Physics, Faculty of Science, University of Lisbon
 
    .. workshop-speaker::
       :name: Wei Tang
