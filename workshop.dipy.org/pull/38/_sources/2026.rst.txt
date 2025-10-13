@@ -120,8 +120,8 @@ Speakers
    .. workshop-speaker::
       :name: Wei Tang
       :image: wei.jpeg
-      :title: Research Scientist
-      :affiliation: Indiana University
+      :title: Assistant Professor
+      :affiliation: Department of Psychological and Brain Sciences, Indiana University
 
    .. workshop-speaker::
       :name: Serge Koudoro
