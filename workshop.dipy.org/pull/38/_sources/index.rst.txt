@@ -42,6 +42,21 @@ About
    Whether you're new to diffusion imaging or an experienced practitioner, this workshop is perfect for you. Our curriculum is tailored to meet the needs of individuals at all levels of expertise. Don't miss this chance to enhance your skills and advance your career.
    Register today to secure your spot in this highly anticipated event. We can't wait to see you in the event!
 
+   .. about-stat-card::
+      :icon: 🏆
+      :number: 18
+      :label: Years of Excellence
+
+   .. about-stat-card::
+      :icon: 👤
+      :number: 2000+
+      :label: Participants Worldwide
+
+   .. about-stat-card::
+      :icon: 🎤
+      :number: 100+
+      :label: Distinguished Speakers
+
 ####
 Why?
 ####
