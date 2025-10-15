@@ -19,12 +19,6 @@
    :team_location: Bloomington, IN
    :registration_link: https://iubgrg-fireform.eas.iu.edu/online/form/index/grgdw2026
 
-   .. workshop-home-slide:: _static/images/background/bg1-min.png
-      :alt: dw_2026_bg_1
-
-   .. workshop-home-slide:: _static/images/background/bg2-min.jpeg
-      :alt: dw_2026_bg_2
-
    .. workshop-home-slide:: _static/images/background/bg3-min.jpeg
       :alt: dw_2026_bg_3
 
@@ -120,14 +114,14 @@ Speakers
    .. workshop-speaker::
       :name: Rafael Neto Henriques
       :image: henriques.jpeg
-      :title: Postdoctoral Researcher
-      :affiliation: Champalimaud Centre for the Unknown, PT
+      :title: Assistant Professor
+      :affiliation: Institute of Biophysics and Biomedical Engineering, Department of Physics, Faculty of Science, University of Lisbon
 
    .. workshop-speaker::
       :name: Wei Tang
       :image: wei.jpeg
-      :title: Research Scientist
-      :affiliation: Indiana University
+      :title: Assistant Professor
+      :affiliation: Department of Psychological and Brain Sciences, Indiana University
 
    .. workshop-speaker::
       :name: Serge Koudoro
@@ -138,8 +132,8 @@ Speakers
    .. workshop-speaker::
       :name: Bramsh Qamar Chandio
       :image: Chandio.jpeg
-      :title: Postdoctoral Scholar
-      :affiliation: University of Southern California
+      :title: Associate Professor
+      :affiliation: West Virginia University
 
    .. workshop-speaker::
       :name: Maharshi Gor
@@ -652,7 +646,7 @@ Registration
    :description: Get the most of the workshop with easy pricing, no hidden fees.
 
    .. pricing-item::
-      :name: Students, Academic, Professionals
+      :name: Students, Academics, Professionals
       :currency: $
       :price: 500
       :discount: 650
