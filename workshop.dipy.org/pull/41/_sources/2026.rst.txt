@@ -31,7 +31,7 @@ About
    :watermark_image_url: _static/images/dipy-watermark.svg
    :note_name: Learn Diffusion MRI
 
-   5 days of hands-on diffusion MRI training. Zero to hero—no coding experience required, just curiosity! Learn preprocessing, tractography, and analytics through practical sessions. Perfect for students, researchers, and clinicians at any level. Earn your certificate and join a global community of neuroimaging professionals.
+   A 5-day intensive workshop covering the fundamentals of diffusion MRI analysis. No coding experience needed—we'll teach you everything from preprocessing to tractography and analytics through practical, hands-on sessions. Whether you're a student, researcher, or clinician, our curriculum meets you at your level. Complete the workshop to earn your certificate and connect with neuroimaging professionals worldwide.
 
    .. about-stat-card::
       :icon: 🏆
