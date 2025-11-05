@@ -109,6 +109,12 @@ Speakers
       :affiliation: Research Associate Professor, University of Washington, Seattle
 
    .. workshop-speaker::
+    :name: Jaroslaw Harezlak
+    :image: jarek.jpeg
+    :title: DIPY Advisor on Statistics
+    :affiliation: Professor, Indiana University
+
+   .. workshop-speaker::
       :name: Rafael Neto Henriques
       :image: henriques.jpeg
       :title: Assistant Professor
