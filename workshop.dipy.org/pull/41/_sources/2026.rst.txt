@@ -31,22 +31,22 @@ About
    :watermark_image_url: _static/images/dipy-watermark.svg
    :note_name: Learn Diffusion MRI
 
-   A 5-day intensive workshop covering the fundamentals of diffusion MRI analysis. No coding experience needed—we'll teach you everything from preprocessing to tractography and analytics through practical, hands-on sessions. Whether you're a student, researcher, or clinician, our curriculum meets you at your level. Complete the workshop to earn your certificate and connect with neuroimaging professionals worldwide.
+   A 5-day workshop covering the fundamentals of structural and diffusion MRI analysis. No coding experience needed. You'll learn everything from preprocessing to tractography and analytics through practical, hands-on sessions. Whether you're a student, researcher, or clinician, our curriculum meets you at your level. Complete the workshop to earn your certificate and connect with neuroimaging professionals worldwide.
 
    .. about-stat-card::
-      :icon: 🏆
+      :icon: ⏳
       :number: 18
       :label: Years in development
 
    .. about-stat-card::
-      :icon: 👤
-      :number: 4000+
-      :label: Participants Worldwide
+      :icon: 🏛️
+      :number: 40+
+      :label: Contributing Universities
 
    .. about-stat-card::
-      :icon: 🎤
-      :number: 300+
-      :label: Distinguished Speakers
+      :icon: 🔬
+      :number: 1500+
+      :label: Projects Powered by DIPY
 
 ####
 Why?
@@ -129,7 +129,7 @@ Speakers
    .. workshop-speaker::
       :name: Bramsh Qamar Chandio
       :image: Chandio.jpeg
-      :title: Associate Professor
+      :title: Assistant Professor
       :affiliation: West Virginia University
 
    .. workshop-speaker::
@@ -311,12 +311,7 @@ Special Thanks
 .. workshop-thanks::
    :template: _templates/v2/thanks_template.html
    :title: Special Thanks
-   :note: Multiple speakers including <b>Garyfallidis, Landman and Harezlak</b> are funded by the <br/><a href="https://www.nih.gov/">National Institutes of Health</a>.<br/> In addition, <b>Koudoro, Rokem and Girard</b> are funded froman EOSS grant through the <br/><a href="https://chanzuckerberg.com/eoss/proposals/strengthening-computational-neuroanatomy-using-dipy/">Chan Zuckerberg Initiative</a>.
-
-   .. workshop-thanks-item::
-      :name: Garyfallidis Research Group (GRG)
-      :image: _static/images/universities/GRG.png
-      :url: https://grg.luddy.indiana.edu/
+   :note: Multiple speakers including <b>Garyfallidis and Harezlak</b> are funded by the <br/><a href="https://www.nih.gov/">National Institutes of Health</a>.<br/> In addition, <b>Koudoro and Rokem</b> are funded froman EOSS grant through the <br/><a href="https://chanzuckerberg.com/eoss/proposals/strengthening-computational-neuroanatomy-using-dipy/">Chan Zuckerberg Initiative</a>.
 
    .. workshop-thanks-item::
       :name: Intelligent Systems Engineering (IU)
