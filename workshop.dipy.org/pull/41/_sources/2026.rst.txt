@@ -326,6 +326,11 @@ Highlights
    :template: _templates/v2/swipe_carousel.html
 
    .. carousel-item::
+      :image: _static/images/carousel/trct.png
+      :title: DIPY GUI
+      :description: DIPY's intuitive graphical interface for advanced visualization and analysis
+   
+   .. carousel-item::
       :image: https://raw.githubusercontent.com/dipy/dipy_data/master/tractometry.png?raw=true
       :title: Advanced tractometry
       :description: Advanced techniques in tractography for diffusion MRI.
