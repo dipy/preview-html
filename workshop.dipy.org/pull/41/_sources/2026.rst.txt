@@ -168,6 +168,12 @@ Speakers
       :title: PhD Student
       :affiliation: Indiana University
 
+   .. workshop-speaker::
+      :name: Sai Prajwal Reddy
+      :image: Prajwal.jpeg
+      :title: PhD Student
+      :affiliation: Indiana University
+
 
 -----------------
 Participants from
@@ -329,7 +335,7 @@ Highlights
       :image: _static/images/carousel/trct.png
       :title: DIPY GUI
       :description: DIPY's intuitive graphical interface for advanced visualization and analysis
-   
+
    .. carousel-item::
       :image: https://raw.githubusercontent.com/dipy/dipy_data/master/tractometry.png?raw=true
       :title: Advanced tractometry
