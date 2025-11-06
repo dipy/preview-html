@@ -333,7 +333,7 @@ Highlights
 
    .. carousel-item::
       :image: _static/images/carousel/trct.png
-      :title: DIPY GUI
+      :title: Interactive visualizer
       :description: DIPY's intuitive graphical interface for advanced visualization and analysis
 
    .. carousel-item::
@@ -570,21 +570,21 @@ Schedule
 
       .. workshop-timeline-item::
          :time: 09:00 - 09:50
-         :title: Thetan
+         :title: THETAN
          :info: Introducing a new theoretical AI framework for the new Era of Data Intelligence.
          :speaker: Eleftherios Garyfallidis
          :image: garyfallidis.jpg
 
       .. workshop-timeline-item::
          :time: 10:00 - 10:50
-         :title: Thetan (Continued)
-         :info: Deep dive into Thetan implementation and use cases.
+         :title: THETAN (Continued)
+         :info: Deep dive into THETAN implementation and use cases.
          :speaker: Eleftherios Garyfallidis
          :image: garyfallidis.jpg
 
       .. workshop-timeline-item::
          :time: 11:00 - 11:50
-         :title: Skyline
+         :title: SKYLINE
          :info: The Crown Jewel of Insight: The World's Most Exquisite Visualization Platform for Immersive Data Exploration.
          :speaker: Maharshi Gor
          :image: maharshi.jpeg
