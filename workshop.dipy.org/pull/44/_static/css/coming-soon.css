@@ -1,0 +1,288 @@
+.coming-soon {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.coming-soon .bg-image {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -10;
+  opacity: 0.9;
+  transform: scaleX(-1);
+}
+
+.coming-soon .container {
+  display: flex;
+  height: 95vh;
+  width: 100%;
+}
+
+.coming-soon .hero-section,
+.coming-soon .video-section {
+  width: 50%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.coming-soon .hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 0 1rem;
+}
+
+.coming-soon .hero-date {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fcd34d;
+  margin: 0.5rem 0;
+}
+
+.coming-soon .hero-subtitle {
+  font-size: 3.5rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #fef3c7, #b45309);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+.coming-soon .hero-description {
+  font-size: 1.25rem;
+}
+
+.coming-soon .email-box form {
+  display: flex;
+  max-width: 400px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 9999px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.coming-soon .email-box form > input {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 9999px 0 0 9999px;
+  outline: none;
+  color: black;
+  font: 1em DM Sans, sans-serif;
+}
+
+.coming-soon .email-box form > button {
+  font: 1em DM Sans, sans-serif;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 9999px;
+  background: linear-gradient(to right, #fcd34d, #f59e0b);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.coming-soon .email-box button:hover {
+  background: linear-gradient(to right, #fbbf24, #d97706);
+}
+
+.coming-soon .notify-text {
+  font-size: 1rem;
+}
+
+.coming-soon .socials h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.coming-soon .social-icons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.coming-soon .social-icons a {
+  background: gray;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9999px;
+  transition: transform 0.3s ease;
+}
+
+.coming-soon .social-icons a:hover {
+  transform: scale(1.1);
+}
+
+.coming-soon .social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+.coming-soon .video-section h3 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.coming-soon .video-section p {
+  font-size: 1.125rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.coming-soon .video-container {
+  width: 100%;
+  max-width: 640px;
+  aspect-ratio: 16 / 9;
+  background: black;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.coming-soon .video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.coming-soon .workshops {
+  width: 240px;
+  position: relative;
+}
+
+.coming-soon .workshops summary {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.coming-soon .workshops summary:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.coming-soon .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 0.5rem;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: black;
+}
+
+.coming-soon .dropdown a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.coming-soon .dropdown a:hover {
+  color: #d97706;
+}
+
+.coming-soon .dropdown img {
+  width: 16px;
+  height: 16px;
+}
+
+.coming-soon + footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.875rem;
+  color: white;
+}
+
+@media (max-width: 1200px) {
+  .coming-soon {
+    padding: 1rem;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .coming-soon .hero-section {
+    margin-top: 5rem;
+  }
+
+  .coming-soon .container {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+
+  .coming-soon .hero-section,
+  .coming-soon .video-section {
+    width: 90%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .coming-soon .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .coming-soon .hero-subtitle {
+    font-size: 2rem;
+  }
+
+  .coming-soon .hero-date {
+    font-size: 1rem;
+  }
+
+  .coming-soon .hero-description {
+    font-size: 1rem;
+  }
+
+  .coming-soon .email-box form > input,
+  .coming-soon .email-box form > button {
+    padding: 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .coming-soon .video-section h3 {
+    font-size: 1.25rem;
+  }
+
+  .coming-soon .video-section p {
+    font-size: 0.875rem;
+  }
+}

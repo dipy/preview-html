@@ -1,0 +1,3362 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="The 2026 Dipy Workshop is a 5-day event focused on diffusion MRI, featuring expert speakers and hands-on sessions." name="description" />
+<meta content="Dipy, Workshop, Diffusion MRI, Neuroimaging, Tractography" name="keywords" />
+
+    <title>Dipy Workshop 2026 &#8212; workshop.dipy.org  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-D2TV6ZZQL3"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-D2TV6ZZQL3');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-D2TV6ZZQL3');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '2026';</script>
+    <script src="_static/js/splide.js?v=acdc9bd7"></script>
+    <script src="_static/js/workshop.js?v=782129ce"></script>
+    <script src="_static/js/countdown.js?v=2cdae20d"></script>
+    <script src="_static/js/carousel.js?v=00b0bd66"></script>
+    <script src="_static/js/schedule-carousel.js?v=87bd6bd2"></script>
+    <script src="_static/js/hero-carousel.js?v=3c689fbe"></script>
+    <script src="_static/js/navbar.js?v=38411762"></script>
+    <link rel="canonical" href="https://workshop.dipy.org/2026.html" />
+    <link rel="icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="About" href="2025.html" />
+    <link rel="prev" title="About" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+
+<nav class="navbar">
+    <div class="navbar-container">
+        
+        <div class="navbar-logo-section">
+            <img
+                src="_static/images/icons/dipy-logo.png"
+                alt="DIPY Logo"
+                width="32"
+                height="32"
+                class="navbar-logo-image"
+            />
+            <span class="navbar-logo-text">DIPY</span>
+        </div>
+
+        
+        <div class="navbar-arrow">
+            <svg viewBox="0 0 240 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M2 12 L230 12 M230 12 L224 8 M230 12 L224 16"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    opacity="0.3"
+                />
+            </svg>
+        </div>
+
+        
+        <ul class="navbar-nav">
+            <li>
+                <a href="#home" class="navbar-nav-item">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="#about" class="navbar-nav-item">
+                    About
+                </a>
+            </li>
+            <li>
+                <a href="#speakers" class="navbar-nav-item">
+                    Speakers
+                </a>
+            </li>
+            <li>
+                <a href="#why" class="navbar-nav-item">
+                    Why?
+                </a>
+            </li>
+            <li>
+                <a href="#highlights" class="navbar-nav-item">
+                    Highlights
+                </a>
+            </li>
+            <li>
+                <a href="#schedule" class="navbar-nav-item">
+                    Schedule
+                </a>
+            </li>
+            <li>
+                <a href="#registration" class="navbar-nav-item">
+                    Registration
+                </a>
+            </li>
+            <li>
+                <a href="#contact" class="navbar-nav-item">
+                    Contact
+                </a>
+            </li>
+        </ul>
+
+        
+        <button class="navbar-mobile-button" id="mobile-menu-button">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </div>
+</nav>
+
+
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    About
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="2025.html">
+    About
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="2024.html">
+    About
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="2023.html">
+    About
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Dipy Workshop 2026</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <link rel="stylesheet" href="_static/css/v2/workshop.css"/><section class="hero-section" id="home">
+    
+    <div class="hero-background-container">
+        
+        <div class="hero-background-image active">
+            <img src="_static/images/background/bg3-min.jpeg" alt="dw_2026_bg_3" />
+        </div>
+        
+        
+        <div class="hero-overlay"></div>
+    </div>
+
+    
+    <div class="hero-content">
+        
+        <div class="hero-title-section">
+            <h1 class="hero-title">
+                DIPY WORKSHOP 2026
+            </h1>
+            <div class="title-underline-heading"></div>
+            <p class="hero-subtitle">
+                100% Online Event
+            </p>
+            <div class="hero-info">
+                <div class="hero-info-item">
+                    <svg class="hero-info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                    <span>March 16 - March 20, 2026</span>
+                </div>
+                <!-- <div class="hero-info-item">
+                    <svg class="hero-info-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    <span>Bloomington, IN</span>
+                </div> -->
+            </div>
+        </div>
+
+        
+        <div class="hero-registration-container" id="hero-registration-container">
+            <div class="hero-registration-card">
+                <h3 class="hero-registration-title" id="countdown-title">
+                    <b>Registration</b> has been started
+                </h3>
+                <p class="hero-registration-subtitle">Time left to register:</p>
+
+                
+                <div class="hero-countdown-grid" id="countdown">
+                    <div class="hero-countdown-item">
+                        <div class="hero-countdown-box">
+                            <span class="hero-countdown-number days time">00</span>
+                        </div>
+                        <span class="hero-countdown-label">DAYS</span>
+                    </div>
+                    <div class="hero-countdown-item">
+                        <div class="hero-countdown-box">
+                            <span class="hero-countdown-number hours time">00</span>
+                        </div>
+                        <span class="hero-countdown-label">HOURS</span>
+                    </div>
+                    <div class="hero-countdown-item">
+                        <div class="hero-countdown-box">
+                            <span class="hero-countdown-number minutes time">00</span>
+                        </div>
+                        <span class="hero-countdown-label">MINS</span>
+                    </div>
+                    <div class="hero-countdown-item">
+                        <div class="hero-countdown-box">
+                            <span class="hero-countdown-number seconds time">00</span>
+                        </div>
+                        <span class="hero-countdown-label">SECS</span>
+                    </div>
+                </div>
+
+                
+                <div id="reg-countdown-stop">
+                    
+                    <a href=https://iubgrg-fireform.eas.iu.edu/online/form/index/grgdw2026 role="button" class="hero-register-button">
+                    
+                        Register Now
+                    </a>
+                </div>
+
+                <small id="reg-countdown-title" style="display: none;">
+                    <b>Registration</b> will start in ...
+                </small>
+
+                <div id="reg-countdown" class="hero-countdown-grid" style="display: none;">
+                    <div class="hero-countdown-item">
+                        <div class="hero-countdown-box">
+                            <span class="hero-countdown-number days time">00</span>
+                        </div>
+                        <span class="hero-countdown-label">DAYS</span>
+                    </div>
+                    <div class="hero-countdown-item">
+                        <div class="hero-countdown-box">
+                            <span class="hero-countdown-number hours time">00</span>
+                        </div>
+                        <span class="hero-countdown-label">HOURS</span>
+                    </div>
+                    <div class="hero-countdown-item">
+                        <div class="hero-countdown-box">
+                            <span class="hero-countdown-number minutes time">00</span>
+                        </div>
+                        <span class="hero-countdown-label">MINS</span>
+                    </div>
+                    <div class="hero-countdown-item">
+                        <div class="hero-countdown-box">
+                            <span class="hero-countdown-number seconds time">00</span>
+                        </div>
+                        <span class="hero-countdown-label">SECS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        setupHomeCarousel(".hero-background-container", ".hero-background-image");
+        initializeClock("countdown", "2025-10-01T00:00:00-04:00", "2026-03-16T09:00:00-04:00", []);
+        initializeClock("reg-countdown", 0, "2025-10-01T00:00:00-04:00", []);
+        setTimeout(() => {
+            hideAfterDate("2026-03-20T17:00:00", "hero-registration-container");
+            messageAfterDate(
+                "2026-03-20T17:00:00",
+                "countdown-stop",
+                "<b>Workshop</b> has been ended. <br/> See you next year!");
+        }, 1000);
+    </script>
+</section><section id="about">
+<h1>About<a class="headerlink" href="#about" title="Link to this heading">#</a></h1>
+<section id="about" class="about-section">
+    <div class="about-container">
+        
+        <div class="about-header">
+            <h2 class="about-title">
+                About the Workshop
+            </h2>
+            <div class="title-underline title-underline-sm"></div>
+        </div>
+
+        
+        <div class="about-content">
+            
+            <div class="about-description">
+                
+                <p>
+                    A 5-day workshop covering the fundamentals of structural and diffusion MRI analysis. No coding experience needed. You&#39;ll learn everything from preprocessing to tractography and analytics through practical, hands-on sessions. Whether you&#39;re a student, researcher, or clinician, our curriculum meets you at your level. Complete the workshop to earn your certificate and connect with neuroimaging professionals worldwide.
+                </p>
+                
+                <p>
+                    
+                </p>
+                
+            </div>
+
+            
+            <div class="about-stats-grid">
+                
+                <div class="about-stat-card">
+                    <div class="about-stat-content">
+                        <div class="about-stat-icon">
+                            ⏳
+                        </div>
+                        <div class="about-stat-number">
+                            18
+                        </div>
+                        <div class="about-stat-label">
+                            Years in development
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-stat-card">
+                    <div class="about-stat-content">
+                        <div class="about-stat-icon">
+                            🏛️
+                        </div>
+                        <div class="about-stat-number">
+                            40+
+                        </div>
+                        <div class="about-stat-label">
+                            Contributing Universities
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-stat-card">
+                    <div class="about-stat-content">
+                        <div class="about-stat-icon">
+                            🔬
+                        </div>
+                        <div class="about-stat-number">
+                            1500+
+                        </div>
+                        <div class="about-stat-label">
+                            Projects Powered by DIPY
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        
+        <div class="about-decorative-circle-left"></div>
+        <div class="about-decorative-circle-right"></div>
+    </div>
+
+    
+    <div class="section-separator"></div>
+</section></section>
+<section id="why">
+<h1>Why?<a class="headerlink" href="#why" title="Link to this heading">#</a></h1>
+<section id="why" class="why-section">
+    
+    <div class="why-decorative-top"></div>
+    <div class="why-decorative-bottom"></div>
+
+    <div class="why-container">
+        
+        <div class="why-header">
+            <h2 class="why-title">
+                Why Attend?
+            </h2>
+            <div class="title-underline title-underline-sm"></div>
+            
+            <p class="why-subtitle">
+                Here are a few reasons why attending the DIPY MR Imaging workshop is essential
+            </p>
+            
+        </div>
+
+        
+        <div class="why-reasons-container">
+            
+            <div class="why-reason-row">
+                <div class="why-reason-row ">
+                    
+                    <div class="why-icon-side">
+                        <div class="why-icon-container">
+                            
+                            <div class="why-icon-box">
+                                <div class="why-icon">
+                                    🔬
+                                    
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="why-content-side">
+                        <div class="why-content-card">
+                            <h3 class="why-content-title">
+                                Hands-on experience
+                            </h3>
+                            <p class="why-content-description">
+                                The workshop offers a hands-on learning experience, which is essential for learning how to use MR imaging techniques and software effectively. The practical sessions provide attendees with the opportunity to work on real-world problems and gain valuable experience in the field.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="why-reason-row">
+                <div class="why-reason-row reverse">
+                    
+                    <div class="why-icon-side">
+                        <div class="why-icon-container">
+                            
+                            <div class="why-icon-box">
+                                <div class="why-icon">
+                                    
+                                    👨‍🏫
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="why-content-side">
+                        <div class="why-content-card">
+                            <h3 class="why-content-title">
+                                Expert instructors
+                            </h3>
+                            <p class="why-content-description">
+                                The workshop is led by expert instructors who have extensive experience in MR imaging and DIPY software. They provide valuable insights and expertise, which is essential for staying up-to-date with the latest advancements in this rapidly evolving field.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="why-reason-row">
+                <div class="why-reason-row ">
+                    
+                    <div class="why-icon-side">
+                        <div class="why-icon-container">
+                            
+                            <div class="why-icon-box">
+                                <div class="why-icon">
+                                    
+                                    
+                                    🤝
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="why-content-side">
+                        <div class="why-content-card">
+                            <h3 class="why-content-title">
+                                Networking opportunities
+                            </h3>
+                            <p class="why-content-description">
+                                The workshop provides an excellent opportunity for attendees to network with other professionals in the field. This can lead to collaborations and the sharing of knowledge and expertise, which is critical for advancing research in the field.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="why-reason-row">
+                <div class="why-reason-row reverse">
+                    
+                    <div class="why-icon-side">
+                        <div class="why-icon-container">
+                            
+                            <div class="why-icon-box">
+                                <div class="why-icon">
+                                    
+                                    
+                                    
+                                    💻
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="why-content-side">
+                        <div class="why-content-card">
+                            <h3 class="why-content-title">
+                                Access to the latest technology
+                            </h3>
+                            <p class="why-content-description">
+                                The DIPY workshop provides access to the latest software for analyzing and processing MR imaging data. This ensures that attendees are working with the most advanced technology available, which can lead to more accurate and efficient analysis of data.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="why-reason-row">
+                <div class="why-reason-row ">
+                    
+                    <div class="why-icon-side">
+                        <div class="why-icon-container">
+                            
+                            <div class="why-icon-box">
+                                <div class="why-icon">
+                                    
+                                    
+                                    
+                                    
+                                    📊
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="why-content-side">
+                        <div class="why-content-card">
+                            <h3 class="why-content-title">
+                                Deep understanding of the theory behind the methods
+                            </h3>
+                            <p class="why-content-description">
+                                The topics covered need a solid understanding of the models, theory and math. For this reason, all tutorials will be provided at four levels : <br />
+   a&#41; Theory <br />
+   b&#41; Algorithms/Methods <br />
+   c&#41; Code/Interfaces <br />
+   d&#41; Clinical Application Examples.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+    <div class="section-separator"></div>
+</section></section>
+<section id="speakers">
+<h1>Speakers<a class="headerlink" href="#speakers" title="Link to this heading">#</a></h1>
+<section id="speakers" class="speakers-section">
+    
+    <div class="speakers-decorative-top"></div>
+    <div class="speakers-decorative-bottom"></div>
+
+    <div class="speakers-container">
+        
+        <div class="speakers-header">
+            <h2 class="speakers-title">
+                Speakers
+            </h2>
+            <div class="title-underline title-underline-sm"></div>
+            
+            <p class="speakers-subtitle">
+                Our expert speakers
+            </p>
+            
+        </div>
+
+        
+        <div class="speakers-grid">
+            
+            <div class="speaker-card-wrapper">
+                
+                <div class="speaker-card">
+                    
+                    <div class="speaker-image-container">
+                        
+                            
+                            
+                                
+                            
+                            <img src="_static/images/speakers/garyfallidis.jpg" alt="Eleftherios Garyfallidis" class="speaker-image" />
+                        
+                        
+                        <div class="speaker-image-gradient"></div>
+                    </div>
+
+                    
+                    <div class="speaker-content">
+                        <h3 class="speaker-name">
+                            Eleftherios Garyfallidis
+                        </h3>
+                        <p class="speaker-role">
+                            Chair, DIPY Founder &amp; Lead Developer
+                        </p>
+                        <p class="speaker-university">
+                            Associate Professor, Indiana University
+                        </p>
+                    </div>
+
+                    
+                    <div class="speaker-decorative-corner"></div>
+                </div>
+
+                
+                <div class="speaker-hover-glow"></div>
+            </div>
+            
+            <div class="speaker-card-wrapper">
+                
+                <div class="speaker-card">
+                    
+                    <div class="speaker-image-container">
+                        
+                            
+                            
+                                
+                            
+                            <img src="_static/images/speakers/rokem.jpg" alt="Ariel Rokem" class="speaker-image" />
+                        
+                        
+                        <div class="speaker-image-gradient"></div>
+                    </div>
+
+                    
+                    <div class="speaker-content">
+                        <h3 class="speaker-name">
+                            Ariel Rokem
+                        </h3>
+                        <p class="speaker-role">
+                            Associate DIPY Lead, eScience Institute
+                        </p>
+                        <p class="speaker-university">
+                            Research Associate Professor, University of Washington, Seattle
+                        </p>
+                    </div>
+
+                    
+                    <div class="speaker-decorative-corner"></div>
+                </div>
+
+                
+                <div class="speaker-hover-glow"></div>
+            </div>
+            
+            <div class="speaker-card-wrapper">
+                
+                <div class="speaker-card">
+                    
+                    <div class="speaker-image-container">
+                        
+                            
+                            
+                                
+                            
+                            <img src="_static/images/speakers/jarek.jpeg" alt="Jaroslaw Harezlak" class="speaker-image" />
+                        
+                        
+                        <div class="speaker-image-gradient"></div>
+                    </div>
+
+                    
+                    <div class="speaker-content">
+                        <h3 class="speaker-name">
+                            Jaroslaw Harezlak
+                        </h3>
+                        <p class="speaker-role">
+                            DIPY Advisor on Statistics
+                        </p>
+                        <p class="speaker-university">
+                            Professor, Indiana University
+                        </p>
+                    </div>
+
+                    
+                    <div class="speaker-decorative-corner"></div>
+                </div>
+
+                
+                <div class="speaker-hover-glow"></div>
+            </div>
+            
+            <div class="speaker-card-wrapper">
+                
+                <div class="speaker-card">
+                    
+                    <div class="speaker-image-container">
+                        
+                            
+                            
+                                
+                            
+                            <img src="_static/images/speakers/henriques.jpeg" alt="Rafael Neto Henriques" class="speaker-image" />
+                        
+                        
+                        <div class="speaker-image-gradient"></div>
+                    </div>
+
+                    
+                    <div class="speaker-content">
+                        <h3 class="speaker-name">
+                            Rafael Neto Henriques
+                        </h3>
+                        <p class="speaker-role">
+                            Assistant Professor
+                        </p>
+                        <p class="speaker-university">
+                            Institute of Biophysics and Biomedical Engineering, Department of Physics, Faculty of Science, University of Lisbon
+                        </p>
+                    </div>
+
+                    
+                    <div class="speaker-decorative-corner"></div>
+                </div>
+
+                
+                <div class="speaker-hover-glow"></div>
+            </div>
+            
+            <div class="speaker-card-wrapper">
+                
+                <div class="speaker-card">
+                    
+                    <div class="speaker-image-container">
+                        
+                            
+                            
+                                
+                            
+                            <img src="_static/images/speakers/serge.png" alt="Serge Koudoro" class="speaker-image" />
+                        
+                        
+                        <div class="speaker-image-gradient"></div>
+                    </div>
+
+                    
+                    <div class="speaker-content">
+                        <h3 class="speaker-name">
+                            Serge Koudoro
+                        </h3>
+                        <p class="speaker-role">
+                            DIPY Release Manager
+                        </p>
+                        <p class="speaker-university">
+                            Indiana University
+                        </p>
+                    </div>
+
+                    
+                    <div class="speaker-decorative-corner"></div>
+                </div>
+
+                
+                <div class="speaker-hover-glow"></div>
+            </div>
+            
+            <div class="speaker-card-wrapper">
+                
+                <div class="speaker-card">
+                    
+                    <div class="speaker-image-container">
+                        
+                            
+                            
+                                
+                            
+                            <img src="_static/images/speakers/Chandio.jpeg" alt="Bramsh Qamar Chandio" class="speaker-image" />
+                        
+                        
+                        <div class="speaker-image-gradient"></div>
+                    </div>
+
+                    
+                    <div class="speaker-content">
+                        <h3 class="speaker-name">
+                            Bramsh Qamar Chandio
+                        </h3>
+                        <p class="speaker-role">
+                            Assistant Professor
+                        </p>
+                        <p class="speaker-university">
+                            West Virginia University
+                        </p>
+                    </div>
+
+                    
+                    <div class="speaker-decorative-corner"></div>
+                </div>
+
+                
+                <div class="speaker-hover-glow"></div>
+            </div>
+            
+            <div class="speaker-card-wrapper">
+                
+                <div class="speaker-card">
+                    
+                    <div class="speaker-image-container">
+                        
+                            
+                            
+                                
+                            
+                            <img src="_static/images/speakers/maharshi.jpeg" alt="Maharshi Gor" class="speaker-image" />
+                        
+                        
+                        <div class="speaker-image-gradient"></div>
+                    </div>
+
+                    
+                    <div class="speaker-content">
+                        <h3 class="speaker-name">
+                            Maharshi Gor
+                        </h3>
+                        <p class="speaker-role">
+                            Research Associate
+                        </p>
+                        <p class="speaker-university">
+                            Indiana University
+                        </p>
+                    </div>
+
+                    
+                    <div class="speaker-decorative-corner"></div>
+                </div>
+
+                
+                <div class="speaker-hover-glow"></div>
+            </div>
+            
+            <div class="speaker-card-wrapper">
+                
+                <div class="speaker-card">
+                    
+                    <div class="speaker-image-container">
+                        
+                            
+                            
+                                
+                            
+                            <img src="_static/images/speakers/sreekar.jpeg" alt="Sreekar Chigurupati" class="speaker-image" />
+                        
+                        
+                        <div class="speaker-image-gradient"></div>
+                    </div>
+
+                    
+                    <div class="speaker-content">
+                        <h3 class="speaker-name">
+                            Sreekar Chigurupati
+                        </h3>
+                        <p class="speaker-role">
+                            PhD Student
+                        </p>
+                        <p class="speaker-university">
+                            Indiana University
+                        </p>
+                    </div>
+
+                    
+                    <div class="speaker-decorative-corner"></div>
+                </div>
+
+                
+                <div class="speaker-hover-glow"></div>
+            </div>
+            
+            <div class="speaker-card-wrapper">
+                
+                <div class="speaker-card">
+                    
+                    <div class="speaker-image-container">
+                        
+                            
+                            
+                                
+                            
+                            <img src="_static/images/speakers/jspark.jpeg" alt="Jong Sung Park" class="speaker-image" />
+                        
+                        
+                        <div class="speaker-image-gradient"></div>
+                    </div>
+
+                    
+                    <div class="speaker-content">
+                        <h3 class="speaker-name">
+                            Jong Sung Park
+                        </h3>
+                        <p class="speaker-role">
+                            PhD Student
+                        </p>
+                        <p class="speaker-university">
+                            Indiana University
+                        </p>
+                    </div>
+
+                    
+                    <div class="speaker-decorative-corner"></div>
+                </div>
+
+                
+                <div class="speaker-hover-glow"></div>
+            </div>
+            
+            <div class="speaker-card-wrapper">
+                
+                <div class="speaker-card">
+                    
+                    <div class="speaker-image-container">
+                        
+                            
+                            
+                                
+                            
+                            <img src="_static/images/speakers/Aziza.jpeg" alt="Aziza Saber Jabdaragh" class="speaker-image" />
+                        
+                        
+                        <div class="speaker-image-gradient"></div>
+                    </div>
+
+                    
+                    <div class="speaker-content">
+                        <h3 class="speaker-name">
+                            Aziza Saber Jabdaragh
+                        </h3>
+                        <p class="speaker-role">
+                            PhD Student
+                        </p>
+                        <p class="speaker-university">
+                            Indiana University
+                        </p>
+                    </div>
+
+                    
+                    <div class="speaker-decorative-corner"></div>
+                </div>
+
+                
+                <div class="speaker-hover-glow"></div>
+            </div>
+            
+            <div class="speaker-card-wrapper">
+                
+                <div class="speaker-card">
+                    
+                    <div class="speaker-image-container">
+                        
+                            
+                            
+                                
+                            
+                            <img src="_static/images/speakers/Mohamed.jpg" alt="Mohamed Abouagour" class="speaker-image" />
+                        
+                        
+                        <div class="speaker-image-gradient"></div>
+                    </div>
+
+                    
+                    <div class="speaker-content">
+                        <h3 class="speaker-name">
+                            Mohamed Abouagour
+                        </h3>
+                        <p class="speaker-role">
+                            PhD Student
+                        </p>
+                        <p class="speaker-university">
+                            Indiana University
+                        </p>
+                    </div>
+
+                    
+                    <div class="speaker-decorative-corner"></div>
+                </div>
+
+                
+                <div class="speaker-hover-glow"></div>
+            </div>
+            
+            <div class="speaker-card-wrapper">
+                
+                <div class="speaker-card">
+                    
+                    <div class="speaker-image-container">
+                        
+                            
+                            
+                                
+                            
+                            <img src="_static/images/speakers/atharva.png" alt="Atharva Shah" class="speaker-image" />
+                        
+                        
+                        <div class="speaker-image-gradient"></div>
+                    </div>
+
+                    
+                    <div class="speaker-content">
+                        <h3 class="speaker-name">
+                            Atharva Shah
+                        </h3>
+                        <p class="speaker-role">
+                            PhD Student
+                        </p>
+                        <p class="speaker-university">
+                            Indiana University
+                        </p>
+                    </div>
+
+                    
+                    <div class="speaker-decorative-corner"></div>
+                </div>
+
+                
+                <div class="speaker-hover-glow"></div>
+            </div>
+            
+            <div class="speaker-card-wrapper">
+                
+                <div class="speaker-card">
+                    
+                    <div class="speaker-image-container">
+                        
+                            
+                            
+                                
+                            
+                            <img src="_static/images/speakers/Prajwal.jpeg" alt="Sai Prajwal Reddy" class="speaker-image" />
+                        
+                        
+                        <div class="speaker-image-gradient"></div>
+                    </div>
+
+                    
+                    <div class="speaker-content">
+                        <h3 class="speaker-name">
+                            Sai Prajwal Reddy
+                        </h3>
+                        <p class="speaker-role">
+                            PhD Student
+                        </p>
+                        <p class="speaker-university">
+                            Indiana University
+                        </p>
+                    </div>
+
+                    
+                    <div class="speaker-decorative-corner"></div>
+                </div>
+
+                
+                <div class="speaker-hover-glow"></div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+    <div class="section-separator"></div>
+</section><section id="participants-from">
+<h2>Participants from<a class="headerlink" href="#participants-from" title="Link to this heading">#</a></h2>
+<section id="participants" class="participants-section">
+    <div class="participants-container">
+        
+        <div class="participants-header">
+            <h2 class="participants-title">
+                Participants from
+            </h2>
+            <div class="title-underline title-underline-sm"></div>
+            
+            <p class="participants-subtitle">
+                Participating Institutions
+            </p>
+            
+        </div>
+
+        
+        <div class="participants-carousel-container">
+            <div class="participants-carousel splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        
+                        
+                        <li class="splide__slide">
+                            <div class="participants-slide-item">
+                                <div class="participants-logo-wrapper">
+                                    <a href="https://www.epfl.ch/en/" target="_blank">
+                                        
+                                        
+                                            
+                                        
+                                        <img src="_static/images/universities/EPFL.png"
+                                             alt="École Polytechnique Fédérale de Lausanne"
+                                             class="participants-logo-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="splide__slide">
+                            <div class="participants-slide-item">
+                                <div class="participants-logo-wrapper">
+                                    <a href="https://www.upenn.edu/" target="_blank">
+                                        
+                                        
+                                            
+                                        
+                                        <img src="_static/images/universities/UPENN.png"
+                                             alt="University of Pennsylvania"
+                                             class="participants-logo-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="splide__slide">
+                            <div class="participants-slide-item">
+                                <div class="participants-logo-wrapper">
+                                    <a href="https://www.utah.edu/" target="_blank">
+                                        
+                                        
+                                            
+                                        
+                                        <img src="_static/images/universities/UTHA.png"
+                                             alt="University of Utah"
+                                             class="participants-logo-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="splide__slide">
+                            <div class="participants-slide-item">
+                                <div class="participants-logo-wrapper">
+                                    <a href="https://www.bumc.bu.edu/busm/" target="_blank">
+                                        
+                                        
+                                            
+                                        
+                                        <img src="_static/images/universities/BUSM.jpeg"
+                                             alt="Boston University School of Medicine"
+                                             class="participants-logo-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="splide__slide">
+                            <div class="participants-slide-item">
+                                <div class="participants-logo-wrapper">
+                                    <a href="https://www.emory.edu/" target="_blank">
+                                        
+                                        
+                                            
+                                        
+                                        <img src="_static/images/universities/EMORY.png"
+                                             alt="Emory University"
+                                             class="participants-logo-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="splide__slide">
+                            <div class="participants-slide-item">
+                                <div class="participants-logo-wrapper">
+                                    <a href="https://medicine.iu.edu/" target="_blank">
+                                        
+                                        
+                                            
+                                        
+                                        <img src="_static/images/universities/IUSM.png"
+                                             alt="Indiana University School of Medicine"
+                                             class="participants-logo-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="splide__slide">
+                            <div class="participants-slide-item">
+                                <div class="participants-logo-wrapper">
+                                    <a href="https://www.uni-muenchen.de/" target="_blank">
+                                        
+                                        
+                                            
+                                        
+                                        <img src="_static/images/universities/LU.png"
+                                             alt="Ludwig-Maximilians-Universität München"
+                                             class="participants-logo-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="splide__slide">
+                            <div class="participants-slide-item">
+                                <div class="participants-logo-wrapper">
+                                    <a href="https://www.camh.ca/" target="_blank">
+                                        
+                                        
+                                            
+                                        
+                                        <img src="_static/images/universities/CAMH.jpg"
+                                             alt="Centre for Addiction and Mental Health"
+                                             class="participants-logo-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="splide__slide">
+                            <div class="participants-slide-item">
+                                <div class="participants-logo-wrapper">
+                                    <a href="https://www.usherbrooke.ca/" target="_blank">
+                                        
+                                        
+                                            
+                                        
+                                        <img src="_static/images/universities/USHER.png"
+                                             alt="University of Sherbrooke"
+                                             class="participants-logo-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="splide__slide">
+                            <div class="participants-slide-item">
+                                <div class="participants-logo-wrapper">
+                                    <a href="https://www.harvard.edu/" target="_blank">
+                                        
+                                        
+                                            
+                                        
+                                        <img src="_static/images/universities/HARVARD.png"
+                                             alt="Harvard University"
+                                             class="participants-logo-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="splide__slide">
+                            <div class="participants-slide-item">
+                                <div class="participants-logo-wrapper">
+                                    <a href="https://www.mit.edu/" target="_blank">
+                                        
+                                        
+                                            
+                                        
+                                        <img src="_static/images/universities/MIT.png"
+                                             alt="Massachusetts Institute of Technology"
+                                             class="participants-logo-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="splide__slide">
+                            <div class="participants-slide-item">
+                                <div class="participants-logo-wrapper">
+                                    <a href="https://icahn.mssm.edu/" target="_blank">
+                                        
+                                        
+                                            
+                                        
+                                        <img src="_static/images/universities/MSINAI.png"
+                                             alt="Icahn School of Medicine at Mount Sinai"
+                                             class="participants-logo-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="splide__slide">
+                            <div class="participants-slide-item">
+                                <div class="participants-logo-wrapper">
+                                    <a href="https://www.wisc.edu/" target="_blank">
+                                        
+                                        
+                                            
+                                        
+                                        <img src="_static/images/universities/MWISCONSIN.png"
+                                             alt="University of Wisconsin–Madison"
+                                             class="participants-logo-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="splide__slide">
+                            <div class="participants-slide-item">
+                                <div class="participants-logo-wrapper">
+                                    <a href="https://www.jhu.edu/" target="_blank">
+                                        
+                                        
+                                            
+                                        
+                                        <img src="_static/images/universities/JHOPKINS.png"
+                                             alt="Johns Hopkins University"
+                                             class="participants-logo-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="splide__slide">
+                            <div class="participants-slide-item">
+                                <div class="participants-logo-wrapper">
+                                    <a href="https://www.uchicago.edu/" target="_blank">
+                                        
+                                        
+                                            
+                                        
+                                        <img src="_static/images/universities/UCHICAGO.png"
+                                             alt="University of Chicago"
+                                             class="participants-logo-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="splide__slide">
+                            <div class="participants-slide-item">
+                                <div class="participants-logo-wrapper">
+                                    <a href="https://www.duke.edu/" target="_blank">
+                                        
+                                        
+                                            
+                                        
+                                        <img src="_static/images/universities/DUKE.jpeg"
+                                             alt="Duke University"
+                                             class="participants-logo-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="splide__slide">
+                            <div class="participants-slide-item">
+                                <div class="participants-logo-wrapper">
+                                    <a href="https://mindresearchnetwork.org/" target="_blank">
+                                        
+                                        
+                                            
+                                        
+                                        <img src="_static/images/universities/THEMINDRESNET.jpeg"
+                                             alt="Mind Research Network"
+                                             class="participants-logo-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="splide__slide">
+                            <div class="participants-slide-item">
+                                <div class="participants-logo-wrapper">
+                                    <a href="https://www.houstonmethodist.org/research/" target="_blank">
+                                        
+                                        
+                                            
+                                        
+                                        <img src="_static/images/universities/HMRI.jpeg"
+                                             alt="Houston Methodist Research Institute"
+                                             class="participants-logo-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="splide__slide">
+                            <div class="participants-slide-item">
+                                <div class="participants-logo-wrapper">
+                                    <a href="https://www.washington.edu/" target="_blank">
+                                        
+                                        
+                                            
+                                        
+                                        <img src="_static/images/universities/UW.jpeg"
+                                             alt="University of Washington"
+                                             class="participants-logo-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="splide__slide">
+                            <div class="participants-slide-item">
+                                <div class="participants-logo-wrapper">
+                                    <a href="https://www.berkeley.edu/" target="_blank">
+                                        
+                                        
+                                            
+                                        
+                                        <img src="_static/images/universities/UCB.png"
+                                             alt="University of California, Berkeley"
+                                             class="participants-logo-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="splide__slide">
+                            <div class="participants-slide-item">
+                                <div class="participants-logo-wrapper">
+                                    <a href="https://www.ucsd.edu/" target="_blank">
+                                        
+                                        
+                                            
+                                        
+                                        <img src="_static/images/universities/UCSD.png"
+                                             alt="University of California, San Diego"
+                                             class="participants-logo-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="splide__slide">
+                            <div class="participants-slide-item">
+                                <div class="participants-logo-wrapper">
+                                    <a href="https://www.pennmedicine.org/" target="_blank">
+                                        
+                                        
+                                            
+                                        
+                                        <img src="_static/images/universities/PENNMED.png"
+                                             alt="Penn Medicine (University of Pennsylvania Health System)"
+                                             class="participants-logo-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="splide__slide">
+                            <div class="participants-slide-item">
+                                <div class="participants-logo-wrapper">
+                                    <a href="https://www.arizona.edu/" target="_blank">
+                                        
+                                        
+                                            
+                                        
+                                        <img src="_static/images/universities/UARIZONA.png"
+                                             alt="University of Arizona"
+                                             class="participants-logo-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="splide__slide">
+                            <div class="participants-slide-item">
+                                <div class="participants-logo-wrapper">
+                                    <a href="https://dellmed.utexas.edu/" target="_blank">
+                                        
+                                        
+                                            
+                                        
+                                        <img src="_static/images/universities/DELLMEDSCHOOL.png"
+                                             alt="Dell Medical School at The University of Texas at Austin"
+                                             class="participants-logo-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                        <li class="splide__slide">
+                            <div class="participants-slide-item">
+                                <div class="participants-logo-wrapper">
+                                    <a href="https://www.iupui.edu/" target="_blank">
+                                        
+                                        
+                                            
+                                        
+                                        <img src="_static/images/universities/IUPUI.png"
+                                             alt="Indiana University–Purdue University Indianapolis"
+                                             class="participants-logo-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="section-separator"></div>
+</section></section>
+<section id="special-thanks">
+<h2>Special Thanks<a class="headerlink" href="#special-thanks" title="Link to this heading">#</a></h2>
+<section id="special-thanks" class="thanks-section">
+    <div class="section-container">
+        <div class="section-header">
+            <h2 class="section-title section-title-dark">Special Thanks</h2>
+            <div class="title-underline title-underline-md"></div>
+            
+        </div>
+
+        <div class="thanks-grid">
+            
+            <a href="https://engineering.indiana.edu/index.html" target="_blank" rel="noopener noreferrer" class="thanks-card">
+                <div class="thanks-image-wrapper">
+                    <img src="_static/images/universities/ISE.jpeg" alt="Intelligent Systems Engineering (IU)" class="thanks-image" />
+                </div>
+                
+                <p class="thanks-name">Intelligent Systems Engineering (IU)</p>
+                
+            </a>
+            
+        </div>
+
+        
+        <div class="thanks-note">
+            <p>Multiple speakers including <b>Garyfallidis and Harezlak</b> are funded by the <br/><a href="https://www.nih.gov/">National Institutes of Health</a>.<br/> In addition, <b>Koudoro and Rokem</b> are funded from an EOSS grant through the <br/><a href="https://chanzuckerberg.com/eoss/proposals/strengthening-computational-neuroanatomy-using-dipy/">Chan Zuckerberg Initiative</a>.</p>
+        </div>
+        
+    </div>
+    <div class="section-separator"></div>
+</section></section>
+</section>
+<section id="highlights">
+<h1>Highlights<a class="headerlink" href="#highlights" title="Link to this heading">#</a></h1>
+<section id="highlights" class="highlights-section">
+    
+    <div class="highlights-decorative-top"></div>
+    <div class="highlights-decorative-bottom"></div>
+
+    <div class="highlights-container">
+        
+        <div class="highlights-header">
+            <h2 class="highlights-title">
+                Workshop Highlights
+            </h2>
+            <div class="title-underline title-underline-sm"></div>
+            <p class="highlights-subtitle">
+                Explore cutting-edge techniques and methodologies in diffusion MRI analysis
+            </p>
+        </div>
+
+        
+        <div class="highlights-carousel">
+            <div id="highlights-splide" class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        
+                        <li class="splide__slide">
+                            <div class="highlights-card-container">
+                                
+                                <div class="highlights-image-container">
+                                    <img src="_static/images/carousel/trct.png" alt="Interactive visualizer" class="highlights-image" />
+                                </div>
+
+                                
+                                <div class="highlights-content">
+                                    <h3 class="highlights-content-title">
+                                        Interactive visualizer
+                                    </h3>
+                                    <p class="highlights-content-description">
+                                        DIPY&#39;s intuitive graphical interface for advanced visualization and analysis
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="splide__slide">
+                            <div class="highlights-card-container">
+                                
+                                <div class="highlights-image-container">
+                                    <img src="https://raw.githubusercontent.com/dipy/dipy_data/master/tractometry.png?raw=true" alt="Advanced tractometry" class="highlights-image" />
+                                </div>
+
+                                
+                                <div class="highlights-content">
+                                    <h3 class="highlights-content-title">
+                                        Advanced tractometry
+                                    </h3>
+                                    <p class="highlights-content-description">
+                                        Advanced techniques in tractography for diffusion MRI.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="splide__slide">
+                            <div class="highlights-card-container">
+                                
+                                <div class="highlights-image-container">
+                                    <img src="https://raw.githubusercontent.com/dipy/dipy_data/master/wrapping_bundles.png?raw=true" alt="Warping of bundles" class="highlights-image" />
+                                </div>
+
+                                
+                                <div class="highlights-content">
+                                    <h3 class="highlights-content-title">
+                                        Warping of bundles
+                                    </h3>
+                                    <p class="highlights-content-description">
+                                        Techniques for warping and aligning bundles in diffusion MRI.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="splide__slide">
+                            <div class="highlights-card-container">
+                                
+                                <div class="highlights-image-container">
+                                    <img src="https://raw.githubusercontent.com/dipy/dipy_data/master/illuminating_lines.png?raw=true" alt="Cinematic visualization" class="highlights-image" />
+                                </div>
+
+                                
+                                <div class="highlights-content">
+                                    <h3 class="highlights-content-title">
+                                        Cinematic visualization
+                                    </h3>
+                                    <p class="highlights-content-description">
+                                        Cinematic techniques for visualizing diffusion MRI data.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="splide__slide">
+                            <div class="highlights-card-container">
+                                
+                                <div class="highlights-image-container">
+                                    <img src="https://raw.githubusercontent.com/dipy/dipy_data/master/preprocess.png?raw=true" alt="State-of-the-art preprocessing" class="highlights-image" />
+                                </div>
+
+                                
+                                <div class="highlights-content">
+                                    <h3 class="highlights-content-title">
+                                        State-of-the-art preprocessing
+                                    </h3>
+                                    <p class="highlights-content-description">
+                                        Advanced preprocessing techniques for diffusion MRI data.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="splide__slide">
+                            <div class="highlights-card-container">
+                                
+                                <div class="highlights-image-container">
+                                    <img src="https://raw.githubusercontent.com/dipy/dipy_data/master/brain-extraction.png?raw=true" alt="Accurate brain extraction" class="highlights-image" />
+                                </div>
+
+                                
+                                <div class="highlights-content">
+                                    <h3 class="highlights-content-title">
+                                        Accurate brain extraction
+                                    </h3>
+                                    <p class="highlights-content-description">
+                                        Techniques for accurate brain extraction in diffusion MRI.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="splide__slide">
+                            <div class="highlights-card-container">
+                                
+                                <div class="highlights-image-container">
+                                    <img src="https://raw.githubusercontent.com/dipy/dipy_data/master/generative_approach.png?raw=true" alt="Generative approaches for missing data" class="highlights-image" />
+                                </div>
+
+                                
+                                <div class="highlights-content">
+                                    <h3 class="highlights-content-title">
+                                        Generative approaches for missing data
+                                    </h3>
+                                    <p class="highlights-content-description">
+                                        Techniques for generative modeling of missing data in diffusion MRI.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="section-separator"></div>
+</section></section>
+<section id="schedule">
+<h1>Schedule<a class="headerlink" href="#schedule" title="Link to this heading">#</a></h1>
+<section id="schedule" class="schedule-section">
+    <div class="schedule-container">
+        
+        <div class="schedule-header">
+            <h2 class="schedule-title">Workshop Schedule</h2>
+            <div class="title-underline title-underline-md"></div>
+            
+            <p class="schedule-subtitle">Five Days of Life Transforming Learning and Networking</p>
+            <p class="schedule-timezone">All times are in EST (Eastern Standard Time)</p>
+            
+        </div>
+
+        
+        <div class="schedule-carousel-wrapper">
+            
+            <div class="schedule-nav-bar">
+                <button class="schedule-nav-arrow schedule-nav-prev" aria-label="Previous day">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+
+                <div class="schedule-current-day">
+                    <span class="schedule-current-day-text">Day 1</span>
+                </div>
+
+                <button class="schedule-nav-arrow schedule-nav-next" aria-label="Next day">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="schedule-grid">
+                
+                
+                <div class="schedule-day-column">
+                    
+                    <div class="schedule-day-header">
+                        <h3 class="schedule-day-title">Preprocessing</h3>
+                        
+                        <p class="schedule-day-date">2026-03-16</p>
+                        
+                        <div class="schedule-day-number">1</div>
+                    </div>
+
+                    
+                    <div class="schedule-sessions">
+                        
+                        
+                        
+                        <div class="schedule-card">
+                            
+                            <div class="schedule-time">
+                                <svg class="schedule-time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>09:00 - 09:50</span>
+                            </div>
+
+                            
+                            <h4 class="schedule-card-title">Workshop Overview</h4>
+
+                            
+                            
+                            <p class="schedule-card-info">Introduction to DIPY framework, workshop goals, and agenda. Learn about the 5-day journey through diffusion MRI analysis.</p>
+                            
+
+                            
+                            
+                            <div class="schedule-card-speaker">Eleftherios Garyfallidis</div>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="schedule-card">
+                            
+                            <div class="schedule-time">
+                                <svg class="schedule-time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>10:00 - 10:50</span>
+                            </div>
+
+                            
+                            <h4 class="schedule-card-title">DIPY AUTO</h4>
+
+                            
+                            
+                            <p class="schedule-card-info">Explore our new graphical user interface and automated pipelines.</p>
+                            
+
+                            
+                            
+                            <div class="schedule-card-speaker">Serge Koudoro</div>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="schedule-card">
+                            
+                            <div class="schedule-time">
+                                <svg class="schedule-time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>11:00 - 11:50</span>
+                            </div>
+
+                            
+                            <h4 class="schedule-card-title">SUCOR</h4>
+
+                            
+                            
+                            <p class="schedule-card-info">Learn about the World&#39;s Most Advanced Susceptibility Distortion Correction.</p>
+                            
+
+                            
+                            
+                            <div class="schedule-card-speaker">Sreekar Chigurupati</div>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="schedule-lunch-card">
+                            <svg class="schedule-lunch-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Lunch Break</span>
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="schedule-card">
+                            
+                            <div class="schedule-time">
+                                <svg class="schedule-time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>13:00 - 13:50</span>
+                            </div>
+
+                            
+                            <h4 class="schedule-card-title">Guided Practice</h4>
+
+                            
+                            
+                            <p class="schedule-card-info">Hands-on session applying preprocessing techniques learned in the morning sessions with expert guidance.</p>
+                            
+
+                            
+                            
+                            <div class="schedule-card-speaker">DIPY Team</div>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="schedule-card">
+                            
+                            <div class="schedule-time">
+                                <svg class="schedule-time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>14:00 - 14:50</span>
+                            </div>
+
+                            
+                            <h4 class="schedule-card-title">Round Table: Best Practices in Preprocessing</h4>
+
+                            
+                            
+                            <p class="schedule-card-info">Interactive discussion sharing experiences, challenges, and solutions in diffusion MRI preprocessing.</p>
+                            
+
+                            
+                            
+                            <div class="schedule-card-speaker">Everyone</div>
+                            
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="schedule-day-column">
+                    
+                    <div class="schedule-day-header">
+                        <h3 class="schedule-day-title">Reconstruction</h3>
+                        
+                        <p class="schedule-day-date">2026-03-17</p>
+                        
+                        <div class="schedule-day-number">2</div>
+                    </div>
+
+                    
+                    <div class="schedule-sessions">
+                        
+                        
+                        
+                        <div class="schedule-card">
+                            
+                            <div class="schedule-time">
+                                <svg class="schedule-time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>09:00 - 09:50</span>
+                            </div>
+
+                            
+                            <h4 class="schedule-card-title">Patch2Self3</h4>
+
+                            
+                            
+                            <p class="schedule-card-info">Advanced self-supervised denoising techniques for diffusion MRI using the latest Patch2Self algorithms.</p>
+                            
+
+                            
+                            
+                            <div class="schedule-card-speaker">TBA</div>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="schedule-card">
+                            
+                            <div class="schedule-time">
+                                <svg class="schedule-time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>10:00 - 10:50</span>
+                            </div>
+
+                            
+                            <h4 class="schedule-card-title">Reconstruction Overview</h4>
+
+                            
+                            
+                            <p class="schedule-card-info">Comprehensive overview of reconstruction methods including DTI, DKI, CSD, and advanced multi-shell techniques.</p>
+                            
+
+                            
+                            
+                            <div class="schedule-card-speaker">TBA</div>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="schedule-card">
+                            
+                            <div class="schedule-time">
+                                <svg class="schedule-time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>11:00 - 11:50</span>
+                            </div>
+
+                            
+                            <h4 class="schedule-card-title">FORCE</h4>
+
+                            
+                            
+                            <p class="schedule-card-info">Introducing the Most Advanced Reconstruction Model, setting an unprecedented standard for medical imaging (One solves All).</p>
+                            
+
+                            
+                            
+                            <div class="schedule-card-speaker">Atharva Shah</div>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="schedule-lunch-card">
+                            <svg class="schedule-lunch-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Lunch Break</span>
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="schedule-card">
+                            
+                            <div class="schedule-time">
+                                <svg class="schedule-time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>13:00 - 13:50</span>
+                            </div>
+
+                            
+                            <h4 class="schedule-card-title">Guided Practice</h4>
+
+                            
+                            
+                            <p class="schedule-card-info">Hands-on implementation of reconstruction algorithms with real diffusion MRI datasets and parameter optimization.</p>
+                            
+
+                            
+                            
+                            <div class="schedule-card-speaker">DIPY Team</div>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="schedule-card">
+                            
+                            <div class="schedule-time">
+                                <svg class="schedule-time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>14:00 - 14:50</span>
+                            </div>
+
+                            
+                            <h4 class="schedule-card-title">Round Table: Best Practices in Reconstruction</h4>
+
+                            
+                            
+                            <p class="schedule-card-info">Collaborative discussion on choosing appropriate reconstruction methods for different research scenarios.</p>
+                            
+
+                            
+                            
+                            <div class="schedule-card-speaker">Everyone</div>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="schedule-card">
+                            
+                            <div class="schedule-time">
+                                <svg class="schedule-time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>15:00 - 15:50</span>
+                            </div>
+
+                            
+                            <h4 class="schedule-card-title">Presentations by Participants</h4>
+
+                            
+                            
+                            <p class="schedule-card-info">Participants showcase their research, methodologies, and challenges in diffusion MRI analysis.</p>
+                            
+
+                            
+                            
+                            <div class="schedule-card-speaker">Participants</div>
+                            
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="schedule-day-column">
+                    
+                    <div class="schedule-day-header">
+                        <h3 class="schedule-day-title">Tractography</h3>
+                        
+                        <p class="schedule-day-date">2026-03-18</p>
+                        
+                        <div class="schedule-day-number">3</div>
+                    </div>
+
+                    
+                    <div class="schedule-sessions">
+                        
+                        
+                        
+                        <div class="schedule-card">
+                            
+                            <div class="schedule-time">
+                                <svg class="schedule-time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>09:00 - 09:50</span>
+                            </div>
+
+                            
+                            <h4 class="schedule-card-title">Tractography Overview</h4>
+
+                            
+                            
+                            <p class="schedule-card-info">Comprehensive introduction to fiber tracking algorithms including deterministic and probabilistic methods.</p>
+                            
+
+                            
+                            
+                            <div class="schedule-card-speaker">TBA</div>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="schedule-card">
+                            
+                            <div class="schedule-time">
+                                <svg class="schedule-time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>10:00 - 10:50</span>
+                            </div>
+
+                            
+                            <h4 class="schedule-card-title">GLIDE</h4>
+
+                            
+                            
+                            <p class="schedule-card-info">The most optimized tractography algorithm.</p>
+                            
+
+                            
+                            
+                            <div class="schedule-card-speaker">TBA</div>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="schedule-card">
+                            
+                            <div class="schedule-time">
+                                <svg class="schedule-time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>11:00 - 11:50</span>
+                            </div>
+
+                            
+                            <h4 class="schedule-card-title">Registration Overview</h4>
+
+                            
+                            
+                            <p class="schedule-card-info">Image registration techniques for aligning diffusion data across subjects and to anatomical templates.</p>
+                            
+
+                            
+                            
+                            <div class="schedule-card-speaker">TBA</div>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="schedule-lunch-card">
+                            <svg class="schedule-lunch-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Lunch Break</span>
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="schedule-card">
+                            
+                            <div class="schedule-time">
+                                <svg class="schedule-time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>13:00 - 13:50</span>
+                            </div>
+
+                            
+                            <h4 class="schedule-card-title">Guided Practice</h4>
+
+                            
+                            
+                            <p class="schedule-card-info">Practical tractography session generating fiber bundles and visualizing white matter pathways.</p>
+                            
+
+                            
+                            
+                            <div class="schedule-card-speaker">DIPY Team</div>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="schedule-card">
+                            
+                            <div class="schedule-time">
+                                <svg class="schedule-time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>14:00 - 14:50</span>
+                            </div>
+
+                            
+                            <h4 class="schedule-card-title">Round Table: Best Practices in Tractography</h4>
+
+                            
+                            
+                            <p class="schedule-card-info">Discussion on parameter selection, validation methods, and common pitfalls in tractography analysis.</p>
+                            
+
+                            
+                            
+                            <div class="schedule-card-speaker">Everyone</div>
+                            
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="schedule-day-column">
+                    
+                    <div class="schedule-day-header">
+                        <h3 class="schedule-day-title">Analytics</h3>
+                        
+                        <p class="schedule-day-date">2026-03-19</p>
+                        
+                        <div class="schedule-day-number">4</div>
+                    </div>
+
+                    
+                    <div class="schedule-sessions">
+                        
+                        
+                        
+                        <div class="schedule-card">
+                            
+                            <div class="schedule-time">
+                                <svg class="schedule-time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>09:00 - 09:50</span>
+                            </div>
+
+                            
+                            <h4 class="schedule-card-title">BUAN3</h4>
+
+                            
+                            
+                            <p class="schedule-card-info">Bundle Analytics - Statistical analysis of diffusion metrics along white matter bundles for group studies.</p>
+                            
+
+                            
+                            
+                            <div class="schedule-card-speaker">Bramsh Qamar Chandio</div>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="schedule-card">
+                            
+                            <div class="schedule-time">
+                                <svg class="schedule-time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>10:00 - 10:50</span>
+                            </div>
+
+                            
+                            <h4 class="schedule-card-title">BUAN3 (Continued)</h4>
+
+                            
+                            
+                            <p class="schedule-card-info">Advanced BUAN features including multi-metric analysis, visualization, and statistical interpretation.</p>
+                            
+
+                            
+                            
+                            <div class="schedule-card-speaker">Bramsh Qamar Chandio</div>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="schedule-card">
+                            
+                            <div class="schedule-time">
+                                <svg class="schedule-time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>11:00 - 11:50</span>
+                            </div>
+
+                            
+                            <h4 class="schedule-card-title">PUMBA</h4>
+
+                            
+                            
+                            <p class="schedule-card-info">PUrely synthetic Multimodal/species invariant Brain extrAction</p>
+                            
+
+                            
+                            
+                            <div class="schedule-card-speaker">Jong Sung Park</div>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="schedule-lunch-card">
+                            <svg class="schedule-lunch-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Lunch Break</span>
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="schedule-card">
+                            
+                            <div class="schedule-time">
+                                <svg class="schedule-time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>13:00 - 13:50</span>
+                            </div>
+
+                            
+                            <h4 class="schedule-card-title">Guided Practice</h4>
+
+                            
+                            
+                            <p class="schedule-card-info">Hands-on tractometry analysis extracting and analyzing diffusion metrics along major white matter pathways.</p>
+                            
+
+                            
+                            
+                            <div class="schedule-card-speaker">DIPY Team</div>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="schedule-card">
+                            
+                            <div class="schedule-time">
+                                <svg class="schedule-time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>14:00 - 14:50</span>
+                            </div>
+
+                            
+                            <h4 class="schedule-card-title">Round Table: Best Practices in Analytics</h4>
+
+                            
+                            
+                            <p class="schedule-card-info">Best practices for reproducible analytics studies and interpreting tract-specific measures.</p>
+                            
+
+                            
+                            
+                            <div class="schedule-card-speaker">Everyone</div>
+                            
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="schedule-day-column">
+                    
+                    <div class="schedule-day-header">
+                        <h3 class="schedule-day-title">Mixed Topics</h3>
+                        
+                        <p class="schedule-day-date">2026-03-20</p>
+                        
+                        <div class="schedule-day-number">5</div>
+                    </div>
+
+                    
+                    <div class="schedule-sessions">
+                        
+                        
+                        
+                        <div class="schedule-card">
+                            
+                            <div class="schedule-time">
+                                <svg class="schedule-time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>09:00 - 09:50</span>
+                            </div>
+
+                            
+                            <h4 class="schedule-card-title">THETAN</h4>
+
+                            
+                            
+                            <p class="schedule-card-info">Introducing a new theoretical AI framework for the new Era of Data Intelligence.</p>
+                            
+
+                            
+                            
+                            <div class="schedule-card-speaker">Eleftherios Garyfallidis</div>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="schedule-card">
+                            
+                            <div class="schedule-time">
+                                <svg class="schedule-time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>10:00 - 10:50</span>
+                            </div>
+
+                            
+                            <h4 class="schedule-card-title">THETAN (Continued)</h4>
+
+                            
+                            
+                            <p class="schedule-card-info">Deep dive into THETAN implementation and use cases.</p>
+                            
+
+                            
+                            
+                            <div class="schedule-card-speaker">Eleftherios Garyfallidis</div>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="schedule-card">
+                            
+                            <div class="schedule-time">
+                                <svg class="schedule-time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>11:00 - 11:50</span>
+                            </div>
+
+                            
+                            <h4 class="schedule-card-title">SKYLINE</h4>
+
+                            
+                            
+                            <p class="schedule-card-info">The Crown Jewel of Insight: The World&#39;s Most Exquisite Visualization Platform for Immersive Data Exploration.</p>
+                            
+
+                            
+                            
+                            <div class="schedule-card-speaker">Maharshi Gor</div>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="schedule-lunch-card">
+                            <svg class="schedule-lunch-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Lunch Break</span>
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="schedule-card">
+                            
+                            <div class="schedule-time">
+                                <svg class="schedule-time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>13:00 - 13:50</span>
+                            </div>
+
+                            
+                            <h4 class="schedule-card-title">Guided Practice</h4>
+
+                            
+                            
+                            <p class="schedule-card-info">Final hands-on session integrating all learned techniques into a complete analysis pipeline.</p>
+                            
+
+                            
+                            
+                            <div class="schedule-card-speaker">DIPY Team</div>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="schedule-card">
+                            
+                            <div class="schedule-time">
+                                <svg class="schedule-time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>14:00 - 14:50</span>
+                            </div>
+
+                            
+                            <h4 class="schedule-card-title">Round Table: Best Practices in General</h4>
+
+                            
+                            
+                            <p class="schedule-card-info">Open forum discussing overall best practices, future directions, and Q&amp;A for all workshop topics.</p>
+                            
+
+                            
+                            
+                            <div class="schedule-card-speaker">Everyone</div>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="schedule-card">
+                            
+                            <div class="schedule-time">
+                                <svg class="schedule-time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>15:00 - 15:30</span>
+                            </div>
+
+                            
+                            <h4 class="schedule-card-title">Final Assembly</h4>
+
+                            
+                            
+                            <p class="schedule-card-info">Workshop wrap-up, certificate distribution, group photo, and farewell remarks.</p>
+                            
+
+                            
+                            
+                            <div class="schedule-card-speaker">DIPY Team</div>
+                            
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        
+        <div class="schedule-carousel-dots">
+            
+            <button class="schedule-dot active" data-index="0" aria-label="Go to day 1"></button>
+            
+            <button class="schedule-dot " data-index="1" aria-label="Go to day 2"></button>
+            
+            <button class="schedule-dot " data-index="2" aria-label="Go to day 3"></button>
+            
+            <button class="schedule-dot " data-index="3" aria-label="Go to day 4"></button>
+            
+            <button class="schedule-dot " data-index="4" aria-label="Go to day 5"></button>
+            
+        </div>
+    </div>
+
+    
+    <div class="section-separator"></div>
+</section>
+
+<script src="_static/js/schedule-carousel.js"></script></section>
+<section id="registration">
+<h1>Registration<a class="headerlink" href="#registration" title="Link to this heading">#</a></h1>
+
+<section id="registration" class="registration-section">
+    <div class="registration-container">
+        <div class="registration-header">
+            <h2 class="registration-title">Registration</h2>
+            <div class="title-underline title-underline-md"></div>
+            
+            <p class="registration-subtitle">Get the Early Birds Discount before 4th January 2026</p>
+            
+        </div>
+
+
+<div class="registration-main-packages">
+            <div class="registration-section-header">
+                <h3 class="registration-section-title">
+                    Main Packages
+                </h3>
+                
+                <p class="registration-section-description">
+                    One Price for all to get you started
+                </p>
+                
+                
+                
+                <p class="registration-section-description">
+                    Get the most of the workshop with easy pricing, no hidden fees.
+                </p>
+                
+            </div>
+
+            <div class="registration-packages-grid">
+                
+                <div class="registration-package-card popular">
+                    
+                    
+                    <div class="registration-popular-badge">
+                        MOST POPULAR
+                    </div>
+                    
+
+                    <div class="registration-package-content">
+                        
+                        <h4 class="registration-package-name">
+                            Students, Academics, Professionals
+                        </h4>
+
+                        
+                        <div class="registration-pricing">
+                            <div class="registration-price-wrapper">
+                                <span class="registration-price">
+                                    $500.0
+                                </span>
+                                
+                                <span class="registration-original-price">
+                                    $650.0
+                                </span>
+                                
+                            </div>
+                            
+                            <div class="registration-savings">
+                                Save $150.0 with Early Bird
+                            </div>
+                            
+                        </div>
+
+                        
+                        <ul class="registration-features-list">
+                            
+                            <li class="registration-feature-item">
+                                <div class="registration-feature-icon">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <span class="registration-feature-text">One price for all</span>
+                            </li>
+                            
+                            <li class="registration-feature-item">
+                                <div class="registration-feature-icon">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <span class="registration-feature-text">Listen to the talks live.</span>
+                            </li>
+                            
+                            <li class="registration-feature-item">
+                                <div class="registration-feature-icon">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <span class="registration-feature-text">Learn from the experts.</span>
+                            </li>
+                            
+                            <li class="registration-feature-item">
+                                <div class="registration-feature-icon">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <span class="registration-feature-text">Basic kit for diffusion imaging.</span>
+                            </li>
+                            
+                            <li class="registration-feature-item">
+                                <div class="registration-feature-icon">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <span class="registration-feature-text">Attend Study Groups.</span>
+                            </li>
+                            
+                            <li class="registration-feature-item">
+                                <div class="registration-feature-icon">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <span class="registration-feature-text">Present your work.</span>
+                            </li>
+                            
+                            <li class="registration-feature-item">
+                                <div class="registration-feature-icon">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <span class="registration-feature-text">Complete 5 days of workshop</span>
+                            </li>
+                            
+                            <li class="registration-feature-item">
+                                <div class="registration-feature-icon">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <span class="registration-feature-text">LinkedIn verifiable certificate.</span>
+                            </li>
+                            
+                        </ul>
+
+                        
+                        <a
+                            href="https://iubgrg-fireform.eas.iu.edu/online/form/index/grgdw2026"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="registration-cta-button popular"
+                        >
+                            Register Now
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="registration-package-card ">
+                    
+                    
+
+                    <div class="registration-package-content">
+                        
+                        <h4 class="registration-package-name">
+                            Returning Participants
+                        </h4>
+
+                        
+                        <div class="registration-pricing">
+                            <div class="registration-price-wrapper">
+                                <span class="registration-price">
+                                    $250.0
+                                </span>
+                                
+                                <span class="registration-original-price">
+                                    $300.0
+                                </span>
+                                
+                            </div>
+                            
+                            <div class="registration-savings">
+                                Save $50.0 with Early Bird
+                            </div>
+                            
+                        </div>
+
+                        
+                        <ul class="registration-features-list">
+                            
+                            <li class="registration-feature-item">
+                                <div class="registration-feature-icon">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <span class="registration-feature-text">Listen to the talks live.</span>
+                            </li>
+                            
+                            <li class="registration-feature-item">
+                                <div class="registration-feature-icon">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <span class="registration-feature-text">Learn from the experts.</span>
+                            </li>
+                            
+                            <li class="registration-feature-item">
+                                <div class="registration-feature-icon">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <span class="registration-feature-text">Basic kit for diffusion imaging.</span>
+                            </li>
+                            
+                            <li class="registration-feature-item">
+                                <div class="registration-feature-icon">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <span class="registration-feature-text">Attend Study Groups.</span>
+                            </li>
+                            
+                            <li class="registration-feature-item">
+                                <div class="registration-feature-icon">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <span class="registration-feature-text">Present your work.</span>
+                            </li>
+                            
+                            <li class="registration-feature-item">
+                                <div class="registration-feature-icon">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <span class="registration-feature-text">Complete 5 days of workshop</span>
+                            </li>
+                            
+                            <li class="registration-feature-item">
+                                <div class="registration-feature-icon">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <span class="registration-feature-text">LinkedIn verifiable certificate.</span>
+                            </li>
+                            
+                        </ul>
+
+                        
+                        <a
+                            href="https://iubgrg-fireform.eas.iu.edu/online/form/index/grgdw2026"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="registration-cta-button "
+                        >
+                            Register Now
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+
+<div class="registration-main-packages">
+            <div class="registration-section-header">
+                <h3 class="registration-section-title">
+                    Optional Packages
+                </h3>
+                
+                <p class="registration-section-description">
+                    Need more flexibility? Check out our optional packages.
+                </p>
+                
+                
+                
+            </div>
+
+            <div class="registration-packages-grid">
+                
+                <div class="registration-package-card ">
+                    
+                    
+
+                    <div class="registration-package-content">
+                        
+                        <h4 class="registration-package-name">
+                            Recording Access
+                        </h4>
+
+                        
+                        <div class="registration-pricing">
+                            <div class="registration-price-wrapper">
+                                <span class="registration-price">
+                                    $250.0
+                                </span>
+                                
+                                <span class="registration-original-price">
+                                    $350.0
+                                </span>
+                                
+                            </div>
+                            
+                            <div class="registration-savings">
+                                Save $100.0 with Early Bird
+                            </div>
+                            
+                        </div>
+
+                        
+                        <ul class="registration-features-list">
+                            
+                            <li class="registration-feature-item">
+                                <div class="registration-feature-icon">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <span class="registration-feature-text">Only accessible if you register for the workshop.</span>
+                            </li>
+                            
+                            <li class="registration-feature-item">
+                                <div class="registration-feature-icon">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <span class="registration-feature-text">Access to talks during and after the workshop.</span>
+                            </li>
+                            
+                            <li class="registration-feature-item">
+                                <div class="registration-feature-icon">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <span class="registration-feature-text">Access to materials during and after the workshop.</span>
+                            </li>
+                            
+                        </ul>
+
+                        
+                        <a
+                            href="https://iubgrg-fireform.eas.iu.edu/online/form/index/grgdw2026"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="registration-cta-button "
+                        >
+                            Register Now
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="registration-package-card ">
+                    
+                    
+
+                    <div class="registration-package-content">
+                        
+                        <h4 class="registration-package-name">
+                            Coaching Package
+                        </h4>
+
+                        
+                        <div class="registration-pricing">
+                            <div class="registration-price-wrapper">
+                                <span class="registration-price">
+                                    $500.0
+                                </span>
+                                
+                                <span class="registration-original-price">
+                                    $750.0
+                                </span>
+                                
+                            </div>
+                            
+                            <div class="registration-savings">
+                                Save $250.0 with Early Bird
+                            </div>
+                            
+                        </div>
+
+                        
+                        <ul class="registration-features-list">
+                            
+                            <li class="registration-feature-item">
+                                <div class="registration-feature-icon">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <span class="registration-feature-text">Only accessible if you register for the workshop.</span>
+                            </li>
+                            
+                            <li class="registration-feature-item">
+                                <div class="registration-feature-icon">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <span class="registration-feature-text">Deep Dive into your data and project with expert guidance.</span>
+                            </li>
+                            
+                            <li class="registration-feature-item">
+                                <div class="registration-feature-icon">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <span class="registration-feature-text">Up to 3 one-hour 1:1 with DIPY developers.</span>
+                            </li>
+                            
+                            <li class="registration-feature-item">
+                                <div class="registration-feature-icon">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <span class="registration-feature-text">A Discount Year-long support option available.</span>
+                            </li>
+                            
+                        </ul>
+
+                        
+                        <a
+                            href="https://iubgrg-fireform.eas.iu.edu/online/form/index/grgdw2026"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="registration-cta-button "
+                        >
+                            Register Now
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+    </div>
+    <div class="section-separator"></div>
+</section>
+</section>
+<section id="contact">
+<h1>Contact<a class="headerlink" href="#contact" title="Link to this heading">#</a></h1>
+<section id="contact" class="contact-section">
+  <div class="contact-container">
+    <!-- Section Header -->
+    <div class="contact-header">
+      <h2 class="contact-title">
+        Contact
+      </h2>
+      <div class="title-underline title-underline-md"></div>
+      <p class="contact-subtitle">
+        Contact us for more information
+      </p>
+    </div>
+
+    <!-- Contact Cards -->
+    <div class="contact-cards-grid">
+      
+      <a
+        href="mailto:workshop@dipy.org"
+        class="contact-card"
+        
+      >
+        <!-- Icon -->
+        <div class="contact-icon-container">
+          
+          <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          
+        </div>
+
+        <!-- Content -->
+        <h3 class="contact-card-title">
+          Email Us
+        </h3>
+        <p class="contact-card-description">
+          Send us an email for inquiries
+        </p>
+        <p class="contact-card-link ">
+          workshop@dipy.org
+        </p>
+      </a>
+      
+      <a
+        href="https://github.com/dipy/dipy/discussions"
+        class="contact-card"
+        target="_blank" rel="noopener noreferrer"
+      >
+        <!-- Icon -->
+        <div class="contact-icon-container">
+          
+          <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+          </svg>
+          
+        </div>
+
+        <!-- Content -->
+        <h3 class="contact-card-title">
+          Join Our Forum
+        </h3>
+        <p class="contact-card-description">
+          Connect with the community
+        </p>
+        <p class="contact-card-link contact-card-link-small">
+          github.com/dipy/dipy/discussions
+        </p>
+      </a>
+      
+    </div>
+  </div>
+
+  <!-- Section Separator -->
+  <div class="section-separator"></div>
+</section></section>
+
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+
+  <footer class="bd-footer">
+  </footer>
+<script>
+</script>
+
+  </body>
+</html>
