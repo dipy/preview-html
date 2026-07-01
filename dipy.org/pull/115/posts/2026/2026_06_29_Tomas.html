@@ -1,0 +1,1587 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Fifth Coding Week: First MI Implementation PR &#8212; Diffusion Imaging in Python  documentation</title>
+  
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/dipy.css?v=2cbe46a9" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  
+<link rel="stylesheet" href="../../_static/styles/grg-sphinx-theme.css"/>
+
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-D610GKJZRC"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-D610GKJZRC');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-D610GKJZRC');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2026/2026_06_29_Tomas';</script>
+    <script src="../../_static/js/dipy.js?v=4b4dfe59"></script>
+    <link rel="canonical" href="https://dipy.org/posts/2026/2026_06_29_Tomas.html" />
+    <link rel="icon" href="../../_static/dipy-favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+  <meta name="keywords" content="DIPY, dMRI, DTI, DSI, diffusion MRI, Tensor,
+  neuroimaging, python, neuroscience, Eleftherios, Garyfallidis, tractography,
+  streamlines, fiber tracking">
+   
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+<nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/dipy-logo.png" class="logo__image only-light" alt="DIPY"/>
+    <script>document.write(`<img src="../../_static/dipy-logo.png" class="logo__image only-dark" alt="DIPY"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  
+  <ul class="bd-navbar-elements navbar-nav">
+    
+          <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-header-nav-more-links">
+                    Docs
+                </button>
+                <ul id="pst-header-nav-more-links" class="dropdown-menu">
+                    
+        <li class="nav-item">
+          <a class="nav-link" href="https://docs.dipy.org/stable">
+            Overview
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://docs.dipy.org/stable/examples_built/index">
+            Tutorials
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://docs.dipy.org/stable/recipes">
+            Recipes
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://docs.dipy.org/stable/interfaces/index">
+            CLI / Workflows
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://docs.dipy.org/stable/reference/index">
+            API
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://docs.dipy.org/stable/reference_cmd/index">
+            CLI API
+          </a>
+        </li>
+                </ul>
+            </li>
+          
+
+          <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-header-nav-more-links">
+                    Workshops
+                </button>
+                <ul id="pst-header-nav-more-links" class="dropdown-menu">
+                    
+    <li class="nav-item">
+      <p class="nav-section-title nav-link">
+        Upcoming
+      </p>
+    </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://workshop.dipy.org" target="_blank">
+            DIPY Workshop 2026 <i class="fa-solid fa-arrow-up-long external-icon mar-l-5"></i>
+          </a>
+        </li>
+
+    <li class="nav-item">
+      <p class="nav-section-title nav-link">
+        Past
+      </p>
+    </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://workshop.dipy.org/2025" target="_blank">
+            DIPY Workshop 2025 <i class="fa-solid fa-arrow-up-long external-icon mar-l-5"></i>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://workshop.dipy.org/2024" target="_blank">
+            DIPY Workshop 2024 <i class="fa-solid fa-arrow-up-long external-icon mar-l-5"></i>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://workshop.dipy.org/2023" target="_blank">
+            DIPY Workshop 2023 <i class="fa-solid fa-arrow-up-long external-icon mar-l-5"></i>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://workshop.dipy.org/2022" target="_blank">
+            DIPY Workshop 2022 <i class="fa-solid fa-arrow-up-long external-icon mar-l-5"></i>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://workshop.dipy.org/2021" target="_blank">
+            DIPY Workshop 2021 <i class="fa-solid fa-arrow-up-long external-icon mar-l-5"></i>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://workshop.dipy.org/2020" target="_blank">
+            DIPY Workshop 2020 <i class="fa-solid fa-arrow-up-long external-icon mar-l-5"></i>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://workshop.dipy.org/2019" target="_blank">
+            DIPY Workshop 2019 <i class="fa-solid fa-arrow-up-long external-icon mar-l-5"></i>
+          </a>
+        </li>
+                </ul>
+            </li>
+          
+
+          <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-header-nav-more-links">
+                    Community
+                </button>
+                <ul id="pst-header-nav-more-links" class="dropdown-menu">
+                    
+    <li class="nav-item">
+      <p class="nav-section-title nav-link">
+        News
+      </p>
+    </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="../../calendar.html">
+          Calendar
+        </a>
+      </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://mail.python.org/mailman3/lists/dipy.python.org/" target="_blank">
+            Newsletters <i class="fa-solid fa-arrow-up-long external-icon mar-l-5"></i>
+          </a>
+        </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="../../blog.html">
+          Blog
+        </a>
+      </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.youtube.com/c/diffusionimaginginpython" target="_blank">
+            Youtube <i class="fa-solid fa-arrow-up-long external-icon mar-l-5"></i>
+          </a>
+        </li>
+
+    <li class="nav-item">
+      <p class="nav-section-title nav-link">
+        Help
+      </p>
+    </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/dipy/dipy/discussions" target="_blank">
+            Github Discussions <i class="fa-solid fa-arrow-up-long external-icon mar-l-5"></i>
+          </a>
+        </li>
+                </ul>
+            </li>
+          
+
+          <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-header-nav-more-links">
+                    About
+                </button>
+                <ul id="pst-header-nav-more-links" class="dropdown-menu">
+                    
+      <li class="nav-item">
+        <a class="nav-link" href="../../team.html">
+          Team
+        </a>
+      </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://docs.dipy.org/stable/faq">
+            FAQ
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://docs.dipy.org/stable/user_guide/mission">
+            Mission Statement
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://docs.dipy.org/stable/stateoftheart">
+            Releases
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://docs.dipy.org/stable/cite">
+            Cite
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://docs.dipy.org/stable/glossary">
+            Glossary
+          </a>
+        </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="../../support.html">
+          Professional Support
+        </a>
+      </li>
+                </ul>
+            </li>
+          
+  </ul>
+  
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/dipy" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/dipymri" title="Twitter/X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Twitter/X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/c/diffusionimaginginpython" title="YouTube" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-youtube fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">YouTube</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/company/dipy/" title="LinkedIn" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">LinkedIn</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+</nav>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  
+  <ul class="bd-navbar-elements navbar-nav">
+    
+          <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-header-nav-more-links">
+                    Docs
+                </button>
+                <ul id="pst-header-nav-more-links" class="dropdown-menu">
+                    
+        <li class="nav-item">
+          <a class="nav-link" href="https://docs.dipy.org/stable">
+            Overview
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://docs.dipy.org/stable/examples_built/index">
+            Tutorials
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://docs.dipy.org/stable/recipes">
+            Recipes
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://docs.dipy.org/stable/interfaces/index">
+            CLI / Workflows
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://docs.dipy.org/stable/reference/index">
+            API
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://docs.dipy.org/stable/reference_cmd/index">
+            CLI API
+          </a>
+        </li>
+                </ul>
+            </li>
+          
+
+          <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-header-nav-more-links">
+                    Workshops
+                </button>
+                <ul id="pst-header-nav-more-links" class="dropdown-menu">
+                    
+    <li class="nav-item">
+      <p class="nav-section-title nav-link">
+        Upcoming
+      </p>
+    </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://workshop.dipy.org" target="_blank">
+            DIPY Workshop 2026 <i class="fa-solid fa-arrow-up-long external-icon mar-l-5"></i>
+          </a>
+        </li>
+
+    <li class="nav-item">
+      <p class="nav-section-title nav-link">
+        Past
+      </p>
+    </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://workshop.dipy.org/2025" target="_blank">
+            DIPY Workshop 2025 <i class="fa-solid fa-arrow-up-long external-icon mar-l-5"></i>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://workshop.dipy.org/2024" target="_blank">
+            DIPY Workshop 2024 <i class="fa-solid fa-arrow-up-long external-icon mar-l-5"></i>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://workshop.dipy.org/2023" target="_blank">
+            DIPY Workshop 2023 <i class="fa-solid fa-arrow-up-long external-icon mar-l-5"></i>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://workshop.dipy.org/2022" target="_blank">
+            DIPY Workshop 2022 <i class="fa-solid fa-arrow-up-long external-icon mar-l-5"></i>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://workshop.dipy.org/2021" target="_blank">
+            DIPY Workshop 2021 <i class="fa-solid fa-arrow-up-long external-icon mar-l-5"></i>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://workshop.dipy.org/2020" target="_blank">
+            DIPY Workshop 2020 <i class="fa-solid fa-arrow-up-long external-icon mar-l-5"></i>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://workshop.dipy.org/2019" target="_blank">
+            DIPY Workshop 2019 <i class="fa-solid fa-arrow-up-long external-icon mar-l-5"></i>
+          </a>
+        </li>
+                </ul>
+            </li>
+          
+
+          <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-header-nav-more-links">
+                    Community
+                </button>
+                <ul id="pst-header-nav-more-links" class="dropdown-menu">
+                    
+    <li class="nav-item">
+      <p class="nav-section-title nav-link">
+        News
+      </p>
+    </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="../../calendar.html">
+          Calendar
+        </a>
+      </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://mail.python.org/mailman3/lists/dipy.python.org/" target="_blank">
+            Newsletters <i class="fa-solid fa-arrow-up-long external-icon mar-l-5"></i>
+          </a>
+        </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="../../blog.html">
+          Blog
+        </a>
+      </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.youtube.com/c/diffusionimaginginpython" target="_blank">
+            Youtube <i class="fa-solid fa-arrow-up-long external-icon mar-l-5"></i>
+          </a>
+        </li>
+
+    <li class="nav-item">
+      <p class="nav-section-title nav-link">
+        Help
+      </p>
+    </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/dipy/dipy/discussions" target="_blank">
+            Github Discussions <i class="fa-solid fa-arrow-up-long external-icon mar-l-5"></i>
+          </a>
+        </li>
+                </ul>
+            </li>
+          
+
+          <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-header-nav-more-links">
+                    About
+                </button>
+                <ul id="pst-header-nav-more-links" class="dropdown-menu">
+                    
+      <li class="nav-item">
+        <a class="nav-link" href="../../team.html">
+          Team
+        </a>
+      </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://docs.dipy.org/stable/faq">
+            FAQ
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://docs.dipy.org/stable/user_guide/mission">
+            Mission Statement
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://docs.dipy.org/stable/stateoftheart">
+            Releases
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://docs.dipy.org/stable/cite">
+            Cite
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://docs.dipy.org/stable/glossary">
+            Glossary
+          </a>
+        </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="../../support.html">
+          Professional Support
+        </a>
+      </li>
+                </ul>
+            </li>
+          
+  </ul>
+  
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/dipy" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/dipymri" title="Twitter/X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Twitter/X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/c/diffusionimaginginpython" title="YouTube" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-youtube fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">YouTube</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/company/dipy/" title="LinkedIn" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">LinkedIn</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<div class="ablog-sidebar-item ablog__postcard">
+   
+  <h2>
+     
+    <i class="fa fa-calendar"></i>
+    
+    <span>29 June 2026</span>
+    
+  </h2>
+  <ul>
+    <div class="ablog-sidebar-item ablog__postcard2">
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
+    </span>
+     
+    <a href="../../blog/author/tomas-guija-valiente.html">Tomas Guija-Valiente</a>
+      
+  </li>
+     
+  <li id="ablog-sidebar-item category ablog__category">
+    <span>
+      
+      <i class="fa-fw fa fa-folder-open"></i>
+      
+    </span>
+     
+    <a href="../../blog/category/gsoc.html">gsoc</a>
+      
+  </li>
+   
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tag"></i>
+      
+    </span>
+     
+    <a href="../../blog/tag/google.html">google</a>
+      
+  </li>
+   
+</div>
+  </ul>
+</div>
+</div>
+        <div class="sidebar-primary-item">
+<div class="ablog-sidebar-item ablog__recentposts">
+  <h3>
+    <a href="../../blog.html">Recent Posts</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="2026_06_22_Tomas.html">
+        22 June - Fourth Coding Week: Halfway there!
+      </a>
+    </li>
+    
+    <li>
+      <a href="2026_06_15_Tomas.html">
+        15 June - Third Coding Week: MI testing and Benchmarking
+      </a>
+    </li>
+    
+    <li>
+      <a href="2026_06_08_Tomas.html">
+        08 June - Second Coding Week: First MI Implementation
+      </a>
+    </li>
+    
+    <li>
+      <a href="2026_06_01_Tomas.html">
+        01 June - First Coding Week: Benchmarking and MI Study
+      </a>
+    </li>
+    
+    <li>
+      <a href="2026_05_25_Tomas.html">
+        25 May - Starting My GSoC Journey with DIPY
+      </a>
+    </li>
+    
+  </ul>
+</div>
+</div>
+        <div class="sidebar-primary-item">
+<div class="ablog-sidebar-item ablog__tagcloud">
+  <link
+    rel="stylesheet"
+    href="../../_static/ablog/tagcloud.css"
+    type="text/css"
+  />
+  <h3><a href="../../blog/tag.html">Tags</a></h3>
+  <ul class="ablog-cloud">
+     
+    <li class="ablog-cloud ablog-cloud-3">
+      <a href="../../blog/tag/google.html">google</a>
+    </li>
+     
+  </ul>
+</div>
+</div>
+        <div class="sidebar-primary-item">
+<div class="ablog-sidebar-item ablog__categories">
+  <h3>
+    <a href="../../blog/category.html">Categories</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../../blog/category/gsoc.html">gsoc (76)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/gsoc-announcement.html">gsoc announcement (8)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/gsod.html">gsod (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/category/gsod-announcement.html">gsod announcement (1)</a>
+    </li>
+     
+  </ul>
+</div>
+</div>
+        <div class="sidebar-primary-item">
+<div class="ablog-sidebar-item ablog__archives">
+  <h3>
+    <a href="../../blog/archive.html">Archives</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../../blog/2026.html">2026 (6)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/2024.html">2024 (29)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/2023.html">2023 (24)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/2022.html">2022 (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/2021.html">2021 (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/2020.html">2020 (3)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/2018.html">2018 (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/2016.html">2016 (7)</a>
+    </li>
+      
+    <li>
+      <a href="../../blog/2015.html">2015 (14)</a>
+    </li>
+     
+  </ul>
+</div>
+</div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Fifth...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                   <section id="fifth-coding-week-first-mi-implementation-pr">
+<h1>Fifth Coding Week: First MI Implementation PR<a class="headerlink" href="#fifth-coding-week-first-mi-implementation-pr" title="Link to this heading">#</a></h1>
+<p>Hello everyone!</p>
+<p>This was the fifth coding week of my GSoC project with
+<a class="reference external" href="https://github.com/dipy/dipy">DIPY</a>, and the work focused on moving the
+Mutual Information (MI) implementation closer to a usable pull request while also
+expanding the registration benchmarks. In particular, this week’s work focused
+on:</p>
+<ul class="simple">
+<li><p>Opening a draft pull request with a working MI implementation for SyN
+registration.</p></li>
+<li><p>Merging the MI implementation branch with the registration benchmarking branch
+to create a combined branch for MI benchmarking experiments.</p></li>
+<li><p>Running new benchmarking experiments with the MI implementation and further
+comparing DIPY against <a class="reference external" href="https://github.com/ANTsX/ANTsPy">ANTs</a>.</p></li>
+<li><p>Measuring and comparing the average runtime of DIPY and ANTs under the same
+benchmark setup.</p></li>
+</ul>
+<section id="new-mi-pr">
+<h2>New MI PR<a class="headerlink" href="#new-mi-pr" title="Link to this heading">#</a></h2>
+<p>This week I reorganized the MI implementation work into a cleaner branch and
+opened a draft pull request. The previous implementation was developed in the
+<a class="reference external" href="https://github.com/TomasGuija/dipy/tree/double-loop-MI">double-loop-MI</a>
+branch. Starting from that work, I created the
+<a class="reference external" href="https://github.com/TomasGuija/dipy/tree/single-loop-MI">single-loop-MI</a>
+branch and opened
+<a class="reference external" href="https://github.com/dipy/dipy/pull/4067">draft PR #4067</a> in DIPY.</p>
+<p>The goal of this branch is to provide a clearer and more efficient
+implementation of MI as a SyN-compatible similarity metric. The earlier
+<code class="docutils literal notranslate"><span class="pre">double-loop-MI</span></code> version was useful as an initial prototype, but it followed a
+more direct structure in which the dense MI derivative computation was split into
+separate stages. This made the implementation easier to develop and debug, but
+it was not ideal as a final version.</p>
+<p>In the new <code class="docutils literal notranslate"><span class="pre">single-loop-MI</span></code> branch, the dense MI update computation was
+reorganized so that the relevant local-support information is computed in a
+tighter path. The implementation now builds the joint intensity statistics and
+stores the local derivative contributions needed for the dense displacement
+update, which are later combined with the MI weights. This removes the initial
+prototype structure and makes the code closer to what should eventually be
+merged.</p>
+<p>The branch also adds a new <code class="docutils literal notranslate"><span class="pre">MIMetric</span></code> class in <code class="docutils literal notranslate"><span class="pre">metrics.py</span></code>, exposing Mutual
+Information through the same interface used by the existing SyN metrics such as
+<code class="docutils literal notranslate"><span class="pre">CCMetric</span></code>, <code class="docutils literal notranslate"><span class="pre">SSDMetric</span></code>, and <code class="docutils literal notranslate"><span class="pre">EMMetric</span></code>. This allows MI to be used directly
+with <code class="docutils literal notranslate"><span class="pre">SymmetricDiffeomorphicRegistration</span></code>.</p>
+</section>
+<section id="lpba40-benchmark">
+<h2>LPBA40 Benchmark<a class="headerlink" href="#lpba40-benchmark" title="Link to this heading">#</a></h2>
+<p>I prepared a new monomodal inter-patient benchmark using <a class="reference external" href="https://resource.loni.usc.edu/resources/atlases-downloads/">LPBA40</a> dataset. The dataset was
+downloaded in its original format, with paired <code class="docutils literal notranslate"><span class="pre">.hdr</span></code> and <code class="docutils literal notranslate"><span class="pre">.img</span></code> files for
+each subject. I converted these files to NIfTI while preserving the original
+voxel grid, spacing, affine information, and label datatypes. During conversion,
+labels 181 and 182 were removed from the anatomical label maps, since they were
+mostly outside the brain foreground and would otherwise distort the
+overlap-based evaluation.</p>
+<p>For each subject, I used the skull-stripped anatomical image in delineation space
+together with its corresponding manual structure label map. I also generated a
+binary brain mask from the nonzero foreground of the skull-stripped image. Thus,
+each subject has an image, a mask, and a cleaned label map in the same space.</p>
+<p>The benchmark is defined as an inter-patient monomodal registration task. I
+generated all unordered subject pairs from the 40 LPBA40 subjects, resulting in
+780 registration pairs.</p>
+<p>As in the other benchmarks, the moving image and labels are first rigidly
+prealigned to the fixed image, using nearest-neighbour interpolation for labels.
+DIPY SyN and ANTs SyN are then run from the same prealigned inputs. Results are
+evaluated using image-based metrics and overlap-based metrics, including Dice and
+Jaccard between the warped moving labels and the fixed labels.</p>
+<p>One of the main goals of this benchmark is to test whether the findings observed
+in the previous <a class="reference external" href="https://sites.wustl.edu/oasisbrains/home/oasis-2/">OASIS-2</a> experiments generalize to a different data distribution.
+In OASIS-2, ANTs performed better than the current state of DIPY, while DIPY
+became competitive or better after the changes collected in
+<a class="reference external" href="https://github.com/TomasGuija/dipy/tree/ants-syn-improvements">ants-syn-improvements</a>.
+Interestingly, this behaviour was not reproduced on LPBA40: in the initial
+100-pair run, DIPY already obtained better intensity-based metrics and slightly
+better mean label overlap than ANTs, without applying those additional changes.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="id1">
+<caption><span class="caption-text">Initial LPBA40 benchmark results over 100 inter-patient monomodal registration pairs. Values are reported as mean +/- standard deviation. Higher values are better, except for runtime.</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>NCC</p></th>
+<th class="head"><p>NMI</p></th>
+<th class="head"><p>Label Dice</p></th>
+<th class="head"><p>Label Jaccard</p></th>
+<th class="head"><p>Time (s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Baseline</p></td>
+<td><p>0.653 +/- 0.058</p></td>
+<td><p>1.051 +/- 0.010</p></td>
+<td><p>0.583 +/- 0.042</p></td>
+<td><p>0.421 +/- 0.040</p></td>
+<td><p>–</p></td>
+</tr>
+<tr class="row-odd"><td><p>ANTs</p></td>
+<td><p>0.933 +/- 0.010</p></td>
+<td><p>1.157 +/- 0.012</p></td>
+<td><p>0.705 +/- 0.017</p></td>
+<td><p>0.551 +/- 0.019</p></td>
+<td><p><strong>129.9 +/- 25.0</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>DIPY</p></td>
+<td><p><strong>0.937 +/- 0.009</strong></p></td>
+<td><p><strong>1.165 +/- 0.012</strong></p></td>
+<td><p><strong>0.709 +/- 0.015</strong></p></td>
+<td><p><strong>0.555 +/- 0.018</strong></p></td>
+<td><p>157.7 +/- 12.3</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="multimodal-mi-benchmarking">
+<h2>Multimodal MI Benchmarking<a class="headerlink" href="#multimodal-mi-benchmarking" title="Link to this heading">#</a></h2>
+<p>I also opened a new branch,
+<a class="reference external" href="https://github.com/TomasGuija/dipy/tree/mi-benchmarking">mi-benchmarking</a>,
+which extends the previous benchmarking work with support for MI-based
+registration experiments. This branch uses the <code class="docutils literal notranslate"><span class="pre">single-loop-MI</span></code> implementation
+and will replace the older <code class="docutils literal notranslate"><span class="pre">registration-benchmark</span></code> branch for future
+experiments.</p>
+<p>For the initial multimodal tests, I used the MRBrainS18 dataset, downloaded from
+<a class="reference external" href="https://dataverse.nl/dataset.xhtml?persistentId=doi%3A10.34894%2FE0U32Q">DataverseNL</a>. Each subject includes FLAIR, IR, T1, and a manual
+segmentation. I created a cleaned multimodal NIfTI folder containing
+skull-stripped versions of these images, using the foreground mask defined by
+<code class="docutils literal notranslate"><span class="pre">segm.nii.gz</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>. The same segmentation is also used as the label map for
+overlap-based evaluation.</p>
+<p>Because modalities from the same subject are already aligned, the benchmark is
+defined as an inter-patient task. I generated all unordered subject pairs and,
+for each pair, all ordered cross-modality combinations among FLAIR, IR, and T1,
+excluding same-modality pairs. With seven subjects, this gives 126
+registration pairs.</p>
+<p>The moving image and labels are first rigidly prealigned to the fixed image, after which DIPY SyN
+and ANTs SyN are run from the same initialization. Results are evaluated with
+image-based metrics and with Dice/Jaccard overlap between the warped moving
+labels and the fixed labels.</p>
+<p>For the initial 100-pair experiment using MI as the registration metric, the
+behaviour differed from the LPBA40 monomodal benchmark: ANTs obtained slightly
+better intensity-based metrics, while DIPY gave slightly better mean label
+overlap.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="id2">
+<caption><span class="caption-text">Initial multimodal MI benchmark results over 100 inter-patient cross-modality registration pairs from MRBrainS18.</span><a class="headerlink" href="#id2" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>NCC</p></th>
+<th class="head"><p>NMI</p></th>
+<th class="head"><p>Label Dice</p></th>
+<th class="head"><p>Label Jaccard</p></th>
+<th class="head"><p>Time (s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Baseline</p></td>
+<td><p>0.362 +/- 0.086</p></td>
+<td><p>1.021 +/- 0.006</p></td>
+<td><p>0.506 +/- 0.056</p></td>
+<td><p>0.369 +/- 0.051</p></td>
+<td><p>–</p></td>
+</tr>
+<tr class="row-odd"><td><p>ANTs</p></td>
+<td><p><strong>0.561 +/- 0.087</strong></p></td>
+<td><p><strong>1.044 +/- 0.013</strong></p></td>
+<td><p>0.565 +/- 0.049</p></td>
+<td><p>0.430 +/- 0.046</p></td>
+<td><p><strong>39.5 +/- 3.6</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>DIPY</p></td>
+<td><p>0.549 +/- 0.084</p></td>
+<td><p>1.043 +/- 0.012</p></td>
+<td><p><strong>0.567 +/- 0.051</strong></p></td>
+<td><p><strong>0.432 +/- 0.048</strong></p></td>
+<td><p>67.2 +/- 4.5</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="time-bottlenecks">
+<h2>Time Bottlenecks<a class="headerlink" href="#time-bottlenecks" title="Link to this heading">#</a></h2>
+<p>Profiling showed that a major metric-independent bottleneck in DIPY’s SyN
+implementation is the fixed-point inversion of displacement fields. Each SyN
+optimization iteration computes four field inversions, and every inversion
+performs several internal fixed-point iterations. In the original implementation,
+all these voxel-wise loops are executed serially.</p>
+<p>A preliminary optimization is available in the
+<a class="reference external" href="https://github.com/TomasGuija/dipy/tree/speed-syn">speed-syn</a> branch. It
+introduces OpenMP parallelization through Cython’s <code class="docutils literal notranslate"><span class="pre">prange</span></code> for the internal
+displacement-field composition used by inversion, the computation of
+residual-vector norms, and the update of the inverse displacement field. A <code class="docutils literal notranslate"><span class="pre">num_threads</span></code> parameter
+was also added and propagated through <code class="docutils literal notranslate"><span class="pre">SymmetricDiffeomorphicRegistration</span></code>.</p>
+<p>This optimization does not modify the fixed-point inversion equations or the SyN
+optimization algorithm. It only parallelizes independent voxel-wise operations
+and is therefore applicable independently of the selected similarity metric.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="id3">
+<caption><span class="caption-text">Preliminary SyN runtime comparison using the same input images and a multiresolution iteration schedule of 20, 20, 10.</span><a class="headerlink" href="#id3" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>Time (s)</p></th>
+<th class="head"><p>NCC</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>DIPY serial</p></td>
+<td><p>301.155</p></td>
+<td><p>0.95494</p></td>
+</tr>
+<tr class="row-odd"><td><p>DIPY threaded</p></td>
+<td><p>243.676</p></td>
+<td><p>0.95494</p></td>
+</tr>
+<tr class="row-even"><td><p>ANTs</p></td>
+<td><p>195.268</p></td>
+<td><p>0.95765</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Threading produced a 1.24x speed-up over serial DIPY. In this preliminary test,
+serial and threaded DIPY required respectively 1.54x and 1.25x the ANTs execution
+time.</p>
+</section>
+<section id="next-week-s-work">
+<h2>Next Week’s Work<a class="headerlink" href="#next-week-s-work" title="Link to this heading">#</a></h2>
+<p>Given the latest results, there does not seem to be a clear and consistent
+accuracy improvement for DIPY across datasets. However, the experiments do
+suggest a more consistent opportunity for improvement in terms of efficiency.
+Based on this, next week’s work will focus on:</p>
+<ul class="simple">
+<li><p>Continuing the benchmarking experiments, with the goal of better understanding
+when and why accuracy differences appear, and whether specific optimization
+choices can improve DIPY’s performance.</p></li>
+<li><p>Preparing a PR focused on improving the runtime efficiency of DIPY’s
+registration pipeline.</p></li>
+<li><p>Continuing work on the new MI PR, including the implementation of the sparse
+path if it becomes necessary.</p></li>
+<li><p>Looking for larger and more suitable datasets for multimodal registration
+benchmarking.</p></li>
+</ul>
+</section>
+<section id="find-me-online">
+<h2>Find Me Online<a class="headerlink" href="#find-me-online" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>GitHub: <a class="reference external" href="https://github.com/TomasGuija">TomasGuija</a></p></li>
+<li><p>LinkedIn: <a class="reference external" href="https://www.linkedin.com/in/tom%C3%A1s-guija-valiente-155180260/">Tomás Guija Valiente</a></p></li>
+</ul>
+<p>Thank you for reading!</p>
+</section>
+</section>
+
+<div class="section ablog__blog_comments">
+     
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+     
+    <a href="2026_06_22_Tomas.html">
+      
+      <i class="fa fa-arrow-circle-left"></i>
+      
+      <span>Fourth Coding Week: Halfway there!</span>
+    </a>
+    
+  </span>
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+    
+  </span>
+</div>
+  
+</div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#new-mi-pr">New MI PR</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lpba40-benchmark">LPBA40 Benchmark</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multimodal-mi-benchmarking">Multimodal MI Benchmarking</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-bottlenecks">Time Bottlenecks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-week-s-work">Next Week’s Work</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-me-online">Find Me Online</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  
+<script type="module" src="../../_static/scripts/grg-sphinx-theme.js"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item"><div>
+  <h3 class="footer-heading">
+    Never miss an update from us!
+  </h3>
+  <p class="footer-sub-heading">
+    Don't worry! we are not going to spam you.
+  </p>
+  <div class="input-group mb-3 mar-t-10">
+    <input type="text" class="form-control" placeholder="You email" aria-label="You email" id="grg-subscribe-email">
+    <div class="input-group-append pointer" onclick="subscriptionClick(document.getElementById('grg-subscribe-email').value)">
+      <span class="input-group-text subscribe">Subscribe</span>
+    </div>
+  </div>  
+  <ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/dipy" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/dipymri" title="Twitter/X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Twitter/X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/c/diffusionimaginginpython" title="YouTube" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-youtube fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">YouTube</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/company/dipy/" title="LinkedIn" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">LinkedIn</span></a>
+        </li>
+</ul>
+</div></div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><div class="grid-3">
+  
+  <div>
+    <h5 class="footer-heading">
+      About
+    </h5>
+    <ul class="footer-section">
+      
+        
+        <li class="pad-v-5">
+          <a href="../../team.html">
+            Developers
+          </a>
+        </li>
+        
+      
+        
+        <li class="pad-v-5">
+          <a href="https://github.com/dipy/dipy/discussions" target="_blank" rel="noopener noreferrer">
+            Support
+            <i class="fa-solid fa-arrow-up-long mar-l-5"></i>
+          </a>
+        </li>
+        
+      
+        
+        <li class="pad-v-5">
+          <a href="https://docs.dipy.org/stable/user_guide/installation">
+            Download
+          </a>
+        </li>
+        
+      
+        
+        <li class="pad-v-5">
+          <a href="https://docs.dipy.org/stable/">
+            Get Started
+          </a>
+        </li>
+        
+      
+        
+        <li class="pad-v-5">
+          <a href="https://docs.dipy.org/stable/examples_built/index">
+            Tutorials
+          </a>
+        </li>
+        
+      
+        
+        <li class="pad-v-5">
+          <a href="https://www.youtube.com/c/diffusionimaginginpython" target="_blank" rel="noopener noreferrer">
+            Videos
+            <i class="fa-solid fa-arrow-up-long mar-l-5"></i>
+          </a>
+        </li>
+        
+      
+    </ul>
+  </div>
+  
+  <div>
+    <h5 class="footer-heading">
+      Friends
+    </h5>
+    <ul class="footer-section">
+      
+        
+        <li class="pad-v-5">
+          <a href="https://nipy.org/" target="_blank" rel="noopener noreferrer">
+            Nipy Projects
+            <i class="fa-solid fa-arrow-up-long mar-l-5"></i>
+          </a>
+        </li>
+        
+      
+        
+        <li class="pad-v-5">
+          <a href="https://fury.gl/" target="_blank" rel="noopener noreferrer">
+            FURY
+            <i class="fa-solid fa-arrow-up-long mar-l-5"></i>
+          </a>
+        </li>
+        
+      
+        
+        <li class="pad-v-5">
+          <a href="https://nipy.org/nibabel" target="_blank" rel="noopener noreferrer">
+            Nibabel
+            <i class="fa-solid fa-arrow-up-long mar-l-5"></i>
+          </a>
+        </li>
+        
+      
+        
+        <li class="pad-v-5">
+          <a href="https://tortoise.nibib.nih.gov/" target="_blank" rel="noopener noreferrer">
+            Tortoise
+            <i class="fa-solid fa-arrow-up-long mar-l-5"></i>
+          </a>
+        </li>
+        
+      
+    </ul>
+  </div>
+  
+  <div>
+    <h5 class="footer-heading">
+      Support
+    </h5>
+    <ul class="footer-section">
+      
+        
+        <li class="pad-v-5">
+          <a href="https://engineering.indiana.edu/" target="_blank" rel="noopener noreferrer">
+            The department of Intelligent Systems Engineering of Indiana University
+            <i class="fa-solid fa-arrow-up-long mar-l-5"></i>
+          </a>
+        </li>
+        
+      
+        
+        <li class="pad-v-5">
+          <a href="https://www.nibib.nih.gov/" target="_blank" rel="noopener noreferrer">
+            The National Institute of Biomedical Imaging and Bioengineering, NIH
+            <i class="fa-solid fa-arrow-up-long mar-l-5"></i>
+          </a>
+        </li>
+        
+      
+        
+        <li class="pad-v-5">
+          <a href="https://escience.washington.edu/tag/alfred-p-sloan-foundation/" target="_blank" rel="noopener noreferrer">
+            The Gordon and Betty Moore Foundation and the Alfred P. Sloan Foundation, through the University of Washington eScience Institute Data Science Environment
+            <i class="fa-solid fa-arrow-up-long mar-l-5"></i>
+          </a>
+        </li>
+        
+      
+        
+        <li class="pad-v-5">
+          <a href="https://summerofcode.withgoogle.com/" target="_blank" rel="noopener noreferrer">
+            Google supported DIPY through the Google Summer of Code Program during multiple Summer (2015-2024)
+            <i class="fa-solid fa-arrow-up-long mar-l-5"></i>
+          </a>
+        </li>
+        
+      
+    </ul>
+  </div>
+  
+</div></div>
+      
+    </div>
+  
+</div>
+
+    <div class="copyright-text">
+      <i class="fa-regular fa-copyright"></i> Copyright 2008-2023, DIPY developers. Created using Grg Sphinx Theme and PyData Sphinx Theme.
+    </div>
+  </footer>
+  </body>
+</html>
